@@ -7,7 +7,7 @@
     <ProjectGuid>{859A9558-F132-47C9-ADCA-36D8505664AF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SuperShop.Data2</RootNamespace>
+    <RootNamespace>SuperShop.Data</RootNamespace>
     <AssemblyName>SuperShop.Data2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
