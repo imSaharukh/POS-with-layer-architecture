@@ -31,5 +31,10 @@ namespace SuperShop.App
             var result = userRepository.GetAll();
             this.mgv.DataSource = result;
         }
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
