@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroFramework.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,14 +11,14 @@ using System.Windows.Forms;
 
 namespace SuperShop.App
 {
-    public partial class ProductControl : UserControl
+    public partial class AddProductForm : MetroForm
     {
-        public ProductControl()
+        public AddProductForm()
         {
             InitializeComponent();
         }
 
-        private void ProductControl_Load(object sender, EventArgs e)
+        private void AddProductForm_Load(object sender, EventArgs e)
         {
 
         }

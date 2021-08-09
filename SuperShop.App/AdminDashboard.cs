@@ -46,5 +46,21 @@ namespace SuperShop.App
             AllUsersControl allUsersControl = new AllUsersControl();
             showControll(allUsersControl);
         }
+        void showProuductControl(Control control2)
+        {
+
+            this.displayPanel.Controls.Clear();
+            control2.Dock = DockStyle.Fill;
+            control2.BringToFront();
+            control2.Focus();
+            this.displayPanel.Controls.Add(control2);
+
+        }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            ProductControl productControl = new ProductControl();
+            showProuductControl(productControl);
+        }
     }
 }
