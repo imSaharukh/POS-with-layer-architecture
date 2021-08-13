@@ -29,6 +29,7 @@ namespace SuperShop.App
         {
 
             var result = userRepository.GetAll();
+            Console.WriteLine(result.Count);
             this.mgv.DataSource = result;
         }
 
