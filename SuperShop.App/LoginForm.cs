@@ -34,14 +34,18 @@ namespace SuperShop.App
             //Console.WriteLine(this.txtPassword.Text);
          var result=   userRepository.VerifyUser(this.txtUsername.Text,this.txtPassword.Text);
 
-            if (result.role.ToString().Trim() == "admin") {
+            if (result == null) {
+                MessageBox.Show("Invalid username or password");
+              
+            }
+            else if (result.RoleName.ToString().Trim() == "admin") {
                 Console.WriteLine("inside if");
                 this.Hide();
 
                 AdminDashboard adminDashboard = new AdminDashboard();
                 adminDashboard.Show();
             }
-            Console.WriteLine(result.role);
+            Console.WriteLine(result?.RoleName);
         }
     }
 }
