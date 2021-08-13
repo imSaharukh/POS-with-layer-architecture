@@ -14,10 +14,12 @@ namespace SuperShop.App
 {
     public partial class AdminDashboard : MetroForm
     {
-        UserRepository userRepository = new UserRepository();
+        AllUsersControl allUsersControl = new AllUsersControl();
+        ProductControl productControl = new ProductControl();
         public AdminDashboard()
         {
             InitializeComponent();
+            showControll(allUsersControl);
         }
 
     
@@ -43,7 +45,7 @@ namespace SuperShop.App
 
         private void btnUser_Click(object sender, EventArgs e)
         {
-            AllUsersControl allUsersControl = new AllUsersControl();
+            //AllUsersControl allUsersControl = new AllUsersControl();
             showControll(allUsersControl);
         }
         void showProuductControl(Control control2)
@@ -59,7 +61,7 @@ namespace SuperShop.App
 
         private void btnProduct_Click(object sender, EventArgs e)
         {
-            ProductControl productControl = new ProductControl();
+       
             showProuductControl(productControl);
         }
     }
