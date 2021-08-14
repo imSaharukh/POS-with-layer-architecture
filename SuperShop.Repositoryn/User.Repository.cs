@@ -1,14 +1,17 @@
-﻿using SuperShop.Data;
+﻿using Dapper;
+using SuperShop.Data;
 using SuperShop.Entity;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SuperShop.Repository
 {
     public class UserRepository
     {
         public User VerifyUser(string username,string password) {
+            var result = DataAccess.sqlcon.Query<User, UserRole, User>("select * from users as u join userRoles as r on u.roleID = r.roleID WHERE  username = @username and password = @password;", (user, role) => { user.userRole = role; return user; }, new { username, password }, splitOn: "roleID").Distinct()
+                .ToList();
 
-            var result = DataAccess.SelectQuery<User>("select * from users as u join userRoles as r on u.roleID = r.roleID WHERE  username = @username and password = @password;", new { username, password });
             if ( result.Count < 1 || result == null)
             {
                 return null;
@@ -17,9 +20,32 @@ namespace SuperShop.Repository
         }
 
         public List<User> GetAll() {
-        
-        var result = DataAccess.SelectQuery<User>("select * from users as u join userRoles as r on u.roleID = r.roleID;");
+
+
+            var result = DataAccess.sqlcon.Query<User,UserRole,User>("select * from users u inner join userRoles r on u.roleID = r.roleID;",(user,role) => { user.userRole = role;return user; }, splitOn: "roleID").Distinct()
+        .ToList();
         return result;
         }
+
+        public int? CreateOne(User user)
+        {
+            var role = user.userRole.RoleName;
+            var id = DataAccess.SelectQuery<UserRole>("select * from userRoles where RoleName = @role",new {role})[0].roleID;
+
+
+            var result = DataAccess.sqlcon.Execute(@"insert into users (username,password,roleID,firstName,lastName) values (@username,@password,@id,@firstName,@lastName);" , new { user.username,user.password, id, user.firstName,user.lastName});
+
+
+            return result;
+        }
+
+        public List<UserRole> GetUserRoles()
+        {
+            var result = DataAccess.SelectQuery<UserRole>("select * from userRoles;");
+
+            return result;
+        }
     }
+
+ 
 }

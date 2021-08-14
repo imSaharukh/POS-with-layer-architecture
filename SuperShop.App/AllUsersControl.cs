@@ -14,12 +14,14 @@ namespace SuperShop.App
     public partial class AllUsersControl : UserControl
     {
         UserRepository userRepository = new UserRepository();
+
+        //List<String> userRoles;
         public AllUsersControl()
         {
             InitializeComponent();
             LoadGridView();
         }
-
+  
         private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
           
@@ -29,13 +31,24 @@ namespace SuperShop.App
         {
 
             var result = userRepository.GetAll();
-            Console.WriteLine(result.Count);
+            Console.WriteLine(result[0].userRole.RoleName);
             this.mgv.DataSource = result;
         }
 
         private void metroButton3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void metroPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            AddUserForm addUserForm = new AddUserForm();
+            addUserForm.Show();
         }
     }
 }

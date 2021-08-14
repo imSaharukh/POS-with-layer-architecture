@@ -12,7 +12,7 @@ namespace SuperShop.Data
 {
     public static class DataAccess
     {
-        private static IDbConnection sqlcon = new SqlConnection(DBConnectionString.dbString);
+        public static IDbConnection sqlcon = new SqlConnection(DBConnectionString.dbString);
 
         public static List<T> SelectQuery<T>(string quary, object p = null)
         {
@@ -27,5 +27,6 @@ namespace SuperShop.Data
             return affectedRows;
 
         }
+
     }
 }

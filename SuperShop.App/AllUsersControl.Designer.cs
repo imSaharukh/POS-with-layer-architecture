@@ -33,16 +33,16 @@ namespace SuperShop.App
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.mgv = new MetroFramework.Controls.MetroGrid();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.metroButton4 = new MetroFramework.Controls.MetroButton();
+            this.metroButton3 = new MetroFramework.Controls.MetroButton();
+            this.btnAdd = new MetroFramework.Controls.MetroButton();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoleName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.mgv)).BeginInit();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -102,56 +102,11 @@ namespace SuperShop.App
             this.mgv.TabIndex = 0;
             this.mgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick);
             // 
-            // username
-            // 
-            this.username.DataPropertyName = "username";
-            this.username.HeaderText = "username";
-            this.username.MinimumWidth = 6;
-            this.username.Name = "username";
-            this.username.ReadOnly = true;
-            this.username.Width = 125;
-            // 
-            // firstName
-            // 
-            this.firstName.DataPropertyName = "firstName";
-            this.firstName.HeaderText = "First Name";
-            this.firstName.MinimumWidth = 6;
-            this.firstName.Name = "firstName";
-            this.firstName.ReadOnly = true;
-            this.firstName.Width = 125;
-            // 
-            // lastName
-            // 
-            this.lastName.DataPropertyName = "lastName";
-            this.lastName.HeaderText = "Last Name";
-            this.lastName.MinimumWidth = 6;
-            this.lastName.Name = "lastName";
-            this.lastName.ReadOnly = true;
-            this.lastName.Width = 125;
-            // 
-            // password
-            // 
-            this.password.DataPropertyName = "password";
-            this.password.HeaderText = "password";
-            this.password.MinimumWidth = 6;
-            this.password.Name = "password";
-            this.password.ReadOnly = true;
-            this.password.Width = 125;
-            // 
-            // RoleName
-            // 
-            this.RoleName.DataPropertyName = "RoleName";
-            this.RoleName.HeaderText = "Role";
-            this.RoleName.MinimumWidth = 6;
-            this.RoleName.Name = "RoleName";
-            this.RoleName.ReadOnly = true;
-            this.RoleName.Width = 125;
-            // 
             // metroPanel1
             // 
             this.metroPanel1.Controls.Add(this.metroButton4);
             this.metroPanel1.Controls.Add(this.metroButton3);
-            this.metroPanel1.Controls.Add(this.metroButton2);
+            this.metroPanel1.Controls.Add(this.btnAdd);
             this.metroPanel1.Controls.Add(this.metroButton1);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
@@ -163,6 +118,7 @@ namespace SuperShop.App
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
             // 
             // metroButton4
             // 
@@ -187,16 +143,17 @@ namespace SuperShop.App
             this.metroButton3.UseSelectable = true;
             this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
             // 
-            // metroButton2
+            // btnAdd
             // 
-            this.metroButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroButton2.Location = new System.Drawing.Point(188, 42);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(89, 30);
-            this.metroButton2.TabIndex = 3;
-            this.metroButton2.Text = "Add";
-            this.metroButton2.UseCustomBackColor = true;
-            this.metroButton2.UseSelectable = true;
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnAdd.Location = new System.Drawing.Point(188, 42);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(89, 30);
+            this.btnAdd.TabIndex = 3;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseCustomBackColor = true;
+            this.btnAdd.UseSelectable = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // metroButton1
             // 
@@ -208,6 +165,51 @@ namespace SuperShop.App
             this.metroButton1.Text = "Search";
             this.metroButton1.UseCustomBackColor = true;
             this.metroButton1.UseSelectable = true;
+            // 
+            // username
+            // 
+            this.username.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.username.DataPropertyName = "username";
+            this.username.HeaderText = "username";
+            this.username.MinimumWidth = 6;
+            this.username.Name = "username";
+            this.username.ReadOnly = true;
+            // 
+            // firstName
+            // 
+            this.firstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.firstName.DataPropertyName = "firstName";
+            this.firstName.HeaderText = "First Name";
+            this.firstName.MinimumWidth = 6;
+            this.firstName.Name = "firstName";
+            this.firstName.ReadOnly = true;
+            // 
+            // lastName
+            // 
+            this.lastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.lastName.DataPropertyName = "lastName";
+            this.lastName.HeaderText = "Last Name";
+            this.lastName.MinimumWidth = 6;
+            this.lastName.Name = "lastName";
+            this.lastName.ReadOnly = true;
+            // 
+            // password
+            // 
+            this.password.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.password.DataPropertyName = "password";
+            this.password.HeaderText = "password";
+            this.password.MinimumWidth = 6;
+            this.password.Name = "password";
+            this.password.ReadOnly = true;
+            // 
+            // RoleName
+            // 
+            this.RoleName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.RoleName.DataPropertyName = "userRole";
+            this.RoleName.HeaderText = "Role";
+            this.RoleName.MinimumWidth = 6;
+            this.RoleName.Name = "RoleName";
+            this.RoleName.ReadOnly = true;
             // 
             // AllUsersControl
             // 
@@ -229,7 +231,7 @@ namespace SuperShop.App
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroButton metroButton4;
         private MetroFramework.Controls.MetroButton metroButton3;
-        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton btnAdd;
         private MetroFramework.Controls.MetroButton metroButton1;
         private System.Windows.Forms.DataGridViewTextBoxColumn username;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstName;

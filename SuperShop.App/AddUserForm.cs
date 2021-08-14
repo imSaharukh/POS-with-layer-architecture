@@ -1,4 +1,6 @@
 ﻿using MetroFramework.Forms;
+using SuperShop.Entity;
+using SuperShop.Repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +15,15 @@ namespace SuperShop.App
 {
     public partial class AddUserForm : MetroForm
     {
+        UserRepository userRepository = new UserRepository();
+        List<String> roleNames =new List<string>();
+
         public AddUserForm()
         {
             InitializeComponent();
+            loadUserRoles();
+
+
         }
 
         private void AddUserForm_Load(object sender, EventArgs e)
@@ -76,6 +84,43 @@ namespace SuperShop.App
         private void metroButton1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        void loadUserRoles()
+        {
+            var result = userRepository.GetUserRoles();
+
+            foreach (var item in result)
+            {
+                roleNames.Add(item.RoleName);
+            }
+            this.cmbRole.DataSource = roleNames;
+
+
+
+
+        }
+        private void CreateUser()
+        {
+            User user = new User();
+            user.userRole = new UserRole();
+            user.username = this.txtUsername.Text;
+            user.password = this.txtPassword.Text;
+            user.firstName = this.txtFirstName.Text;
+            user.lastName = this.txtLastName.Text;
+            user.userRole.RoleName = this.cmbRole.Text;
+            var result = userRepository.CreateOne(user);
+            Console.WriteLine(result);
+
+            MessageBox.Show("user added");
+            Hide();
+            //Console.WriteLine(this.txtFirstName);
+            //Console.WriteLine(this.cmbRole.Text);
+        }
+
+        private void cmbConfirm_Click(object sender, EventArgs e)
+        {
+            CreateUser();
         }
     }
 }

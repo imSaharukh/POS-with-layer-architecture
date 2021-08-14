@@ -38,14 +38,14 @@ namespace SuperShop.App
                 MessageBox.Show("Invalid username or password");
               
             }
-            else if (result.RoleName.ToString().Trim() == "admin") {
+            else if (result.userRole.RoleName.Trim() == "admin") {
                 Console.WriteLine("inside if");
                 this.Hide();
 
                 AdminDashboard adminDashboard = new AdminDashboard();
                 adminDashboard.Show();
             }
-            Console.WriteLine(result?.RoleName);
+            Console.WriteLine(result?.userRole);
         }
     }
 }
