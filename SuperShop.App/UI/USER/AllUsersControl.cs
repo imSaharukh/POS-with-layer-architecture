@@ -80,5 +80,15 @@ namespace SuperShop.App
             //AddUserForm addUserForm = new AddUserForm();
             //addUserForm.Show();
         }
+
+        private void txtSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AllUsersControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
