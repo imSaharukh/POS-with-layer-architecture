@@ -15,14 +15,16 @@ namespace SuperShop.App
 {
     public partial class AddUserForm : MetroForm
     {
+        bool isUpdate = false;
         UserRepository userRepository = new UserRepository();
-        List<String> roleNames =new List<string>();
-
-        public AddUserForm(User user = null)
+        List<string> roleNames =new List<string>();
+        CallbackDelegate loadGridViewCallback;
+        public AddUserForm(CallbackDelegate loadGridViewCallback, User user = null)
         {
             InitializeComponent();
             loadUserRoles();
             loadUpdateData(user);
+            this.loadGridViewCallback = loadGridViewCallback;
 
         }
         void loadUpdateData(User user)
@@ -33,6 +35,10 @@ namespace SuperShop.App
                 this.txtLastName.Text = user.lastName;
                 this.txtPassword.Text = user.password;
                 this.cmbRole.Text = user.userRole.RoleName;
+                this.Text = "Update User";
+                this.txtUsername.ReadOnly = true;
+                this.cmbRole.Enabled = false;
+                this.isUpdate = true;
 
             }
         }
@@ -112,6 +118,8 @@ namespace SuperShop.App
         }
         private void CreateUser()
         {
+
+          
             User user = new User();
             user.userRole = new UserRole();
             user.username = this.txtUsername.Text;
@@ -119,10 +127,22 @@ namespace SuperShop.App
             user.firstName = this.txtFirstName.Text;
             user.lastName = this.txtLastName.Text;
             user.userRole.RoleName = this.cmbRole.Text;
-            var result = userRepository.CreateOne(user);
-            Console.WriteLine(result);
 
-            MessageBox.Show("user added");
+
+            if (isUpdate)
+            {
+                var result = userRepository.UpdateOne(user);
+                MessageBox.Show("user updated");
+            }
+            else { var result = userRepository.CreateOne(user);
+                MessageBox.Show("user added");
+
+            }
+
+            //Console.WriteLine(result);
+            loadGridViewCallback();
+
+
             Hide();
             //Console.WriteLine(this.txtFirstName);
             //Console.WriteLine(this.cmbRole.Text);

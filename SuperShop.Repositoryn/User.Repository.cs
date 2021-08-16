@@ -56,6 +56,19 @@ namespace SuperShop.Repository
 
             return result;
         }
+
+
+        public int? UpdateOne(User user)
+        {
+            //var role = user.userRole.RoleName;
+            //var id = DataAccess.SelectQuery<UserRole>("select * from userRoles where RoleName = @role", new { role })[0].roleID;
+
+
+            var result = DataAccess.sqlcon.Execute(@"update users set password = @password,firstName = @firstName,lastName = @lastName where username = @username;", new { user.username, user.password, user.firstName, user.lastName });
+
+
+            return result;
+        }
     }
 
  

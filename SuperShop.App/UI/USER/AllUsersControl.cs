@@ -45,7 +45,8 @@ namespace SuperShop.App
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AddUserForm addUserForm = new AddUserForm();
+            CallbackDelegate callbackDelegate = new CallbackDelegate(LoadGridView);
+            AddUserForm addUserForm = new AddUserForm(callbackDelegate);
             addUserForm.Show();
         }
 
@@ -72,8 +73,8 @@ namespace SuperShop.App
                 user.password = row.Cells["password"].Value.ToString();
                 user.userRole =new UserRole();
                 user.userRole.RoleName = row.Cells[4].Value.ToString();
-
-                AddUserForm addUserForm = new AddUserForm(user);
+                CallbackDelegate callbackDelegate = new CallbackDelegate(LoadGridView);
+                AddUserForm addUserForm = new AddUserForm(callbackDelegate,user);
                 addUserForm.Show();
             }
             //Console.WriteLine(this.dgv.SelectedRows[0].Cells["firstName"]);
@@ -93,9 +94,9 @@ namespace SuperShop.App
 
         private void txtSerachChanged(object sender, EventArgs e)
         {
-    
+       
 
-            var result = userRepository.SearchByUsername(this.txtSearch.Text);
+                var result = userRepository.SearchByUsername(this.txtSearch.Text);
             //Console.WriteLine(result[0]?.userRole.RoleName);
             this.dgv.DataSource = result;
         }

@@ -83,6 +83,7 @@
     <Compile Include="AddProductForm.Designer.cs">
       <DependentUpon>AddProductForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Delegates.cs" />
     <Compile Include="UI\USER\AddUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
