@@ -27,6 +27,17 @@ namespace SuperShop.Repository
         return result;
         }
 
+        public List<User> SearchByUsername(string search)
+        {
+            search = "%"+  search + "%";
+
+            var result = DataAccess.sqlcon.Query<User, UserRole, User>("select * from users u inner join userRoles r on u.roleID = r.roleID where username like @search", (user, role) => { user.userRole = role; return user; }, new { search }, splitOn: "roleID").Distinct()
+        .ToList();
+            return result;
+        }
+
+
+
         public int? CreateOne(User user)
         {
             var role = user.userRole.RoleName;

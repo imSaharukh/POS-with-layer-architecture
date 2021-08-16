@@ -90,5 +90,14 @@ namespace SuperShop.App
         {
 
         }
+
+        private void txtSerachChanged(object sender, EventArgs e)
+        {
+    
+
+            var result = userRepository.SearchByUsername(this.txtSearch.Text);
+            //Console.WriteLine(result[0]?.userRole.RoleName);
+            this.dgv.DataSource = result;
+        }
     }
 }
