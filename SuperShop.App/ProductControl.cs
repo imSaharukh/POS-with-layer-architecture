@@ -21,5 +21,10 @@ namespace SuperShop.App
         {
 
         }
+
+        private void txtSearchProduct_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
