@@ -35,7 +35,7 @@ namespace SuperShop.App
             this.metroButton4 = new MetroFramework.Controls.MetroButton();
             this.metroButton5 = new MetroFramework.Controls.MetroButton();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.btnSalesReport = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
@@ -96,7 +96,7 @@ namespace SuperShop.App
             // 
             // metroPanel1
             // 
-            this.metroPanel1.Controls.Add(this.metroButton2);
+            this.metroPanel1.Controls.Add(this.btnSalesReport);
             this.metroPanel1.Controls.Add(this.metroLabel1);
             this.metroPanel1.Controls.Add(this.metroButton1);
             this.metroPanel1.Controls.Add(this.metroButton5);
@@ -116,14 +116,15 @@ namespace SuperShop.App
             this.metroPanel1.VerticalScrollbarSize = 10;
             this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
             // 
-            // metroButton2
+            // btnSalesReport
             // 
-            this.metroButton2.Location = new System.Drawing.Point(23, 185);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(153, 23);
-            this.metroButton2.TabIndex = 9;
-            this.metroButton2.Text = "Sales Report";
-            this.metroButton2.UseSelectable = true;
+            this.btnSalesReport.Location = new System.Drawing.Point(23, 185);
+            this.btnSalesReport.Name = "btnSalesReport";
+            this.btnSalesReport.Size = new System.Drawing.Size(153, 23);
+            this.btnSalesReport.TabIndex = 9;
+            this.btnSalesReport.Text = "Sales Report";
+            this.btnSalesReport.UseSelectable = true;
+            this.btnSalesReport.Click += new System.EventHandler(this.btnSalesReport_Click);
             // 
             // metroLabel1
             // 
@@ -168,6 +169,6 @@ namespace SuperShop.App
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton btnSalesReport;
     }
 }

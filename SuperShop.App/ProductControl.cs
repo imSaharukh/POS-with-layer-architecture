@@ -26,5 +26,11 @@ namespace SuperShop.App
         {
 
         }
+
+        private void btnAddProductform_Click(object sender, EventArgs e)
+        {
+            AddProductForm addProductForm = new AddProductForm();
+            addProductForm.Show();
+        }
     }
 }
