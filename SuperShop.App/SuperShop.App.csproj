@@ -77,10 +77,10 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddProductForm.cs">
+    <Compile Include="UI\Product\AddProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddProductForm.Designer.cs">
+    <Compile Include="UI\Product\AddProductForm.Designer.cs">
       <DependentUpon>AddProductForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Delegates.cs" />
@@ -116,13 +116,13 @@
     <Compile Include="UI\USER\AllUsersControl.Designer.cs">
       <DependentUpon>AllUsersControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProductControl.cs">
+    <Compile Include="UI\Product\ProductControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ProductControl.Designer.cs">
+    <Compile Include="UI\Product\ProductControl.Designer.cs">
       <DependentUpon>ProductControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddProductForm.resx">
+    <EmbeddedResource Include="UI\Product\AddProductForm.resx">
       <DependentUpon>AddProductForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportControl.resx">
@@ -150,7 +150,7 @@
     <EmbeddedResource Include="UI\USER\AllUsersControl.resx">
       <DependentUpon>AllUsersControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductControl.resx">
+    <EmbeddedResource Include="UI\Product\ProductControl.resx">
       <DependentUpon>ProductControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

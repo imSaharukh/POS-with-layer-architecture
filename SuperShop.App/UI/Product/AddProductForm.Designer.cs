@@ -30,6 +30,8 @@ namespace SuperShop.App
         private void InitializeComponent()
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroTextBox5 = new MetroFramework.Controls.MetroTextBox();
@@ -41,13 +43,15 @@ namespace SuperShop.App
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.txtUnit = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroPanel1
             // 
+            this.metroPanel1.Controls.Add(this.txtUnit);
+            this.metroPanel1.Controls.Add(this.metroLabel7);
             this.metroPanel1.Controls.Add(this.metroComboBox1);
             this.metroPanel1.Controls.Add(this.metroDateTime1);
             this.metroPanel1.Controls.Add(this.metroLabel6);
@@ -66,11 +70,30 @@ namespace SuperShop.App
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(23, 63);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(374, 427);
+            this.metroPanel1.Size = new System.Drawing.Size(374, 517);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // metroComboBox1
+            // 
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.IntegralHeight = false;
+            this.metroComboBox1.ItemHeight = 24;
+            this.metroComboBox1.Location = new System.Drawing.Point(91, 219);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.Size = new System.Drawing.Size(192, 30);
+            this.metroComboBox1.TabIndex = 16;
+            this.metroComboBox1.UseSelectable = true;
+            // 
+            // metroDateTime1
+            // 
+            this.metroDateTime1.Location = new System.Drawing.Point(91, 329);
+            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 30);
+            this.metroDateTime1.Name = "metroDateTime1";
+            this.metroDateTime1.Size = new System.Drawing.Size(192, 30);
+            this.metroDateTime1.TabIndex = 15;
             // 
             // metroLabel6
             // 
@@ -83,7 +106,7 @@ namespace SuperShop.App
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(91, 379);
+            this.metroButton1.Location = new System.Drawing.Point(91, 430);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(192, 30);
             this.metroButton1.TabIndex = 12;
@@ -263,30 +286,52 @@ namespace SuperShop.App
             this.metroLabel1.TabIndex = 2;
             this.metroLabel1.Text = "Product Name";
             // 
-            // metroDateTime1
+            // txtUnit
             // 
-            this.metroDateTime1.Location = new System.Drawing.Point(91, 329);
-            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 30);
-            this.metroDateTime1.Name = "metroDateTime1";
-            this.metroDateTime1.Size = new System.Drawing.Size(192, 30);
-            this.metroDateTime1.TabIndex = 15;
             // 
-            // metroComboBox1
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.IntegralHeight = false;
-            this.metroComboBox1.ItemHeight = 24;
-            this.metroComboBox1.Location = new System.Drawing.Point(91, 219);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(192, 30);
-            this.metroComboBox1.TabIndex = 16;
-            this.metroComboBox1.UseSelectable = true;
+            // 
+            this.txtUnit.CustomButton.Image = null;
+            this.txtUnit.CustomButton.Location = new System.Drawing.Point(164, 2);
+            this.txtUnit.CustomButton.Name = "";
+            this.txtUnit.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtUnit.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtUnit.CustomButton.TabIndex = 1;
+            this.txtUnit.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtUnit.CustomButton.UseSelectable = true;
+            this.txtUnit.CustomButton.Visible = false;
+            this.txtUnit.Lines = new string[] {
+        "metroTextBox4"};
+            this.txtUnit.Location = new System.Drawing.Point(91, 388);
+            this.txtUnit.MaxLength = 32767;
+            this.txtUnit.Name = "txtUnit";
+            this.txtUnit.PasswordChar = '\0';
+            this.txtUnit.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtUnit.SelectedText = "";
+            this.txtUnit.SelectionLength = 0;
+            this.txtUnit.SelectionStart = 0;
+            this.txtUnit.ShortcutsEnabled = true;
+            this.txtUnit.Size = new System.Drawing.Size(192, 30);
+            this.txtUnit.TabIndex = 18;
+            this.txtUnit.Text = "metroTextBox4";
+            this.txtUnit.UseSelectable = true;
+            this.txtUnit.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtUnit.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(91, 365);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(41, 20);
+            this.metroLabel7.TabIndex = 17;
+            this.metroLabel7.Text = "UNIT";
             // 
             // AddProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(420, 513);
+            this.ClientSize = new System.Drawing.Size(420, 603);
             this.Controls.Add(this.metroPanel1);
             this.Name = "AddProductForm";
             this.Text = "Add Product Details";
@@ -313,5 +358,7 @@ namespace SuperShop.App
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroComboBox metroComboBox1;
         private MetroFramework.Controls.MetroDateTime metroDateTime1;
+        private MetroFramework.Controls.MetroTextBox txtUnit;
+        private MetroFramework.Controls.MetroLabel metroLabel7;
     }
 }
