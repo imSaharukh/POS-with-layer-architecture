@@ -22,5 +22,22 @@ namespace SuperShop.App.UI.MiniStatement
         {
 
         }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(bmp, -30, -30);
+        }
+        Bitmap bmp;
+        private void SlipPrint_Click(object sender, EventArgs e)
+        {
+            Graphics pnt = this.CreateGraphics();
+            bmp = new Bitmap(this.Size.Width, this.Size.Height, pnt);
+            Graphics pt = Graphics.FromImage(bmp);
+            pt.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, this.Size);
+            printPreviewDialog1.Document.DefaultPageSettings.Landscape = true;
+            printPreviewDialog1.ShowDialog();
+        }
+
+        
     }
 }

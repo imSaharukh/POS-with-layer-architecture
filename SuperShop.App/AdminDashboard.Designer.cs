@@ -32,7 +32,7 @@ namespace SuperShop.App
             this.displayPanel = new MetroFramework.Controls.MetroPanel();
             this.btnUser = new MetroFramework.Controls.MetroButton();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
+            this.btnStats = new MetroFramework.Controls.MetroButton();
             this.metroButton5 = new MetroFramework.Controls.MetroButton();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.btnSalesReport = new MetroFramework.Controls.MetroButton();
@@ -75,14 +75,15 @@ namespace SuperShop.App
             this.metroButton3.Text = "Customization";
             this.metroButton3.UseSelectable = true;
             // 
-            // metroButton4
+            // btnStats
             // 
-            this.metroButton4.Location = new System.Drawing.Point(23, 129);
-            this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(153, 23);
-            this.metroButton4.TabIndex = 5;
-            this.metroButton4.Text = "Statistics";
-            this.metroButton4.UseSelectable = true;
+            this.btnStats.Location = new System.Drawing.Point(23, 129);
+            this.btnStats.Name = "btnStats";
+            this.btnStats.Size = new System.Drawing.Size(153, 23);
+            this.btnStats.TabIndex = 5;
+            this.btnStats.Text = "Statistics";
+            this.btnStats.UseSelectable = true;
+            this.btnStats.Click += new System.EventHandler(this.btnStats_Click);
             // 
             // metroButton5
             // 
@@ -100,7 +101,7 @@ namespace SuperShop.App
             this.metroPanel1.Controls.Add(this.metroLabel1);
             this.metroPanel1.Controls.Add(this.metroButton1);
             this.metroPanel1.Controls.Add(this.metroButton5);
-            this.metroPanel1.Controls.Add(this.metroButton4);
+            this.metroPanel1.Controls.Add(this.btnStats);
             this.metroPanel1.Controls.Add(this.metroButton3);
             this.metroPanel1.Controls.Add(this.btnUser);
             this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -164,7 +165,7 @@ namespace SuperShop.App
         private MetroFramework.Controls.MetroPanel displayPanel;
         private MetroFramework.Controls.MetroButton btnUser;
         private MetroFramework.Controls.MetroButton metroButton3;
-        private MetroFramework.Controls.MetroButton metroButton4;
+        private MetroFramework.Controls.MetroButton btnStats;
         private MetroFramework.Controls.MetroButton metroButton5;
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroLabel metroLabel1;

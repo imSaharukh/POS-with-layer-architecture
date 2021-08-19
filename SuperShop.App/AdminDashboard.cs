@@ -17,6 +17,7 @@ namespace SuperShop.App
         AllUsersControl allUsersControl = new AllUsersControl();
         ProductControl productControl = new ProductControl();
         ReportControl reportControl = new ReportControl();
+        
         public AdminDashboard()
         {
             InitializeComponent();
@@ -77,6 +78,12 @@ namespace SuperShop.App
         private void btnSalesReport_Click(object sender, EventArgs e)
         {
             showReportControl(reportControl);
+        }
+
+        private void btnStats_Click(object sender, EventArgs e)
+        {
+            UI.MiniStatement.SalesSlip saleslip = new UI.MiniStatement.SalesSlip();
+            saleslip.Show();
         }
     }
 }

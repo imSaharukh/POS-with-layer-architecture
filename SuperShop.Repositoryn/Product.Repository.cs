@@ -83,16 +83,16 @@ namespace SuperShop.Repository
             return result;
         }
 
-        public List<Product> SearchByProductname(string search)
+       /* public List<Product> SearchByProductname(string search)
         {
             search = "%" + search + "%";
 
            /* var result = DataAccess.sqlcon.Query<User, UserRole, User>("select * from products p inner join productCategories" +
                 " c on p.productCategoryID = c.productCategoryID inner join productUnits u on p.ProductUnitID = u.ProductUnitID; " +
                 " where username like @search".ToList();
-            */
+            
            // return result;
         }
-
+            */
     }
 }
