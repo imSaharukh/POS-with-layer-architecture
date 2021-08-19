@@ -155,13 +155,13 @@ namespace SuperShop.App
             bool result = true;
             if (string.IsNullOrEmpty(this.txtFirstName.Text))
             {
-
-
-
+               
                 result = false;
                 this.lblErrFirstName.Text = "First Name can't be empty";
+                this.lblErrFirstName.Visible = true;
+                //Console.WriteLine("inside if");
             }
-
+         
             return result;
         }
 

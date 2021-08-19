@@ -66,9 +66,9 @@ namespace SuperShop.App
             this.flowLayoutPanel1.Controls.Add(this.txtPassword);
             this.flowLayoutPanel1.Controls.Add(this.metroButton1);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(107, 64);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(197, 75);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 353);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(410, 427);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.WrapContents = false;
             // 
@@ -319,7 +319,7 @@ namespace SuperShop.App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(401, 448);
+            this.ClientSize = new System.Drawing.Size(608, 585);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "AddUserForm";
             this.Text = "Add User Details";
