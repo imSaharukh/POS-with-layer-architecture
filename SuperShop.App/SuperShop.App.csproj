@@ -77,6 +77,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UI\MiniStatement\SalesSlip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MiniStatement\SalesSlip.Designer.cs">
+      <DependentUpon>SalesSlip.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Product\AddCatagory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     <Compile Include="UI\Product\ProductControl.Designer.cs">
       <DependentUpon>ProductControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\MiniStatement\SalesSlip.resx">
+      <DependentUpon>SalesSlip.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Product\AddCatagory.resx">
       <DependentUpon>AddCatagory.cs</DependentUpon>
     </EmbeddedResource>
