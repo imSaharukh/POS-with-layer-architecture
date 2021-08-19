@@ -26,7 +26,7 @@ namespace SuperShop.App.UI.Seller
 
         void loadGridView()
         {
-            this.dgvProduct.DataSource = productRepository.GetAll();
+            this.dgvAllProduct.DataSource = productRepository.GetAll();
         }
 
         private void metroLabel1_Click(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace SuperShop.App.UI.Seller
 
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
-            DataGridViewRow row = this.dgvProduct.SelectedRows[0];
+            DataGridViewRow row = this.dgvAllProduct.SelectedRows[0];
             //Console.WriteLine(row.Cells[0].Value);
             var productID = Convert.ToInt32(row.Cells["productID"].Value);
             if (!products.Contains(productID))

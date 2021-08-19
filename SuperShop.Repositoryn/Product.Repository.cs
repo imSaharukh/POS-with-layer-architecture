@@ -86,12 +86,16 @@ namespace SuperShop.Repository
         public List<Product> SearchByProductname(string search)
         {
             search = "%" + search + "%";
+            var result = DataAccess.sqlcon.Query<Product, ProductCategory, ProductUnit, Product>("select * from products p inner join " +
+                    "productCategories c on p.productCategoryID = c.productCategoryID inner join productUnits u on p.ProductUnitID = u.ProductUnitID where productName = @search;",
+                    (product, catagory, unit) => {
+                        product.productCategory = catagory;
+                        product.ProductUnit = unit;
+                        return product;
+                    },new { search }, splitOn: "ProductUnitID,productCategoryID").Distinct()
+            .ToList();
 
-           /* var result = DataAccess.sqlcon.Query<User, UserRole, User>("select * from products p inner join productCategories" +
-                " c on p.productCategoryID = c.productCategoryID inner join productUnits u on p.ProductUnitID = u.ProductUnitID; " +
-                " where username like @search".ToList();
-            */
-           // return result;
+            return result;
         }
 
     }
