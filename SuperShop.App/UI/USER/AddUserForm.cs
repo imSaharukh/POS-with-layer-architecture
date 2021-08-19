@@ -25,7 +25,7 @@ namespace SuperShop.App
             loadUserRoles();
             loadUpdateData(user);
             this.loadGridViewCallback = loadGridViewCallback;
-
+             
         }
         
         void loadUpdateData(User user)
