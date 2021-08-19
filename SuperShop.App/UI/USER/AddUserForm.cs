@@ -27,6 +27,7 @@ namespace SuperShop.App
             this.loadGridViewCallback = loadGridViewCallback;
 
         }
+        
         void loadUpdateData(User user)
         {
             if (user != null) {
@@ -44,7 +45,7 @@ namespace SuperShop.App
         }
         private void AddUserForm_Load(object sender, EventArgs e)
         {
-
+            this.lblErrFirstName.Visible = false;
         }
 
         private void metroTextBox2_Click(object sender, EventArgs e)
@@ -148,9 +149,26 @@ namespace SuperShop.App
             //Console.WriteLine(this.cmbRole.Text);
         }
 
+
+        bool validate()
+        {
+            bool result = true;
+            if (string.IsNullOrEmpty(this.txtFirstName.Text))
+            {
+
+
+
+                result = false;
+                this.lblErrFirstName.Text = "First Name can't be empty";
+            }
+
+            return result;
+        }
+
         private void cmbConfirm_Click(object sender, EventArgs e)
         {
-            CreateUser();
+            if (validate()) { CreateUser(); }
+            
         }
     }
 }
