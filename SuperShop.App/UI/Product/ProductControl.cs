@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SuperShop.Repository;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,14 @@ using System.Windows.Forms;
 
 namespace SuperShop.App
 {
-    public partial class ProductControl : UserControl
+    public partial class ProductControl : UserControl  
     {
+
+        ProductRepository productRepository = new ProductRepository();
         public ProductControl()
         {
             InitializeComponent();
+            loadGridView();
         }
 
         private void ProductControl_Load(object sender, EventArgs e)
@@ -26,7 +30,10 @@ namespace SuperShop.App
         {
 
         }
-
+        void loadGridView()
+        {
+            this.dgvProduct.DataSource = productRepository.GetAll();
+        }
         private void btnAddProductform_Click(object sender, EventArgs e)
         {
             AddProductForm addProductForm = new AddProductForm();

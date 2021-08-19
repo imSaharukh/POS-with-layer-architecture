@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace SuperShop.Entity
 {
-    class Product
+  public  class Product
     {
         public int productID { get; set; }
         public string productName { get; set; }
-
+        public int productCategoryID { get; set; }
         public float unitPrice { get; set; }
 
         public int stock { get; set; }
@@ -19,25 +19,35 @@ namespace SuperShop.Entity
 
         public DateTime expireDate { get; set; }
 
-        public ProductUnit ProductUnitID { get; set; }
+        public ProductUnit ProductUnit { get; set; }
 
-        public ProductCategory productCategoryID { get; set; }
+        public ProductCategory productCategory { get; set; }
     }
 
-    class ProductCategory
+    public class ProductCategory
     {
         public string productCategoryName { get; set; }
         public int productCategoryID { get; set; }
 
         public ICollection<Product> users { get; set; }
+
+        public override string ToString()
+        {
+            return this.productCategoryName;
+        }
     }
 
 
-    class ProductUnit
+    public class ProductUnit
     {
         public string ProductUnitName { get; set; }
         public int ProductUnitID { get; set; }
 
         public ICollection<Product> users { get; set; }
+
+        public override string ToString()
+        {
+            return this.ProductUnitName;
+        }
     }
 }
