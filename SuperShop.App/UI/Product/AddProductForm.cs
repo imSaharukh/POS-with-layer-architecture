@@ -15,21 +15,37 @@ namespace SuperShop.App
 {
     public partial class AddProductForm : MetroForm
     {
+        bool isUpdate = false;
         ProductRepository productRepository = new ProductRepository();
         CallbackDelegate loadgridviewcallback;
         public AddProductForm(CallbackDelegate loadgridviewcallback,Product product = null)
         {
             InitializeComponent();
             loadInitialData();
-
+            loadUpdateData(product);
             this.loadgridviewcallback = loadgridviewcallback;
         }
 
+        void loadUpdateData(Product product)
+        {
+            if(product !=null)
+            {
+                this.txtProductName.Text = product.productName;
+                this.txtUnitPrice.Text = product.unitPrice.ToString();
+                this.txtStock.Text = product.stock.ToString();
+                this.txtPurchasePrice.Text = product.purchasePrice.ToString();
+                this.txtPurchasePrice.ReadOnly = true;
+                this.cmbCategory.Text = product.categoryID.ToString();
+                this.dtExpireDate.Value = product.expireDate;
+                this.cmbUnit.Text = product.ProductUnit.ProductUnitName;
+
+
+            }    
+        }
         void loadInitialData() {
 
             this.cmbCategory.DataSource = productRepository.GellAllProductCatagory();
             this.cmbUnit.DataSource = productRepository.GellAllProductUnits();
-        
         }
         bool validate()
         {
@@ -82,7 +98,8 @@ namespace SuperShop.App
         {
 
         }
-
+        void updateProduct()
+        { }
 
         void CreateProduct()
         {
