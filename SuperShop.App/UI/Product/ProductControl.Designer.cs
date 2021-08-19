@@ -37,16 +37,6 @@ namespace SuperShop.App
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.dgvProduct = new MetroFramework.Controls.MetroGrid();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productCategoryID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.purchasePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.expireDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.btnAddCatagory = new MetroFramework.Controls.MetroButton();
@@ -56,6 +46,16 @@ namespace SuperShop.App
             this.btnProductUpdate = new MetroFramework.Controls.MetroButton();
             this.metroButton4 = new MetroFramework.Controls.MetroButton();
             this.btnAddProductform = new MetroFramework.Controls.MetroButton();
+            this.productID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productCategoryID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.purchasePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expireDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
@@ -94,7 +94,7 @@ namespace SuperShop.App
             this.dgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
+            this.productID,
             this.categoryID,
             this.productCategoryID,
             this.productName,
@@ -133,99 +133,6 @@ namespace SuperShop.App
             this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProduct.Size = new System.Drawing.Size(858, 355);
             this.dgvProduct.TabIndex = 3;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.DataPropertyName = "productID";
-            this.Column1.HeaderText = "ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            // 
-            // categoryID
-            // 
-            this.categoryID.DataPropertyName = "categoryID";
-            this.categoryID.HeaderText = "categoryID";
-            this.categoryID.MinimumWidth = 6;
-            this.categoryID.Name = "categoryID";
-            this.categoryID.ReadOnly = true;
-            this.categoryID.Visible = false;
-            this.categoryID.Width = 125;
-            // 
-            // productCategoryID
-            // 
-            this.productCategoryID.DataPropertyName = "productCategoryID";
-            this.productCategoryID.HeaderText = "productCategoryID";
-            this.productCategoryID.MinimumWidth = 6;
-            this.productCategoryID.Name = "productCategoryID";
-            this.productCategoryID.ReadOnly = true;
-            this.productCategoryID.Visible = false;
-            this.productCategoryID.Width = 125;
-            // 
-            // productName
-            // 
-            this.productName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.productName.DataPropertyName = "productName";
-            this.productName.HeaderText = "Name";
-            this.productName.MinimumWidth = 3;
-            this.productName.Name = "productName";
-            this.productName.ReadOnly = true;
-            // 
-            // unitPrice
-            // 
-            this.unitPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.unitPrice.DataPropertyName = "unitPrice";
-            this.unitPrice.HeaderText = "Unit Price";
-            this.unitPrice.MinimumWidth = 6;
-            this.unitPrice.Name = "unitPrice";
-            this.unitPrice.ReadOnly = true;
-            // 
-            // stock
-            // 
-            this.stock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.stock.DataPropertyName = "stock";
-            this.stock.HeaderText = "Stock";
-            this.stock.MinimumWidth = 6;
-            this.stock.Name = "stock";
-            this.stock.ReadOnly = true;
-            // 
-            // productCategory
-            // 
-            this.productCategory.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.productCategory.DataPropertyName = "productCategory";
-            this.productCategory.HeaderText = "Category";
-            this.productCategory.MinimumWidth = 6;
-            this.productCategory.Name = "productCategory";
-            this.productCategory.ReadOnly = true;
-            // 
-            // purchasePrice
-            // 
-            this.purchasePrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.purchasePrice.DataPropertyName = "purchasePrice";
-            this.purchasePrice.HeaderText = "Purchase Price";
-            this.purchasePrice.MinimumWidth = 6;
-            this.purchasePrice.Name = "purchasePrice";
-            this.purchasePrice.ReadOnly = true;
-            // 
-            // expireDate
-            // 
-            this.expireDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.expireDate.DataPropertyName = "expireDate";
-            this.expireDate.HeaderText = "Expire Date";
-            this.expireDate.MinimumWidth = 6;
-            this.expireDate.Name = "expireDate";
-            this.expireDate.ReadOnly = true;
-            // 
-            // ProductUnit
-            // 
-            this.ProductUnit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ProductUnit.DataPropertyName = "ProductUnit";
-            this.ProductUnit.HeaderText = "UNIT";
-            this.ProductUnit.MinimumWidth = 6;
-            this.ProductUnit.Name = "ProductUnit";
-            this.ProductUnit.ReadOnly = true;
             // 
             // metroGrid1
             // 
@@ -389,6 +296,99 @@ namespace SuperShop.App
             this.btnAddProductform.UseSelectable = true;
             this.btnAddProductform.Click += new System.EventHandler(this.btnAddProductform_Click);
             // 
+            // productID
+            // 
+            this.productID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.productID.DataPropertyName = "productID";
+            this.productID.HeaderText = "ID";
+            this.productID.MinimumWidth = 6;
+            this.productID.Name = "productID";
+            this.productID.ReadOnly = true;
+            this.productID.Visible = false;
+            // 
+            // categoryID
+            // 
+            this.categoryID.DataPropertyName = "categoryID";
+            this.categoryID.HeaderText = "categoryID";
+            this.categoryID.MinimumWidth = 6;
+            this.categoryID.Name = "categoryID";
+            this.categoryID.ReadOnly = true;
+            this.categoryID.Visible = false;
+            this.categoryID.Width = 125;
+            // 
+            // productCategoryID
+            // 
+            this.productCategoryID.DataPropertyName = "productCategoryID";
+            this.productCategoryID.HeaderText = "productCategoryID";
+            this.productCategoryID.MinimumWidth = 6;
+            this.productCategoryID.Name = "productCategoryID";
+            this.productCategoryID.ReadOnly = true;
+            this.productCategoryID.Visible = false;
+            this.productCategoryID.Width = 125;
+            // 
+            // productName
+            // 
+            this.productName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.productName.DataPropertyName = "productName";
+            this.productName.HeaderText = "Name";
+            this.productName.MinimumWidth = 3;
+            this.productName.Name = "productName";
+            this.productName.ReadOnly = true;
+            // 
+            // unitPrice
+            // 
+            this.unitPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.unitPrice.DataPropertyName = "unitPrice";
+            this.unitPrice.HeaderText = "Unit Price";
+            this.unitPrice.MinimumWidth = 6;
+            this.unitPrice.Name = "unitPrice";
+            this.unitPrice.ReadOnly = true;
+            // 
+            // stock
+            // 
+            this.stock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.stock.DataPropertyName = "stock";
+            this.stock.HeaderText = "Stock";
+            this.stock.MinimumWidth = 6;
+            this.stock.Name = "stock";
+            this.stock.ReadOnly = true;
+            // 
+            // productCategory
+            // 
+            this.productCategory.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.productCategory.DataPropertyName = "productCategory";
+            this.productCategory.HeaderText = "Category";
+            this.productCategory.MinimumWidth = 6;
+            this.productCategory.Name = "productCategory";
+            this.productCategory.ReadOnly = true;
+            // 
+            // purchasePrice
+            // 
+            this.purchasePrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.purchasePrice.DataPropertyName = "purchasePrice";
+            this.purchasePrice.HeaderText = "Purchase Price";
+            this.purchasePrice.MinimumWidth = 6;
+            this.purchasePrice.Name = "purchasePrice";
+            this.purchasePrice.ReadOnly = true;
+            // 
+            // expireDate
+            // 
+            this.expireDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.expireDate.DataPropertyName = "expireDate";
+            this.expireDate.HeaderText = "Expire Date";
+            this.expireDate.MinimumWidth = 6;
+            this.expireDate.Name = "expireDate";
+            this.expireDate.ReadOnly = true;
+            // 
+            // ProductUnit
+            // 
+            this.ProductUnit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ProductUnit.DataPropertyName = "ProductUnit";
+            this.ProductUnit.HeaderText = "UNIT";
+            this.ProductUnit.MinimumWidth = 6;
+            this.ProductUnit.Name = "ProductUnit";
+            this.ProductUnit.ReadOnly = true;
+            // 
             // ProductControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -420,7 +420,7 @@ namespace SuperShop.App
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroButton btnAddCatagory;
         private MetroFramework.Controls.MetroButton btnAddUnit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productID;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryID;
         private System.Windows.Forms.DataGridViewTextBoxColumn productCategoryID;
         private System.Windows.Forms.DataGridViewTextBoxColumn productName;

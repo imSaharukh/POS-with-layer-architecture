@@ -15,6 +15,7 @@ namespace SuperShop.App
 {
     public partial class AddProductForm : MetroForm
     {
+        int productID = 0;
         bool isUpdate = false;
         ProductRepository productRepository = new ProductRepository();
         CallbackDelegate loadgridviewcallback;
@@ -30,6 +31,7 @@ namespace SuperShop.App
         {
             if(product !=null)
             {
+                isUpdate = true;
                 this.txtProductName.Text = product.productName;
                 this.txtUnitPrice.Text = product.unitPrice.ToString();
                 this.txtStock.Text = product.stock.ToString();
@@ -38,6 +40,7 @@ namespace SuperShop.App
                 this.cmbCategory.Text = product.categoryID.ToString();
                 this.dtExpireDate.Value = product.expireDate;
                 this.cmbUnit.Text = product.ProductUnit.ProductUnitName;
+                this.productID = product.productID;
 
 
             }    
@@ -98,12 +101,12 @@ namespace SuperShop.App
         {
 
         }
-        void updateProduct()
-        { }
+
 
         void CreateProduct()
         {
            Product product = new Product();
+            product.productID = this.productID;
             product.ProductUnit = new ProductUnit();
             product.productCategory = new ProductCategory();
             product.productName = this.txtProductName.Text;
@@ -114,12 +117,20 @@ namespace SuperShop.App
             product.stock = Convert.ToInt32(this.txtStock.Text);
             product.unitPrice = Convert.ToDouble(this.txtUnitPrice.Text);
             product.expireDate = this.dtExpireDate.Value;
+            //product.productID = 
             //Console.WriteLine(this.da)
-            var result = productRepository.CreateOne(product);
+            int? result = 0;
+            if (isUpdate) {
+                result = productRepository.UpdateOne(product);
+                Console.WriteLine("update: " + result);
+            } else
+            {
+                 result = productRepository.CreateOne(product);
+            }
 
             if (result == 1)
             {
-                MessageBox.Show("Product added");
+                MessageBox.Show(isUpdate?"Product updated":"Product added");
                 loadgridviewcallback();
                 Hide();
             }

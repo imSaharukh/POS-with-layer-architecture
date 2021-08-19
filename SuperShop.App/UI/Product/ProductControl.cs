@@ -55,6 +55,10 @@ namespace SuperShop.App
                 DataGridViewRow row = this.dgvProduct.SelectedRows[0];
                 Console.WriteLine(row.Cells[0].Value);
                 Product product = new Product();
+
+                var productID = Convert.ToInt32(row.Cells["productID"].Value);
+                Console.WriteLine("-> "+ productID);
+                product.productID = productID;
                 product.ProductUnit = new ProductUnit();
                 product.productCategory = new ProductCategory();
                 product.productName = row.Cells["productName"].Value.ToString();
