@@ -46,6 +46,9 @@ namespace SuperShop.App
         private void AddUserForm_Load(object sender, EventArgs e)
         {
             this.lblErrFirstName.Visible = false;
+            this.lblErrLastName.Visible = false;
+            this.lblErrUname.Visible = false;
+            this.lblErrPassword.Visible = false;
         }
 
         private void metroTextBox2_Click(object sender, EventArgs e)
@@ -161,7 +164,30 @@ namespace SuperShop.App
                 this.lblErrFirstName.Visible = true;
                 //Console.WriteLine("inside if");
             }
-         
+            if (string.IsNullOrEmpty(this.txtUsername.Text))
+            {
+
+                result = false;
+                this.lblErrUname.Text = "User Name can't be empty";
+                this.lblErrUname.Visible = true;
+                //Console.WriteLine("inside if");
+            }
+            if (string.IsNullOrEmpty(this.txtPassword.Text))
+            {
+
+                result = false;
+                this.lblErrPassword.Text = "Password can't be empty";
+                this.lblErrPassword.Visible = true;
+                //Console.WriteLine("inside if");
+            }
+            if (string.IsNullOrEmpty(this.txtLastName.Text))
+            {
+
+                result = false;
+                this.lblErrLastName.Text = "Last Name can't be empty";
+                this.lblErrLastName.Visible = true;
+                //Console.WriteLine("inside if");
+            }
             return result;
         }
 
@@ -169,6 +195,15 @@ namespace SuperShop.App
         {
             if (validate()) { CreateUser(); }
             
+        }
+
+        private void metroLabel6_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void metroLblErrUname_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
