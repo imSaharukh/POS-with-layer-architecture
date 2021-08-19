@@ -19,7 +19,7 @@ namespace SuperShop.Entity
 
         public DateTime expireDate { get; set; }
 
-        public int unit { get; set; }
+        public ProductUnit ProductUnitID { get; set; }
 
         public ProductCategory productCategoryID { get; set; }
     }
@@ -30,5 +30,14 @@ namespace SuperShop.Entity
         public int productCategoryID { get; set; }
 
         public ICollection<Product> users { get; set; }
-    } 
+    }
+
+
+    class ProductUnit
+    {
+        public string ProductUnitName { get; set; }
+        public int ProductUnitID { get; set; }
+
+        public ICollection<Product> users { get; set; }
+    }
 }

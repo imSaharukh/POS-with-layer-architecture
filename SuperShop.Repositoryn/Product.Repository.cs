@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SuperShop.Repository
 {
-    class Product
+    class ProductRepository
     {
     }
 }

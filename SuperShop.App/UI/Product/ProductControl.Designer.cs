@@ -37,13 +37,6 @@ namespace SuperShop.App
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroGrid2 = new MetroFramework.Controls.MetroGrid();
-            this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.txtSearchProduct = new MetroFramework.Controls.MetroTextBox();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
-            this.btnAddProductform = new MetroFramework.Controls.MetroButton();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +45,15 @@ namespace SuperShop.App
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UNIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
+            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.txtSearchProduct = new MetroFramework.Controls.MetroTextBox();
+            this.metroButton3 = new MetroFramework.Controls.MetroButton();
+            this.metroButton4 = new MetroFramework.Controls.MetroButton();
+            this.btnAddProductform = new MetroFramework.Controls.MetroButton();
+            this.btnAddUnit = new MetroFramework.Controls.MetroButton();
+            this.btnAddCatagory = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
@@ -65,9 +67,9 @@ namespace SuperShop.App
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(3, 106);
+            this.metroPanel1.Location = new System.Drawing.Point(3, 141);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(923, 481);
+            this.metroPanel1.Size = new System.Drawing.Size(861, 383);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -109,7 +111,7 @@ namespace SuperShop.App
             this.metroGrid2.EnableHeadersVisualStyles = false;
             this.metroGrid2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGrid2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid2.Location = new System.Drawing.Point(12, 25);
+            this.metroGrid2.Location = new System.Drawing.Point(3, 25);
             this.metroGrid2.Name = "metroGrid2";
             this.metroGrid2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -124,8 +126,65 @@ namespace SuperShop.App
             this.metroGrid2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid2.RowTemplate.Height = 24;
             this.metroGrid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid2.Size = new System.Drawing.Size(849, 437);
+            this.metroGrid2.Size = new System.Drawing.Size(858, 355);
             this.metroGrid2.TabIndex = 3;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "Name";
+            this.Column2.MinimumWidth = 3;
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "Unit Price";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.HeaderText = "Stock";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.HeaderText = "Category";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.HeaderText = "Purchase Price";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column7.HeaderText = "Expire Date";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            // 
+            // UNIT
+            // 
+            this.UNIT.HeaderText = "UNIT";
+            this.UNIT.MinimumWidth = 6;
+            this.UNIT.Name = "UNIT";
+            this.UNIT.ReadOnly = true;
+            this.UNIT.Width = 125;
             // 
             // metroGrid1
             // 
@@ -174,6 +233,8 @@ namespace SuperShop.App
             // 
             // metroPanel2
             // 
+            this.metroPanel2.Controls.Add(this.btnAddCatagory);
+            this.metroPanel2.Controls.Add(this.btnAddUnit);
             this.metroPanel2.Controls.Add(this.metroLabel1);
             this.metroPanel2.Controls.Add(this.txtSearchProduct);
             this.metroPanel2.Controls.Add(this.metroButton3);
@@ -184,7 +245,7 @@ namespace SuperShop.App
             this.metroPanel2.HorizontalScrollbarSize = 10;
             this.metroPanel2.Location = new System.Drawing.Point(3, 29);
             this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(861, 71);
+            this.metroPanel2.Size = new System.Drawing.Size(861, 106);
             this.metroPanel2.TabIndex = 1;
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
@@ -264,62 +325,27 @@ namespace SuperShop.App
             this.btnAddProductform.UseSelectable = true;
             this.btnAddProductform.Click += new System.EventHandler(this.btnAddProductform_Click);
             // 
-            // Column1
+            // btnAddUnit
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
+            this.btnAddUnit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnAddUnit.Location = new System.Drawing.Point(693, 64);
+            this.btnAddUnit.Name = "btnAddUnit";
+            this.btnAddUnit.Size = new System.Drawing.Size(156, 30);
+            this.btnAddUnit.TabIndex = 8;
+            this.btnAddUnit.Text = "Add New UNIT";
+            this.btnAddUnit.UseCustomBackColor = true;
+            this.btnAddUnit.UseSelectable = true;
             // 
-            // Column2
+            // btnAddCatagory
             // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "Name";
-            this.Column2.MinimumWidth = 3;
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "Unit Price";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "Stock";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.HeaderText = "Category";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column6.HeaderText = "Purchase Price";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column7.HeaderText = "Expire Date";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            // 
-            // UNIT
-            // 
-            this.UNIT.HeaderText = "UNIT";
-            this.UNIT.MinimumWidth = 6;
-            this.UNIT.Name = "UNIT";
-            this.UNIT.ReadOnly = true;
-            this.UNIT.Width = 125;
+            this.btnAddCatagory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnAddCatagory.Location = new System.Drawing.Point(524, 64);
+            this.btnAddCatagory.Name = "btnAddCatagory";
+            this.btnAddCatagory.Size = new System.Drawing.Size(163, 30);
+            this.btnAddCatagory.TabIndex = 9;
+            this.btnAddCatagory.Text = "Add New Catagory";
+            this.btnAddCatagory.UseCustomBackColor = true;
+            this.btnAddCatagory.UseSelectable = true;
             // 
             // ProductControl
             // 
@@ -358,5 +384,7 @@ namespace SuperShop.App
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn UNIT;
+        private MetroFramework.Controls.MetroButton btnAddCatagory;
+        private MetroFramework.Controls.MetroButton btnAddUnit;
     }
 }
