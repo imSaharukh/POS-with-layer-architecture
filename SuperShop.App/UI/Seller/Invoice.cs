@@ -41,13 +41,7 @@ namespace SuperShop.App.UI.Seller
             var productID = Convert.ToInt32(row.Cells["productID"].Value);
             if (!products.Contains(productID))
             {
-                //Console.WriteLine("inside if");
-                //products.Add(productID);
-                //var form = new invoiceProduct("asd", "asd", "Asd", productID);
-                //form.TopLevel = false;
-                //form.Show();
-                //this.flowLayoutItems.Controls.Add(form);
-                //form.Dock = DockStyle.Fill;
+                this.dgvInvoiceProduct.Rows.Insert(0, "one", "two", "three");
                
 
             }
