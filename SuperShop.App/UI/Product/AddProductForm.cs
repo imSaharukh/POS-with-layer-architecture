@@ -16,10 +16,13 @@ namespace SuperShop.App
     public partial class AddProductForm : MetroForm
     {
         ProductRepository productRepository = new ProductRepository();
-        public AddProductForm()
+        CallbackDelegate loadgridviewcallback;
+        public AddProductForm(CallbackDelegate loadgridviewcallback,Product product = null)
         {
             InitializeComponent();
             loadInitialData();
+
+            this.loadgridviewcallback = loadgridviewcallback;
         }
 
         void loadInitialData() {
@@ -100,12 +103,14 @@ namespace SuperShop.App
             if (result == 1)
             {
                 MessageBox.Show("Product added");
+                loadgridviewcallback();
+                Hide();
             }
             else
             {
                 MessageBox.Show("Somthing went wrong");
             }
-
+            
         }
 
         private void metroButton1_Click(object sender, EventArgs e)

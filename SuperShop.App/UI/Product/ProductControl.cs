@@ -15,6 +15,7 @@ namespace SuperShop.App
     {
 
         ProductRepository productRepository = new ProductRepository();
+       
         public ProductControl()
         {
             InitializeComponent();
@@ -36,7 +37,8 @@ namespace SuperShop.App
         }
         private void btnAddProductform_Click(object sender, EventArgs e)
         {
-            AddProductForm addProductForm = new AddProductForm();
+            CallbackDelegate callbackDelegate = new CallbackDelegate(loadGridView);
+            AddProductForm addProductForm = new AddProductForm(callbackDelegate);
             addProductForm.Show();
         }
     }
