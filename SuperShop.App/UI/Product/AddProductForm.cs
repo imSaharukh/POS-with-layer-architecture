@@ -1,4 +1,6 @@
 ﻿using MetroFramework.Forms;
+using SuperShop.Entity;
+using SuperShop.Repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,12 +15,19 @@ namespace SuperShop.App
 {
     public partial class AddProductForm : MetroForm
     {
+        ProductRepository productRepository = new ProductRepository();
         public AddProductForm()
         {
             InitializeComponent();
+            loadInitialData();
         }
 
+        void loadInitialData() {
 
+            this.cmbCategory.DataSource = productRepository.GellAllProductCatagory();
+            this.cmbUnit.DataSource = productRepository.GellAllProductUnits();
+        
+        }
         bool validate()
         {
             bool result = true;
@@ -54,40 +63,6 @@ namespace SuperShop.App
                 this.lblErrUnitPrice.Text = "Unit Price can't be empty";
                 this.lblErrUnitPrice.Visible = true;
             }
-            
-
-                //if (string.IsNullOrEmpty(this.txtFirstName.Text))
-                //{
-
-                //    result = false;
-                //    this.lblErrFirstName.Text = "First Name can't be empty";
-                //    this.lblErrFirstName.Visible = true;
-                //    //Console.WriteLine("inside if");
-                //}
-                //if (string.IsNullOrEmpty(this.txtUsername.Text))
-                //{
-
-                //    result = false;
-                //    this.lblErrUname.Text = "User Name can't be empty";
-                //    this.lblErrUname.Visible = true;
-                //    //Console.WriteLine("inside if");
-                //}
-                //if (string.IsNullOrEmpty(this.txtPassword.Text))
-                //{
-
-                //    result = false;
-                //    this.lblErrPassword.Text = "Password can't be empty";
-                //    this.lblErrPassword.Visible = true;
-                //    //Console.WriteLine("inside if");
-                //}
-                //if (string.IsNullOrEmpty(this.txtLastName.Text))
-                //{
-
-                //    result = false;
-                //    this.lblErrLastName.Text = "Last Name can't be empty";
-                //    this.lblErrLastName.Visible = true;
-                //    //Console.WriteLine("inside if");
-                //}
                 return result;
         }
         private void AddProductForm_Load(object sender, EventArgs e)
@@ -105,9 +80,40 @@ namespace SuperShop.App
 
         }
 
+
+        void CreateProduct()
+        {
+           Product product = new Product();
+            product.ProductUnit = new ProductUnit();
+            product.productCategory = new ProductCategory();
+            product.productName = this.txtProductName.Text;
+            product.purchasePrice = Convert.ToDouble(this.txtPurchasePrice.Text);
+            product.ProductUnit.ProductUnitName = this.cmbUnit.Text;
+           
+            product.productCategory.productCategoryName = this.cmbCategory.Text;
+            product.stock = Convert.ToInt32(this.txtStock.Text);
+            product.unitPrice = Convert.ToDouble(this.txtUnitPrice.Text);
+            product.expireDate = this.dtExpireDate.Value;
+            //Console.WriteLine(this.da)
+            var result = productRepository.CreateOne(product);
+
+            if (result == 1)
+            {
+                MessageBox.Show("Product added");
+            }
+            else
+            {
+                MessageBox.Show("Somthing went wrong");
+            }
+
+        }
+
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            validate();
+            if (validate())
+            {
+                CreateProduct();
+            }
         }
     }
 }

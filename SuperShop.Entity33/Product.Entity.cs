@@ -11,11 +11,11 @@ namespace SuperShop.Entity
         public int productID { get; set; }
         public string productName { get; set; }
         public int productCategoryID { get; set; }
-        public float unitPrice { get; set; }
+        public double unitPrice { get; set; }
 
         public int stock { get; set; }
         public int categoryID { get; set; }
-        public float purchasePrice { get; set; }
+        public double purchasePrice { get; set; }
 
         public DateTime expireDate { get; set; }
 

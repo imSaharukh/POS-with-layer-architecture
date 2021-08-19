@@ -34,12 +34,12 @@ namespace SuperShop.App
             this.lblErrProductName = new System.Windows.Forms.Label();
             this.txtProductName = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.cmbCategory = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.lblErrPrice = new System.Windows.Forms.Label();
             this.txtPurchasePrice = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
+            this.cmbUnit = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.lblErrStock = new System.Windows.Forms.Label();
             this.txtStock = new MetroFramework.Controls.MetroTextBox();
@@ -47,7 +47,7 @@ namespace SuperShop.App
             this.lblErrUnitPrice = new System.Windows.Forms.Label();
             this.txtUnitPrice = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
+            this.dtExpireDate = new MetroFramework.Controls.MetroDateTime();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -58,12 +58,12 @@ namespace SuperShop.App
             this.flowLayoutPanel1.Controls.Add(this.lblErrProductName);
             this.flowLayoutPanel1.Controls.Add(this.txtProductName);
             this.flowLayoutPanel1.Controls.Add(this.metroLabel4);
-            this.flowLayoutPanel1.Controls.Add(this.metroComboBox1);
+            this.flowLayoutPanel1.Controls.Add(this.cmbCategory);
             this.flowLayoutPanel1.Controls.Add(this.metroLabel5);
             this.flowLayoutPanel1.Controls.Add(this.lblErrPrice);
             this.flowLayoutPanel1.Controls.Add(this.txtPurchasePrice);
             this.flowLayoutPanel1.Controls.Add(this.metroLabel7);
-            this.flowLayoutPanel1.Controls.Add(this.metroComboBox2);
+            this.flowLayoutPanel1.Controls.Add(this.cmbUnit);
             this.flowLayoutPanel1.Controls.Add(this.metroLabel3);
             this.flowLayoutPanel1.Controls.Add(this.lblErrStock);
             this.flowLayoutPanel1.Controls.Add(this.txtStock);
@@ -71,7 +71,7 @@ namespace SuperShop.App
             this.flowLayoutPanel1.Controls.Add(this.lblErrUnitPrice);
             this.flowLayoutPanel1.Controls.Add(this.txtUnitPrice);
             this.flowLayoutPanel1.Controls.Add(this.metroLabel6);
-            this.flowLayoutPanel1.Controls.Add(this.metroDateTime1);
+            this.flowLayoutPanel1.Controls.Add(this.dtExpireDate);
             this.flowLayoutPanel1.Controls.Add(this.metroButton1);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.ForeColor = System.Drawing.Color.Red;
@@ -142,17 +142,17 @@ namespace SuperShop.App
             this.metroLabel4.TabIndex = 22;
             this.metroLabel4.Text = "Category";
             // 
-            // metroComboBox1
+            // cmbCategory
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.IntegralHeight = false;
-            this.metroComboBox1.ItemHeight = 24;
-            this.metroComboBox1.Location = new System.Drawing.Point(3, 93);
-            this.metroComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(192, 30);
-            this.metroComboBox1.TabIndex = 31;
-            this.metroComboBox1.UseSelectable = true;
+            this.cmbCategory.FormattingEnabled = true;
+            this.cmbCategory.IntegralHeight = false;
+            this.cmbCategory.ItemHeight = 24;
+            this.cmbCategory.Location = new System.Drawing.Point(3, 93);
+            this.cmbCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbCategory.Name = "cmbCategory";
+            this.cmbCategory.Size = new System.Drawing.Size(192, 30);
+            this.cmbCategory.TabIndex = 31;
+            this.cmbCategory.UseSelectable = true;
             // 
             // metroLabel5
             // 
@@ -214,17 +214,17 @@ namespace SuperShop.App
             this.metroLabel7.TabIndex = 32;
             this.metroLabel7.Text = "UNIT";
             // 
-            // metroComboBox2
+            // cmbUnit
             // 
-            this.metroComboBox2.FormattingEnabled = true;
-            this.metroComboBox2.IntegralHeight = false;
-            this.metroComboBox2.ItemHeight = 24;
-            this.metroComboBox2.Location = new System.Drawing.Point(3, 217);
-            this.metroComboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.metroComboBox2.Name = "metroComboBox2";
-            this.metroComboBox2.Size = new System.Drawing.Size(192, 30);
-            this.metroComboBox2.TabIndex = 39;
-            this.metroComboBox2.UseSelectable = true;
+            this.cmbUnit.FormattingEnabled = true;
+            this.cmbUnit.IntegralHeight = false;
+            this.cmbUnit.ItemHeight = 24;
+            this.cmbUnit.Location = new System.Drawing.Point(3, 217);
+            this.cmbUnit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbUnit.Name = "cmbUnit";
+            this.cmbUnit.Size = new System.Drawing.Size(192, 30);
+            this.cmbUnit.TabIndex = 39;
+            this.cmbUnit.UseSelectable = true;
             // 
             // metroLabel3
             // 
@@ -337,14 +337,14 @@ namespace SuperShop.App
             this.metroLabel6.TabIndex = 29;
             this.metroLabel6.Text = "Expire Date";
             // 
-            // metroDateTime1
+            // dtExpireDate
             // 
-            this.metroDateTime1.Location = new System.Drawing.Point(3, 412);
-            this.metroDateTime1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 30);
-            this.metroDateTime1.Name = "metroDateTime1";
-            this.metroDateTime1.Size = new System.Drawing.Size(192, 30);
-            this.metroDateTime1.TabIndex = 30;
+            this.dtExpireDate.Location = new System.Drawing.Point(3, 412);
+            this.dtExpireDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtExpireDate.MinimumSize = new System.Drawing.Size(0, 30);
+            this.dtExpireDate.Name = "dtExpireDate";
+            this.dtExpireDate.Size = new System.Drawing.Size(192, 30);
+            this.dtExpireDate.TabIndex = 30;
             // 
             // metroButton1
             // 
@@ -381,7 +381,7 @@ namespace SuperShop.App
         private System.Windows.Forms.Label lblErrProductName;
         private MetroFramework.Controls.MetroTextBox txtProductName;
         private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroComboBox cmbCategory;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private System.Windows.Forms.Label lblErrPrice;
         private MetroFramework.Controls.MetroTextBox txtPurchasePrice;
@@ -393,8 +393,8 @@ namespace SuperShop.App
         private System.Windows.Forms.Label lblErrUnitPrice;
         private MetroFramework.Controls.MetroTextBox txtUnitPrice;
         private MetroFramework.Controls.MetroLabel metroLabel6;
-        private MetroFramework.Controls.MetroDateTime metroDateTime1;
+        private MetroFramework.Controls.MetroDateTime dtExpireDate;
         private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroComboBox metroComboBox2;
+        private MetroFramework.Controls.MetroComboBox cmbUnit;
     }
 }

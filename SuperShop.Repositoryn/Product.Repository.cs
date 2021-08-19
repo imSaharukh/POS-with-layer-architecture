@@ -15,8 +15,8 @@ namespace SuperShop.Repository
             //var role = user.userRole.RoleName;
             var ProductUnitID = DataAccess.SelectQuery<ProductUnit>("select * from productUnits where ProductUnitName = @ProductUnitName", new { product.ProductUnit.ProductUnitName })[0].ProductUnitID;
 
-
-            var result = DataAccess.sqlcon.Execute(@"insert into products (productName,unitPrice,stock,productCategoryID,purchasePrice,expireDate,ProductUnitID) values (@productName,@unitPrice,@stock,@productCategoryID,@purchasePrice,@expireDate,@ProductUnitID);", new {product.productName, product.unitPrice, product.stock, product.productCategoryID,product.purchasePrice,product.expireDate, ProductUnitID });
+            var productCategoryID = DataAccess.SelectQuery<ProductCategory>("select * from productCategories where productCategoryName = @productCategoryName", new { product.productCategory.productCategoryName })[0].productCategoryID;
+            var result = DataAccess.sqlcon.Execute(@"insert into products (productName,unitPrice,stock,productCategoryID,purchasePrice,expireDate,ProductUnitID) values (@productName,@unitPrice,@stock,@productCategoryID,@purchasePrice,@expireDate,@ProductUnitID);", new {product.productName, product.unitPrice, product.stock, productCategoryID,product.purchasePrice,product.expireDate, ProductUnitID });
 
 
             return result;
@@ -29,6 +29,18 @@ namespace SuperShop.Repository
                     product.ProductUnit = unit;
                     return product; }, splitOn: "ProductUnitID,productCategoryID").Distinct()
         .ToList();
+            return result;
+        }
+        public List<ProductCategory> GellAllProductCatagory()
+        {
+            var result = DataAccess.SelectQuery<ProductCategory>("select * from productCategories");
+
+            return result;
+        }
+        public List<ProductUnit> GellAllProductUnits()
+        {
+            var result = DataAccess.SelectQuery<ProductUnit>("select * from productUnits");
+
             return result;
         }
     }
