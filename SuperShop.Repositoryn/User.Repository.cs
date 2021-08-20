@@ -69,6 +69,12 @@ namespace SuperShop.Repository
 
             return result;
         }
+
+        public List<User> GetAllSeller()
+        {
+             var result = DataAccess.SelectQuery<User>("select * from users where roleID = 2");
+            return result;
+        }
     }
 
  

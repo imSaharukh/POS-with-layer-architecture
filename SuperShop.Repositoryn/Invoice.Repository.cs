@@ -44,19 +44,29 @@ namespace SuperShop.Repository
 
 
         }
-
-       public List<Invoice> GetAll()
+        public List<Invoice> GetByUsernameAndDateRange(string username,string DateForm , string DateTo)
+        {
+            var result = DataAccess.sqlcon.Query<Invoice>(@"select * from invoice 
+            where SalesmanUsername = @username and (PurchaseDate <= @DateTo AND PurchaseDate >= @DateForm);", new { username , DateTo , DateForm }).Distinct()
+             .ToList();
+            return result;
+        }
+        public List<Invoice> GetAll()
         {
             var result = DataAccess.sqlcon.Query<Invoice>(@"select * from invoice;").Distinct()
              .ToList();
+
+            Console.WriteLine("GetAll --> " +result.Count);
             return result;
         }
 
         public List<Invoice> SearchByUserName(string search)
         {
-            search = "%" +search +"%";
-            var result = DataAccess.sqlcon.Query<Invoice>(@"select * from invoice where SelsmanUsername like @search;" , new { search}).Distinct()
+           
+            var result = DataAccess.sqlcon.Query<Invoice>(@"select * from invoice where SalesmanUsername = @search;", new { search}).Distinct()
              .ToList();
+
+            Console.WriteLine("SearchByUserName --> " + result.Count);
             return result;
         }
     }
