@@ -385,7 +385,6 @@ namespace SuperShop.App.UI.Seller
             this.dgvInvoiceProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvInvoiceProduct.Location = new System.Drawing.Point(3, 99);
             this.dgvInvoiceProduct.Name = "dgvInvoiceProduct";
-            this.dgvInvoiceProduct.ReadOnly = true;
             this.dgvInvoiceProduct.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
@@ -571,7 +570,6 @@ namespace SuperShop.App.UI.Seller
             this.ID.HeaderText = "ID";
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
             this.ID.Visible = false;
             this.ID.Width = 125;
             // 
@@ -589,7 +587,6 @@ namespace SuperShop.App.UI.Seller
             this.Qty.HeaderText = "Qty";
             this.Qty.MinimumWidth = 6;
             this.Qty.Name = "Qty";
-            this.Qty.ReadOnly = true;
             // 
             // Price
             // 

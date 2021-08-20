@@ -125,7 +125,7 @@ namespace SuperShop.App.UI.Seller
             Total = 0;
             foreach (DataGridViewRow item in this.dgvInvoiceProduct.Rows)
             {
-                Total += Convert.ToDouble(item.Cells[1].Value) * Convert.ToDouble(item.Cells[2].Value);
+                Total += Convert.ToDouble(item.Cells[2].Value) * Convert.ToDouble(item.Cells[3].Value);
             }
             lblTotal.Text = Total.ToString();
         }
