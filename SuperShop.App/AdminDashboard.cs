@@ -89,6 +89,7 @@ namespace SuperShop.App
         private void btnPrint_Click(object sender, EventArgs e)
         {
             UI.MiniStatement.SalesSlip salesSlip = new UI.MiniStatement.SalesSlip();
+            salesSlip.Location = new Point(0, 0);
             salesSlip.Show();
         }
     }
