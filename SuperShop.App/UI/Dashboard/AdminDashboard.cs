@@ -43,11 +43,11 @@ namespace SuperShop.App
         }
         void showControll(Control control) {
 
-            this.displayPanel.Controls.Clear();
+            this.btnLogout.Controls.Clear();
             control.Dock = DockStyle.Fill;
             control.BringToFront();
             control.Focus();
-            this.displayPanel.Controls.Add(control);
+            this.btnLogout.Controls.Add(control);
         
         }
 
@@ -59,11 +59,11 @@ namespace SuperShop.App
         void showProuductControl(Control control2)
         {
 
-            this.displayPanel.Controls.Clear();
+            this.btnLogout.Controls.Clear();
             control2.Dock = DockStyle.Fill;
             control2.BringToFront();
             control2.Focus();
-            this.displayPanel.Controls.Add(control2);
+            this.btnLogout.Controls.Add(control2);
 
         }
 
@@ -74,11 +74,11 @@ namespace SuperShop.App
         }
         void showReportControl(Control control3)
         {
-            this.displayPanel.Controls.Clear();
+            this.btnLogout.Controls.Clear();
             control3.Dock = DockStyle.Fill;
             control3.BringToFront();
             control3.Focus();
-            this.displayPanel.Controls.Add(control3);
+            this.btnLogout.Controls.Add(control3);
         }
 
         private void btnSalesReport_Click(object sender, EventArgs e)
@@ -93,9 +93,7 @@ namespace SuperShop.App
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            UI.MiniStatement.SalesSlip salesSlip = new UI.MiniStatement.SalesSlip();
-            salesSlip.Location = new Point(0, 0);
-            salesSlip.Show();
+           
         }
     }
 }

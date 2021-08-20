@@ -108,10 +108,10 @@
       <DependentUpon>AddProductForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Delegates.cs" />
-    <Compile Include="ReportControl.cs">
+    <Compile Include="UI\Seller\ReportControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ReportControl.Designer.cs">
+    <Compile Include="UI\Seller\ReportControl.Designer.cs">
       <DependentUpon>ReportControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Product\AddUnit.cs">
@@ -173,7 +173,7 @@
     <EmbeddedResource Include="UI\Product\AddProductForm.resx">
       <DependentUpon>AddProductForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportControl.resx">
+    <EmbeddedResource Include="UI\Seller\ReportControl.resx">
       <DependentUpon>ReportControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Product\AddUnit.resx">

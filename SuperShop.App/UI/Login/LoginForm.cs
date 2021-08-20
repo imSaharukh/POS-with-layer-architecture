@@ -53,8 +53,8 @@ namespace SuperShop.App
             {
                 Console.WriteLine("inside if");
                 this.Hide();
-
-                SellerDashboard sellerboard = new SellerDashboard();
+               
+                SellerDashboard sellerboard = new SellerDashboard(this.txtUsername.Text);
                 sellerboard.Show();
             }
             Console.WriteLine(result?.userRole);

@@ -157,9 +157,11 @@ namespace SuperShop.App.UI.Seller
            var result =  InvoiceRepository.CreateOne(invoice);
             if (result == 1)
             {
-                MessageBox.Show ("Product updated");
-            
-                Hide();
+                UI.MiniStatement.SalesSlip salesSlip = new UI.MiniStatement.SalesSlip();
+                salesSlip.Location = new Point(0, 0);
+                salesSlip.Show();
+
+                //Hide();
             }
             else
             {
@@ -175,6 +177,13 @@ namespace SuperShop.App.UI.Seller
         private void metroPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnClearAll_Click(object sender, EventArgs e)
+        {
+            this.dgvInvoiceProduct.Rows.Clear();
+            CalculateTotal();
+            CalculateSubTotal();
         }
     }
 }

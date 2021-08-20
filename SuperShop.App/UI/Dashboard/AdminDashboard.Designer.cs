@@ -29,34 +29,32 @@ namespace SuperShop.App
         /// </summary>
         private void InitializeComponent()
         {
-            this.displayPanel = new MetroFramework.Controls.MetroPanel();
+            this.btnLogout = new MetroFramework.Controls.MetroPanel();
             this.btnUser = new MetroFramework.Controls.MetroButton();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.btnStats = new MetroFramework.Controls.MetroButton();
             this.metroButton5 = new MetroFramework.Controls.MetroButton();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.btnSalesReport = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.btnPrint = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // displayPanel
+            // btnLogout
             // 
-            this.displayPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.displayPanel.HorizontalScrollbarBarColor = true;
-            this.displayPanel.HorizontalScrollbarHighlightOnWheel = false;
-            this.displayPanel.HorizontalScrollbarSize = 10;
-            this.displayPanel.Location = new System.Drawing.Point(220, 60);
-            this.displayPanel.Name = "displayPanel";
-            this.displayPanel.Size = new System.Drawing.Size(868, 527);
-            this.displayPanel.TabIndex = 1;
-            this.displayPanel.VerticalScrollbarBarColor = true;
-            this.displayPanel.VerticalScrollbarHighlightOnWheel = false;
-            this.displayPanel.VerticalScrollbarSize = 10;
-            this.displayPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnLogout.HorizontalScrollbarBarColor = true;
+            this.btnLogout.HorizontalScrollbarHighlightOnWheel = false;
+            this.btnLogout.HorizontalScrollbarSize = 10;
+            this.btnLogout.Location = new System.Drawing.Point(220, 60);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(868, 527);
+            this.btnLogout.TabIndex = 1;
+            this.btnLogout.VerticalScrollbarBarColor = true;
+            this.btnLogout.VerticalScrollbarHighlightOnWheel = false;
+            this.btnLogout.VerticalScrollbarSize = 10;
+            this.btnLogout.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
             // 
             // btnUser
             // 
@@ -98,8 +96,6 @@ namespace SuperShop.App
             // 
             // metroPanel1
             // 
-            this.metroPanel1.Controls.Add(this.btnPrint);
-            this.metroPanel1.Controls.Add(this.metroButton2);
             this.metroPanel1.Controls.Add(this.btnSalesReport);
             this.metroPanel1.Controls.Add(this.metroLabel1);
             this.metroPanel1.Controls.Add(this.metroButton1);
@@ -119,16 +115,6 @@ namespace SuperShop.App
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
-            // 
-            // metroButton2
-            // 
-            this.metroButton2.Location = new System.Drawing.Point(23, 286);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(153, 23);
-            this.metroButton2.TabIndex = 10;
-            this.metroButton2.Text = "Sales";
-            this.metroButton2.UseSelectable = true;
-            this.metroButton2.Click += new System.EventHandler(this.btnSales_Click);
             // 
             // btnSalesReport
             // 
@@ -158,22 +144,12 @@ namespace SuperShop.App
             this.metroButton1.Text = "Log Out";
             this.metroButton1.UseSelectable = true;
             // 
-            // btnPrint
-            // 
-            this.btnPrint.Location = new System.Drawing.Point(23, 333);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(153, 23);
-            this.btnPrint.TabIndex = 11;
-            this.btnPrint.Text = "Print Slip";
-            this.btnPrint.UseSelectable = true;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1108, 607);
-            this.Controls.Add(this.displayPanel);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.metroPanel1);
             this.Name = "AdminDashboard";
             this.Text = "AdminDashboard";
@@ -185,7 +161,7 @@ namespace SuperShop.App
         }
 
         #endregion
-        private MetroFramework.Controls.MetroPanel displayPanel;
+        private MetroFramework.Controls.MetroPanel btnLogout;
         private MetroFramework.Controls.MetroButton btnUser;
         private MetroFramework.Controls.MetroButton metroButton3;
         private MetroFramework.Controls.MetroButton btnStats;
@@ -194,7 +170,5 @@ namespace SuperShop.App
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroButton btnSalesReport;
-        private MetroFramework.Controls.MetroButton metroButton2;
-        private MetroFramework.Controls.MetroButton btnPrint;
     }
 }

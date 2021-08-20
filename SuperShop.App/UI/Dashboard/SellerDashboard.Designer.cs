@@ -29,97 +29,114 @@ namespace SuperShop.App.UI.Dashboard
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.Salesdisplay = new MetroFramework.Controls.MetroPanel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.btnSalesReport = new MetroFramework.Controls.MetroButton();
-            this.btnLogOut = new MetroFramework.Controls.MetroButton();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.btnSales = new MetroFramework.Controls.MetroButton();
+            this.btnLogOut = new MetroFramework.Controls.MetroButton();
+            this.btnSalesReport = new MetroFramework.Controls.MetroButton();
             this.metroPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // metroPanel1
+            // Salesdisplay
             // 
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 8;
-            this.metroPanel1.Location = new System.Drawing.Point(172, 54);
-            this.metroPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(642, 421);
-            this.metroPanel1.TabIndex = 0;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 8;
+            this.Salesdisplay.HorizontalScrollbarBarColor = true;
+            this.Salesdisplay.HorizontalScrollbarHighlightOnWheel = false;
+            this.Salesdisplay.HorizontalScrollbarSize = 10;
+            this.Salesdisplay.Location = new System.Drawing.Point(229, 66);
+            this.Salesdisplay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Salesdisplay.Name = "Salesdisplay";
+            this.Salesdisplay.Size = new System.Drawing.Size(856, 518);
+            this.Salesdisplay.TabIndex = 0;
+            this.Salesdisplay.VerticalScrollbarBarColor = true;
+            this.Salesdisplay.VerticalScrollbarHighlightOnWheel = false;
+            this.Salesdisplay.VerticalScrollbarSize = 11;
             // 
             // metroPanel2
             // 
+            this.metroPanel2.Controls.Add(this.metroLabel1);
             this.metroPanel2.Controls.Add(this.btnSales);
             this.metroPanel2.Controls.Add(this.btnLogOut);
             this.metroPanel2.Controls.Add(this.btnSalesReport);
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 8;
-            this.metroPanel2.Location = new System.Drawing.Point(17, 54);
-            this.metroPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroPanel2.HorizontalScrollbarSize = 10;
+            this.metroPanel2.Location = new System.Drawing.Point(23, 66);
+            this.metroPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(150, 421);
+            this.metroPanel2.Size = new System.Drawing.Size(200, 518);
             this.metroPanel2.TabIndex = 1;
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 8;
+            this.metroPanel2.VerticalScrollbarSize = 11;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(3, 488);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(55, 20);
+            this.metroLabel1.TabIndex = 8;
+            this.metroLabel1.Text = "Version";
+            // 
+            // btnSales
+            // 
+            this.btnSales.Location = new System.Drawing.Point(29, 18);
+            this.btnSales.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSales.Name = "btnSales";
+            this.btnSales.Size = new System.Drawing.Size(153, 23);
+            this.btnSales.TabIndex = 7;
+            this.btnSales.Text = "Sales";
+            this.btnSales.UseSelectable = true;
+            this.btnSales.Click += new System.EventHandler(this.btnSales_Click);
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.Location = new System.Drawing.Point(29, 454);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(153, 23);
+            this.btnLogOut.TabIndex = 5;
+            this.btnLogOut.Text = "Logout";
+            this.btnLogOut.UseSelectable = true;
             // 
             // btnSalesReport
             // 
-            this.btnSalesReport.Location = new System.Drawing.Point(22, 53);
+            this.btnSalesReport.Location = new System.Drawing.Point(29, 75);
+            this.btnSalesReport.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalesReport.Name = "btnSalesReport";
-            this.btnSalesReport.Size = new System.Drawing.Size(115, 19);
+            this.btnSalesReport.Size = new System.Drawing.Size(153, 23);
             this.btnSalesReport.TabIndex = 4;
             this.btnSalesReport.Text = "Sales Report";
             this.btnSalesReport.UseSelectable = true;
             this.btnSalesReport.Click += new System.EventHandler(this.btnSalesReport_Click);
             // 
-            // btnLogOut
-            // 
-            this.btnLogOut.Location = new System.Drawing.Point(22, 369);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(115, 19);
-            this.btnLogOut.TabIndex = 5;
-            this.btnLogOut.Text = "Logout";
-            this.btnLogOut.UseSelectable = true;
-            // 
-            // btnSales
-            // 
-            this.btnSales.Location = new System.Drawing.Point(22, 15);
-            this.btnSales.Name = "btnSales";
-            this.btnSales.Size = new System.Drawing.Size(115, 19);
-            this.btnSales.TabIndex = 7;
-            this.btnSales.Text = "Sales";
-            this.btnSales.UseSelectable = true;
-            // 
             // SellerDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 493);
+            this.ClientSize = new System.Drawing.Size(1108, 607);
             this.Controls.Add(this.metroPanel2);
-            this.Controls.Add(this.metroPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.Salesdisplay);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "SellerDashboard";
-            this.Padding = new System.Windows.Forms.Padding(15, 49, 15, 16);
+            this.Padding = new System.Windows.Forms.Padding(20, 74, 20, 20);
             this.Text = "Seller Dashboard";
             this.Load += new System.EventHandler(this.SellerDashboard_Load);
             this.metroPanel2.ResumeLayout(false);
+            this.metroPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private MetroFramework.Controls.MetroPanel metroPanel1;
+        private MetroFramework.Controls.MetroPanel Salesdisplay;
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private MetroFramework.Controls.MetroButton btnLogOut;
         private MetroFramework.Controls.MetroButton btnSalesReport;
         private MetroFramework.Controls.MetroButton btnSales;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
     }
 }
