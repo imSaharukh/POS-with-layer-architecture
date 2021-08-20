@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,7 +41,8 @@ namespace SuperShop.App.UI.MiniStatement
             // printDocument1.Print(this,printDocument1.PrintPage())
             var Bitmap = new System.Drawing.Bitmap(this.Width, this.Height);
             this.DrawToBitmap(Bitmap, this.Bounds);
-            Bitmap.Save("Shium.jpg",ImageFormat.Jpeg)
+            Bitmap.Save("Shium.jpg", ImageFormat.Jpeg);
+            Bitmap.Dispose();
         }
 
         
