@@ -119,14 +119,9 @@ namespace SuperShop.App.UI.Seller
             CalculateSubTotal();
         }
 
-        void CalculateDiscount()
-        {
-            SubTotal = Total - Discount;
-
-        }
+ 
         void CalculateTotal()
         {
-           // this.dgvInvoiceProduct.Rows.
             Total = 0;
             foreach (DataGridViewRow item in this.dgvInvoiceProduct.Rows)
             {
@@ -138,7 +133,8 @@ namespace SuperShop.App.UI.Seller
         {
             SubTotal = 0;
             CalculateTotal();
-            lblSubTotal.Text = (Total - Convert.ToDouble(String.IsNullOrEmpty(this.txtBoxDiscount.Text) ? "0":this.txtBoxDiscount.Text)).ToString();
+             this.SubTotal = Total - Convert.ToDouble(String.IsNullOrEmpty(this.txtBoxDiscount.Text) ? "0" : this.txtBoxDiscount.Text);
+            lblSubTotal.Text = (SubTotal).ToString();
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -146,6 +142,9 @@ namespace SuperShop.App.UI.Seller
             Invoice invoice = new Invoice();
             invoice.SalesmanUsername = Username;
             invoice.InvoiceItems =new List<InvoiceItem>();
+            invoice.TotalPrice = this.Total;
+            invoice.SubTotal = this.SubTotal;
+            invoice.Discount = this.Discount;
             foreach (DataGridViewRow item in this.dgvInvoiceProduct.Rows)
             {
                 var product = new InvoiceItem();
@@ -182,7 +181,7 @@ namespace SuperShop.App.UI.Seller
         private void btnClearAll_Click(object sender, EventArgs e)
         {
             this.dgvInvoiceProduct.Rows.Clear();
-            CalculateTotal();
+           
             CalculateSubTotal();
         }
     }

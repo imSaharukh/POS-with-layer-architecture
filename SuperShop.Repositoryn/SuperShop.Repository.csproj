@@ -37,6 +37,9 @@
     <Reference Include="Dapper.SimpleCRUD, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.SimpleCRUD.2.3.0\lib\netstandard2.0\Dapper.SimpleCRUD.dll</HintPath>
     </Reference>
+    <Reference Include="shortid, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\shortid.3.0.1\lib\netstandard1.0\shortid.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />

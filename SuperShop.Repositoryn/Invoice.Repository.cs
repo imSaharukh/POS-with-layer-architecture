@@ -1,4 +1,6 @@
 ﻿using Dapper;
+using shortid;
+using shortid.Configuration;
 using SuperShop.Data;
 using SuperShop.Entity;
 using System;
@@ -13,13 +15,14 @@ namespace SuperShop.Repository
     {
         public int? CreateOne(Invoice invoice) {
 
-            //var ProductUnitID = DataAccess.SelectQuery<ProductUnit>("select * from productUnits where ProductUnitName = @ProductUnitName",
-            //new { product.ProductUnit.ProductUnitName })[0].ProductUnitID;
+            //var invoiceID = Guid.NewGuid().ToString();
 
-            //var productCategoryID = DataAccess.SelectQuery<ProductCategory>("select * from productCategories where " +
-            //    "productCategoryName = @productCategoryName", new { product.productCategory.productCategoryName })[0].productCategoryID;
-            var invoiceID = Guid.NewGuid().ToString();
-
+            var options = new GenerationOptions
+            {
+                Length = 9
+            };
+            string invoiceID = ShortId.Generate(options);
+            invoice.PurchaseDate = DateTime.Now;
             foreach (var item in invoice.InvoiceItems)
             {
                 DataAccess.DrmQuery(@"insert into invoiceItems (invoiceID,productID,qty) 
@@ -40,6 +43,21 @@ namespace SuperShop.Repository
             return result;
 
 
+        }
+
+       public List<Invoice> GetAll()
+        {
+            var result = DataAccess.sqlcon.Query<Invoice>(@"select * from invoice;").Distinct()
+             .ToList();
+            return result;
+        }
+
+        public List<Invoice> SearchByUserName(string search)
+        {
+            search = "%" +search +"%";
+            var result = DataAccess.sqlcon.Query<Invoice>(@"select * from invoice where SelsmanUsername like @search;" , new { search}).Distinct()
+             .ToList();
+            return result;
         }
     }
 }

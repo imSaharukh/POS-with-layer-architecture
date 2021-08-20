@@ -40,13 +40,13 @@ namespace SuperShop.App.UI.Seller
             this.txtProductQty = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.txtSearch = new MetroFramework.Controls.MetroTextBox();
-            this.btnClearAll = new MetroFramework.Controls.MetroButton();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.btnCartItemRemove = new MetroFramework.Controls.MetroButton();
             this.txtBoxDiscount = new MetroFramework.Controls.MetroTextBox();
+            this.btnClearAll = new MetroFramework.Controls.MetroButton();
             this.lblSubTotal = new MetroFramework.Controls.MetroLabel();
             this.lblTotal = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
@@ -179,18 +179,6 @@ namespace SuperShop.App.UI.Seller
             this.txtSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txtSearch.TextChanged += new System.EventHandler(this.search_changed);
             // 
-            // btnClearAll
-            // 
-            this.btnClearAll.BackColor = System.Drawing.Color.Aqua;
-            this.btnClearAll.Location = new System.Drawing.Point(30, 33);
-            this.btnClearAll.Name = "btnClearAll";
-            this.btnClearAll.Size = new System.Drawing.Size(112, 23);
-            this.btnClearAll.TabIndex = 7;
-            this.btnClearAll.Text = "Clear All";
-            this.btnClearAll.UseCustomBackColor = true;
-            this.btnClearAll.UseSelectable = true;
-            this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
-            // 
             // metroButton1
             // 
             this.metroButton1.Location = new System.Drawing.Point(212, 37);
@@ -219,9 +207,9 @@ namespace SuperShop.App.UI.Seller
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(573, 4);
+            this.metroPanel2.Location = new System.Drawing.Point(573, 0);
             this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(301, 520);
+            this.metroPanel2.Size = new System.Drawing.Size(301, 524);
             this.metroPanel2.TabIndex = 5;
             this.metroPanel2.UseCustomBackColor = true;
             this.metroPanel2.VerticalScrollbarBarColor = true;
@@ -314,6 +302,18 @@ namespace SuperShop.App.UI.Seller
             this.txtBoxDiscount.TextChanged += new System.EventHandler(this.DiscountChanged);
             this.txtBoxDiscount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.QtyKeyPress);
             // 
+            // btnClearAll
+            // 
+            this.btnClearAll.BackColor = System.Drawing.Color.Aqua;
+            this.btnClearAll.Location = new System.Drawing.Point(30, 33);
+            this.btnClearAll.Name = "btnClearAll";
+            this.btnClearAll.Size = new System.Drawing.Size(112, 23);
+            this.btnClearAll.TabIndex = 7;
+            this.btnClearAll.Text = "Clear All";
+            this.btnClearAll.UseCustomBackColor = true;
+            this.btnClearAll.UseSelectable = true;
+            this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
+            // 
             // lblSubTotal
             // 
             this.lblSubTotal.AutoSize = true;
@@ -321,7 +321,7 @@ namespace SuperShop.App.UI.Seller
             this.lblSubTotal.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblSubTotal.Location = new System.Drawing.Point(125, 386);
             this.lblSubTotal.Name = "lblSubTotal";
-            this.lblSubTotal.Size = new System.Drawing.Size(17, 20);
+            this.lblSubTotal.Size = new System.Drawing.Size(18, 20);
             this.lblSubTotal.TabIndex = 13;
             this.lblSubTotal.Text = "0";
             this.lblSubTotal.UseCustomBackColor = true;
@@ -333,7 +333,7 @@ namespace SuperShop.App.UI.Seller
             this.lblTotal.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblTotal.Location = new System.Drawing.Point(125, 320);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(17, 20);
+            this.lblTotal.Size = new System.Drawing.Size(18, 20);
             this.lblTotal.TabIndex = 12;
             this.lblTotal.Text = "0";
             this.lblTotal.UseCustomBackColor = true;
