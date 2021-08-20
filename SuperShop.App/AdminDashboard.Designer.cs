@@ -35,10 +35,11 @@ namespace SuperShop.App
             this.btnStats = new MetroFramework.Controls.MetroButton();
             this.metroButton5 = new MetroFramework.Controls.MetroButton();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.btnSalesReport = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.btnPrint = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,7 +85,6 @@ namespace SuperShop.App
             this.btnStats.TabIndex = 5;
             this.btnStats.Text = "Statistics";
             this.btnStats.UseSelectable = true;
-
             // 
             // metroButton5
             // 
@@ -98,6 +98,7 @@ namespace SuperShop.App
             // 
             // metroPanel1
             // 
+            this.metroPanel1.Controls.Add(this.btnPrint);
             this.metroPanel1.Controls.Add(this.metroButton2);
             this.metroPanel1.Controls.Add(this.btnSalesReport);
             this.metroPanel1.Controls.Add(this.metroLabel1);
@@ -118,6 +119,16 @@ namespace SuperShop.App
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.Location = new System.Drawing.Point(23, 286);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(153, 23);
+            this.metroButton2.TabIndex = 10;
+            this.metroButton2.Text = "Sales";
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.btnSales_Click);
             // 
             // btnSalesReport
             // 
@@ -147,15 +158,15 @@ namespace SuperShop.App
             this.metroButton1.Text = "Log Out";
             this.metroButton1.UseSelectable = true;
             // 
-            // metroButton2
+            // btnPrint
             // 
-            this.metroButton2.Location = new System.Drawing.Point(23, 286);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(153, 23);
-            this.metroButton2.TabIndex = 10;
-            this.metroButton2.Text = "Sales";
-            this.metroButton2.UseSelectable = true;
-            this.metroButton2.Click += new System.EventHandler(this.btnSales_Click);
+            this.btnPrint.Location = new System.Drawing.Point(23, 333);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(153, 23);
+            this.btnPrint.TabIndex = 11;
+            this.btnPrint.Text = "Print Slip";
+            this.btnPrint.UseSelectable = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // AdminDashboard
             // 
@@ -184,5 +195,6 @@ namespace SuperShop.App
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroButton btnSalesReport;
         private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton btnPrint;
     }
 }

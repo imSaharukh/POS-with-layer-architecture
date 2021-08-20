@@ -85,5 +85,11 @@ namespace SuperShop.App
         {
             showReportControl(invoice);
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            UI.MiniStatement.SalesSlip salesSlip = new UI.MiniStatement.SalesSlip();
+            salesSlip.Show();
+        }
     }
 }

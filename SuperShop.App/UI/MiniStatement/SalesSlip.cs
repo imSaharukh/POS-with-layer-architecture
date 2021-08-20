@@ -30,12 +30,17 @@ namespace SuperShop.App.UI.MiniStatement
         Bitmap bmp;
         private void SlipPrint_Click(object sender, EventArgs e)
         {
-            Graphics pnt = this.CreateGraphics();
-            bmp = new Bitmap(this.Size.Width, this.Size.Height, pnt);
-            Graphics pt = Graphics.FromImage(bmp);
-            pt.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, this.Size);
-            printPreviewDialog1.Document.DefaultPageSettings.Landscape = true;
-            printPreviewDialog1.ShowDialog();
+            /* Graphics pnt = this.CreateGraphics();
+             bmp = new Bitmap(this.Size.Width, this.Size.Height, pnt);
+             Graphics pt = Graphics.FromImage(bmp);
+             pt.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, this.Size);
+             printPreviewDialog1.Document.DefaultPageSettings.Landscape = true;
+             printPreviewDialog1.ShowDialog();*/
+
+            // printDocument1.Print(this,printDocument1.PrintPage())
+            var Bitmap = new System.Drawing.Bitmap(this.Width, this.Height);
+            this.DrawToBitmap(Bitmap, this.Bounds);
+            Bitmap.Save("Shium.jpg",ImageFormat.Jpeg)
         }
 
         
