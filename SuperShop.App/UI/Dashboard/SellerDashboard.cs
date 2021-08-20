@@ -22,5 +22,10 @@ namespace SuperShop.App.UI.Dashboard
         {
 
         }
+
+        private void btnSalesReport_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
