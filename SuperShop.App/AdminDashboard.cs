@@ -15,14 +15,19 @@ namespace SuperShop.App
 {
     public partial class AdminDashboard : MetroForm
     {
-        AllUsersControl allUsersControl = new AllUsersControl();
-        ProductControl productControl = new ProductControl();
-        ReportControl reportControl = new ReportControl();
-        Invoice invoice = new Invoice();
-        public AdminDashboard()
+        AllUsersControl AllUsersControl { get; set; }
+        ProductControl ProductControl { get; set; }
+        ReportControl ReportControl { get; set; }
+        InvoiceForm Invoice { get; set; }
+        public AdminDashboard(string username)
         {
             InitializeComponent();
-            showControll(allUsersControl);
+           
+             AllUsersControl = new AllUsersControl();
+             ProductControl = new ProductControl();
+             ReportControl = new ReportControl();
+             Invoice = new InvoiceForm(username);
+            showControll(AllUsersControl);
         }
 
     
@@ -49,7 +54,7 @@ namespace SuperShop.App
         private void btnUser_Click(object sender, EventArgs e)
         {
             //AllUsersControl allUsersControl = new AllUsersControl();
-            showControll(allUsersControl);
+            showControll(AllUsersControl);
         }
         void showProuductControl(Control control2)
         {
@@ -65,7 +70,7 @@ namespace SuperShop.App
         private void btnProduct_Click(object sender, EventArgs e)
         {
        
-            showProuductControl(productControl);
+            showProuductControl(ProductControl);
         }
         void showReportControl(Control control3)
         {
@@ -78,12 +83,12 @@ namespace SuperShop.App
 
         private void btnSalesReport_Click(object sender, EventArgs e)
         {
-            showReportControl(reportControl);
+            showReportControl(ReportControl);
         }
 
         private void btnSales_Click(object sender, EventArgs e)
         {
-            showReportControl(invoice);
+            showReportControl(Invoice);
         }
 
         private void btnPrint_Click(object sender, EventArgs e)

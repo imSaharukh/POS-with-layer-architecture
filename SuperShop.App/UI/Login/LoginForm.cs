@@ -42,7 +42,7 @@ namespace SuperShop.App
                 Console.WriteLine("inside if");
                 this.Hide();
 
-                AdminDashboard adminDashboard = new AdminDashboard();
+                AdminDashboard adminDashboard = new AdminDashboard(this.txtUsername.Text);
                 adminDashboard.Show();
             }
             Console.WriteLine(result?.userRole);

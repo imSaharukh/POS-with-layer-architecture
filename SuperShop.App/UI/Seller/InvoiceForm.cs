@@ -1,4 +1,5 @@
-﻿using SuperShop.Repository;
+﻿using SuperShop.Entity;
+using SuperShop.Repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,18 +13,22 @@ using System.Windows.Forms;
 namespace SuperShop.App.UI.Seller
 {
     
-    public partial class Invoice : UserControl
+    public partial class InvoiceForm : UserControl
     {
         double Total { get; set; }
         double SubTotal { get; set; }
         double Discount { get; set; }
+        string Username { get; set; }
         List<int> products { get; set; }
         ProductRepository productRepository = new ProductRepository();
-        public Invoice()
+        InvoiceRepository InvoiceRepository = new InvoiceRepository();
+
+        public InvoiceForm(string username)
         {
             InitializeComponent();
             loadGridView();
             products = new List<int>();
+            this.Username = username;
             Total = 0;
             SubTotal = 0;
             Discount = 0;
@@ -134,6 +139,32 @@ namespace SuperShop.App.UI.Seller
             SubTotal = 0;
             CalculateTotal();
             lblSubTotal.Text = (Total - Convert.ToDouble(String.IsNullOrEmpty(this.txtBoxDiscount.Text) ? "0":this.txtBoxDiscount.Text)).ToString();
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            Invoice invoice = new Invoice();
+            invoice.SalesmanUsername = Username;
+            invoice.InvoiceItems =new List<InvoiceItem>();
+            foreach (DataGridViewRow item in this.dgvInvoiceProduct.Rows)
+            {
+                var product = new InvoiceItem();
+                product.qty = Convert.ToInt32(item.Cells[2].Value);
+                product.productID = Convert.ToInt32(item.Cells[3].Value);
+                invoice.InvoiceItems.Add(product);
+            }
+
+           var result =  InvoiceRepository.CreateOne(invoice);
+            if (result == 1)
+            {
+                MessageBox.Show ("Product updated");
+            
+                Hide();
+            }
+            else
+            {
+                MessageBox.Show("Somthing went wrong");
+            }
         }
     }
 }
