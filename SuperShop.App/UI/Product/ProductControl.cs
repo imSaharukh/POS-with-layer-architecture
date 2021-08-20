@@ -57,7 +57,7 @@ namespace SuperShop.App
                 Product product = new Product();
 
                 var productID = Convert.ToInt32(row.Cells["productID"].Value);
-                Console.WriteLine("-> "+ productID);
+                //Console.WriteLine("-> "+ productID);
                 product.productID = productID;
                 product.ProductUnit = new ProductUnit();
                 product.productCategory = new ProductCategory();

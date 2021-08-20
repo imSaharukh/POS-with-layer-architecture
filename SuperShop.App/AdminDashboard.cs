@@ -1,4 +1,5 @@
 ﻿using MetroFramework.Forms;
+using SuperShop.App.UI.Seller;
 using SuperShop.Repository;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace SuperShop.App
         AllUsersControl allUsersControl = new AllUsersControl();
         ProductControl productControl = new ProductControl();
         ReportControl reportControl = new ReportControl();
-        
+        Invoice invoice = new Invoice();
         public AdminDashboard()
         {
             InitializeComponent();
@@ -80,10 +81,9 @@ namespace SuperShop.App
             showReportControl(reportControl);
         }
 
-        private void btnStats_Click(object sender, EventArgs e)
+        private void btnSales_Click(object sender, EventArgs e)
         {
-            UI.MiniStatement.SalesSlip saleslip = new UI.MiniStatement.SalesSlip();
-            saleslip.Show();
+            showReportControl(invoice);
         }
     }
 }

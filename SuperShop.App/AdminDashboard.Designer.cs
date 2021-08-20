@@ -38,6 +38,7 @@ namespace SuperShop.App
             this.btnSalesReport = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,6 +98,7 @@ namespace SuperShop.App
             // 
             // metroPanel1
             // 
+            this.metroPanel1.Controls.Add(this.metroButton2);
             this.metroPanel1.Controls.Add(this.btnSalesReport);
             this.metroPanel1.Controls.Add(this.metroLabel1);
             this.metroPanel1.Controls.Add(this.metroButton1);
@@ -145,6 +147,16 @@ namespace SuperShop.App
             this.metroButton1.Text = "Log Out";
             this.metroButton1.UseSelectable = true;
             // 
+            // metroButton2
+            // 
+            this.metroButton2.Location = new System.Drawing.Point(23, 286);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(153, 23);
+            this.metroButton2.TabIndex = 10;
+            this.metroButton2.Text = "Sales";
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.btnSales_Click);
+            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -171,5 +183,6 @@ namespace SuperShop.App
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroButton btnSalesReport;
+        private MetroFramework.Controls.MetroButton metroButton2;
     }
 }

@@ -108,6 +108,12 @@
     <Compile Include="UI\Product\AddUnit.Designer.cs">
       <DependentUpon>AddUnit.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Seller\Invoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Seller\Invoice.Designer.cs">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\USER\AddUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Product\AddUnit.resx">
       <DependentUpon>AddUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Seller\Invoice.resx">
+      <DependentUpon>Invoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\USER\AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
