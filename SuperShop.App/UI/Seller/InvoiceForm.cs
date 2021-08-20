@@ -166,5 +166,10 @@ namespace SuperShop.App.UI.Seller
                 MessageBox.Show("Somthing went wrong");
             }
         }
+
+        private void search_changed(object sender, EventArgs e)
+        {
+        this.dgvAllProduct.DataSource=    productRepository.SearchByProductname(this.txtSearch.Text);
+        }
     }
 }
