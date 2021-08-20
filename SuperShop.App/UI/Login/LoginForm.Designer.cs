@@ -62,8 +62,7 @@ namespace SuperShop.App
             this.txtUsername.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtUsername.CustomButton.UseSelectable = true;
             this.txtUsername.CustomButton.Visible = false;
-            this.txtUsername.Lines = new string[] {
-        "username"};
+            this.txtUsername.Lines = new string[0];
             this.txtUsername.Location = new System.Drawing.Point(271, 95);
             this.txtUsername.MaxLength = 32767;
             this.txtUsername.Name = "txtUsername";
@@ -75,7 +74,6 @@ namespace SuperShop.App
             this.txtUsername.ShortcutsEnabled = true;
             this.txtUsername.Size = new System.Drawing.Size(205, 23);
             this.txtUsername.TabIndex = 1;
-            this.txtUsername.Text = "username";
             this.txtUsername.UseSelectable = true;
             this.txtUsername.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtUsername.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -94,8 +92,7 @@ namespace SuperShop.App
             this.txtPassword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtPassword.CustomButton.UseSelectable = true;
             this.txtPassword.CustomButton.Visible = false;
-            this.txtPassword.Lines = new string[] {
-        "password"};
+            this.txtPassword.Lines = new string[0];
             this.txtPassword.Location = new System.Drawing.Point(271, 177);
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.Name = "txtPassword";
@@ -107,7 +104,6 @@ namespace SuperShop.App
             this.txtPassword.ShortcutsEnabled = true;
             this.txtPassword.Size = new System.Drawing.Size(205, 23);
             this.txtPassword.TabIndex = 2;
-            this.txtPassword.Text = "password";
             this.txtPassword.UseSelectable = true;
             this.txtPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -137,13 +133,12 @@ namespace SuperShop.App
             this.metroPanel1.Controls.Add(this.metroLabel1);
             this.metroPanel1.Controls.Add(this.txtUsername);
             this.metroPanel1.Controls.Add(this.btnLogin);
-            this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(20, 60);
+            this.metroPanel1.Location = new System.Drawing.Point(20, 84);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(760, 370);
+            this.metroPanel1.Size = new System.Drawing.Size(760, 346);
             this.metroPanel1.TabIndex = 5;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -155,6 +150,7 @@ namespace SuperShop.App
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.metroPanel1);
+            this.MaximizeBox = false;
             this.Name = "LoginForm";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load);

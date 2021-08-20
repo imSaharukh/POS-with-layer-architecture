@@ -77,6 +77,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UI\Dashboard\ManagerDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dashboard\ManagerDashboard.Designer.cs">
+      <DependentUpon>ManagerDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dashboard\SellerDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dashboard\SellerDashboard.Designer.cs">
+      <DependentUpon>SellerDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\MiniStatement\SalesSlip.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,10 +132,10 @@
     <Compile Include="UI\USER\AddUserForm.Designer.cs">
       <DependentUpon>AddUserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminDashboard.cs">
+    <Compile Include="UI\Dashboard\AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminDashboard.Designer.cs">
+    <Compile Include="UI\Dashboard\AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Login\LoginForm.cs">
@@ -146,6 +158,12 @@
     <Compile Include="UI\Product\ProductControl.Designer.cs">
       <DependentUpon>ProductControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\Dashboard\ManagerDashboard.resx">
+      <DependentUpon>ManagerDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dashboard\SellerDashboard.resx">
+      <DependentUpon>SellerDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\MiniStatement\SalesSlip.resx">
       <DependentUpon>SalesSlip.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,7 +185,7 @@
     <EmbeddedResource Include="UI\USER\AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminDashboard.resx">
+    <EmbeddedResource Include="UI\Dashboard\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Login\LoginForm.resx">

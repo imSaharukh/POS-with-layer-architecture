@@ -171,5 +171,10 @@ namespace SuperShop.App.UI.Seller
         {
         this.dgvAllProduct.DataSource=    productRepository.SearchByProductname(this.txtSearch.Text);
         }
+
+        private void metroPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using MetroFramework.Forms;
+using SuperShop.App.UI.Dashboard;
 using SuperShop.Repository;
 using System;
 using System.Collections.Generic;
@@ -28,10 +29,6 @@ namespace SuperShop.App
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
-            //Console.WriteLine(this.txtUsername.Text);
-
-            //Console.WriteLine(this.txtPassword.Text);
          var result=   userRepository.VerifyUser(this.txtUsername.Text,this.txtPassword.Text);
 
             if (result == null) {
@@ -44,6 +41,21 @@ namespace SuperShop.App
 
                 AdminDashboard adminDashboard = new AdminDashboard(this.txtUsername.Text);
                 adminDashboard.Show();
+            }
+            else if (result.userRole.RoleName.Trim() == "manager") {
+                Console.WriteLine("inside if");
+                this.Hide();
+
+                ManagerDashboard managerDashboard = new ManagerDashboard();
+                managerDashboard.Show();
+            }
+            else if (result.userRole.RoleName.Trim() == "seller")
+            {
+                Console.WriteLine("inside if");
+                this.Hide();
+
+                SellerDashboard sellerboard = new SellerDashboard();
+                sellerboard.Show();
             }
             Console.WriteLine(result?.userRole);
         }
