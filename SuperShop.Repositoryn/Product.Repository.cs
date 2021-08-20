@@ -83,11 +83,11 @@ namespace SuperShop.Repository
             return result;
         }
 
-       /* public List<Product> SearchByProductname(string search)
+        public List<Product> SearchByProductname(string search)
         {
             search = "%" + search + "%";
-            var result = DataAccess.sqlcon.Query<Product, ProductCategory, ProductUnit, Product>("select * from products p inner join " +
-                    "productCategories c on p.productCategoryID = c.productCategoryID inner join productUnits u on p.ProductUnitID = u.ProductUnitID where productName = @search;",
+            var result = DataAccess.sqlcon.Query<Product, ProductCategory, ProductUnit, Product>(@"select * from products p inner join 
+                  productCategories c on p.productCategoryID = c.productCategoryID inner join productUnits u on p.ProductUnitID = u.ProductUnitID where productName like @search;",
                     (product, catagory, unit) => {
                         product.productCategory = catagory;
                         product.ProductUnit = unit;
@@ -97,6 +97,6 @@ namespace SuperShop.Repository
 
             return result;
         }
-            */
+           
     }
 }

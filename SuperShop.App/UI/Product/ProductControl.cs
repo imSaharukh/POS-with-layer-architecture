@@ -27,11 +27,6 @@ namespace SuperShop.App
         {
 
         }
-
-        private void txtSearchProduct_Click(object sender, EventArgs e)
-        {
-
-        }
         void loadGridView()
         {
             this.dgvProduct.DataSource = productRepository.GetAll();
@@ -73,6 +68,12 @@ namespace SuperShop.App
                 addProductForm.Show();
             }
                
+        }
+
+        private void search_TextChanged(object sender, EventArgs e)
+        {
+            Console.WriteLine(this.txtSearchProduct.Text);
+        this.dgvProduct.DataSource= productRepository.SearchByProductname(this.txtSearchProduct.Text);
         }
     }
 }
