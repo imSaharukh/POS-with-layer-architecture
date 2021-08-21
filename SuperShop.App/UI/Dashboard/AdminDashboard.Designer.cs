@@ -83,6 +83,7 @@ namespace SuperShop.App
             this.btnStats.TabIndex = 5;
             this.btnStats.Text = "Statistics";
             this.btnStats.UseSelectable = true;
+            this.btnStats.Click += new System.EventHandler(this.btnStats_Click);
             // 
             // metroButton5
             // 
