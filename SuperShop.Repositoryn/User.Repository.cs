@@ -84,7 +84,7 @@ namespace SuperShop.Repository
             //var id = DataAccess.SelectQuery<UserRole>("select * from userRoles where RoleName = @role", new { role })[0].roleID;
 
 
-            var result = DataAccess.sqlcon.Execute(@"delete from users where username;", new { username});
+            var result = DataAccess.sqlcon.Execute(@"delete from users where username = @username;", new { username});
 
 
             return result;
