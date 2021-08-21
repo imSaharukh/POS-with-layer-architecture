@@ -158,7 +158,7 @@ namespace SuperShop.App.UI.Seller
             invoice.InvoiceItems =new List<InvoiceItem>();
             invoice.TotalPrice = this.Total;
             invoice.SubTotal = this.SubTotal;
-            invoice.Discount = this.Discount;
+            invoice.Discount = Convert.ToDouble(this.txtBoxDiscount.Text);
             foreach (DataGridViewRow item in this.dgvInvoiceProduct.Rows)
             {
                 var product = new InvoiceItem();
