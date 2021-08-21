@@ -65,6 +65,9 @@ namespace SuperShop.App.UI.MiniStatement
             this.Hide();
         }
 
-        
+        private void metroLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
