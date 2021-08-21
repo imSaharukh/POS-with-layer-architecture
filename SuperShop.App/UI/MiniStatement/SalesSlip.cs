@@ -15,11 +15,15 @@ namespace SuperShop.App.UI.MiniStatement
     public partial class SalesSlip : MetroForm
     {
         Entity.Invoice invoice { get; set; }
-        public SalesSlip(Entity.Invoice invoice)
+        string PaidAmount { get; set; }
+        string ExchangeAmount { get; set; }
+        public SalesSlip(Entity.Invoice invoice,string paidAmount,string exchangeAmount)
         {
             InitializeComponent();
             this.invoice = invoice;
-            LoadData(invoice);
+            this.PaidAmount = paidAmount;
+            this.ExchangeAmount = exchangeAmount;
+            this.LoadData(invoice);
         }
         void LoadData(Entity.Invoice invoice)
         {
@@ -29,6 +33,15 @@ namespace SuperShop.App.UI.MiniStatement
             this.txtSubtotal.Text = invoice.SubTotal.ToString();
             this.txtTotalBDT.Text = invoice.TotalPrice.ToString();
             this.txtDiscountBDT.Text = invoice.Discount.ToString();
+            this.txtPaidAmount.Text = PaidAmount.ToString();
+            this.txtExchange.Text = ExchangeAmount.ToString();
+            Console.WriteLine("invoice.InvoiceItems.Count " + invoice.InvoiceItems.Count);
+            for (int i = 0; i < invoice.InvoiceItems.Count; i++)
+            {
+                var item = invoice.InvoiceItems[i];
+                this.dgvProducts.Rows.Insert(0,invoice.InvoiceItems.Count- i,
+                    item.Product.productName, item.Product.unitPrice, item.qty);
+            }
         }
         private void SalesSlip_Load(object sender, EventArgs e)
         {
@@ -42,18 +55,14 @@ namespace SuperShop.App.UI.MiniStatement
         Bitmap bmp;
         private void SlipPrint_Click(object sender, EventArgs e)
         {
-            /* Graphics pnt = this.CreateGraphics();
-             bmp = new Bitmap(this.Size.Width, this.Size.Height, pnt);
-             Graphics pt = Graphics.FromImage(bmp);
-             pt.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, this.Size);
-             printPreviewDialog1.Document.DefaultPageSettings.Landscape = true;
-             printPreviewDialog1.ShowDialog();*/
 
-            // printDocument1.Print(this,printDocument1.PrintPage())
             var Bitmap = new System.Drawing.Bitmap(this.Width, this.Height);
             this.DrawToBitmap(Bitmap, this.Bounds);
-            Bitmap.Save("Shium.jpg", ImageFormat.Jpeg);
+            var path = "./../../../"+ invoice.invoiceID+".jpg";
+            Bitmap.Save(path, ImageFormat.Jpeg);
             Bitmap.Dispose();
+            MessageBox.Show("Saved Invoice to " + invoice.invoiceID + ".jpg");
+            this.Hide();
         }
 
         
