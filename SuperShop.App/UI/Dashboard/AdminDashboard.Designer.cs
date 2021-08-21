@@ -132,9 +132,9 @@ namespace SuperShop.App
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.Location = new System.Drawing.Point(3, 497);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(55, 20);
+            this.metroLabel1.Size = new System.Drawing.Size(114, 20);
             this.metroLabel1.TabIndex = 8;
-            this.metroLabel1.Text = "Version";
+            this.metroLabel1.Text = "Version 0.1 [Beta]";
             // 
             // metroButton1
             // 
