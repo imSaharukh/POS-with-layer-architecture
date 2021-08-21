@@ -32,9 +32,6 @@ namespace SuperShop.App.UI.Statistics
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -47,16 +44,15 @@ namespace SuperShop.App.UI.Statistics
             this.metroDateTime2 = new MetroFramework.Controls.MetroDateTime();
             this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.piChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.barChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.piChart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,11 +148,11 @@ namespace SuperShop.App.UI.Statistics
             // 
             // metroPanel2
             // 
+            this.metroPanel2.Controls.Add(this.cartesianChart1);
             this.metroPanel2.Controls.Add(this.metroLabel6);
             this.metroPanel2.Controls.Add(this.metroLabel5);
             this.metroPanel2.Controls.Add(this.metroLabel4);
             this.metroPanel2.Controls.Add(this.piChart);
-            this.metroPanel2.Controls.Add(this.barChart);
             this.metroPanel2.Controls.Add(this.metroGrid1);
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
@@ -168,6 +164,24 @@ namespace SuperShop.App.UI.Statistics
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Location = new System.Drawing.Point(148, 27);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(61, 20);
+            this.metroLabel6.TabIndex = 7;
+            this.metroLabel6.Text = "5000 TK";
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(17, 27);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(125, 20);
+            this.metroLabel5.TabIndex = 6;
+            this.metroLabel5.Text = "Total Seals Amount";
             // 
             // metroLabel4
             // 
@@ -199,24 +213,6 @@ namespace SuperShop.App.UI.Statistics
             this.piChart.Size = new System.Drawing.Size(408, 304);
             this.piChart.TabIndex = 4;
             this.piChart.Text = "chart2";
-            // 
-            // barChart
-            // 
-            chartArea2.Name = "Salary";
-            this.barChart.ChartAreas.Add(chartArea2);
-            legend2.Name = "Salary";
-            this.barChart.Legends.Add(legend2);
-            this.barChart.Location = new System.Drawing.Point(17, 94);
-            this.barChart.Name = "barChart";
-            this.barChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
-            series2.ChartArea = "Salary";
-            series2.Legend = "Salary";
-            series2.Name = "Salary";
-            this.barChart.Series.Add(series2);
-            this.barChart.Size = new System.Drawing.Size(409, 304);
-            this.barChart.TabIndex = 3;
-            this.barChart.Text = "chart1";
-            this.barChart.Click += new System.EventHandler(this.barChart_Click);
             // 
             // metroGrid1
             // 
@@ -264,23 +260,13 @@ namespace SuperShop.App.UI.Statistics
             this.metroGrid1.TabIndex = 2;
             this.metroGrid1.UseCustomBackColor = true;
             // 
-            // metroLabel5
+            // cartesianChart1
             // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(17, 27);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(125, 20);
-            this.metroLabel5.TabIndex = 6;
-            this.metroLabel5.Text = "Total Seals Amount";
-            // 
-            // metroLabel6
-            // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(148, 27);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(61, 20);
-            this.metroLabel6.TabIndex = 7;
-            this.metroLabel6.Text = "5000 TK";
+            this.cartesianChart1.Location = new System.Drawing.Point(17, 94);
+            this.cartesianChart1.Name = "cartesianChart1";
+            this.cartesianChart1.Size = new System.Drawing.Size(409, 304);
+            this.cartesianChart1.TabIndex = 8;
+            this.cartesianChart1.Text = "cartesianChart1";
             // 
             // Statistics
             // 
@@ -295,7 +281,6 @@ namespace SuperShop.App.UI.Statistics
             this.metroPanel2.ResumeLayout(false);
             this.metroPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.piChart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             this.ResumeLayout(false);
 
@@ -315,8 +300,8 @@ namespace SuperShop.App.UI.Statistics
         private MetroFramework.Controls.MetroComboBox metroComboBox1;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private System.Windows.Forms.DataVisualization.Charting.Chart piChart;
-        private System.Windows.Forms.DataVisualization.Charting.Chart barChart;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel5;
+        private LiveCharts.WinForms.CartesianChart cartesianChart1;
     }
 }
