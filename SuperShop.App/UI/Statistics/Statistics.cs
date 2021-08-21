@@ -24,11 +24,15 @@ namespace SuperShop.App.UI.Statistics
         }
         void LoadPiChart()
         {
+            Func<ChartPoint, string> lablePoint = chartPoint => string.Format("{0} ({1:P})",chartPoint.Y ,chartPoint.Participation);
+            SeriesCollection series = new SeriesCollection();
             var result = extraRepository.GetSellersData();
             foreach (var item in result)
             {
-                piChart.Series["SalesData"].Points.AddXY(item.SalesmanUsername , item.NoOfSales);
+                series.Add(new PieSeries() {Title = item.SalesmanUsername,Values = new ChartValues<double> {item.NoOfSales },DataLabels = true, LabelPoint = lablePoint });
+                //pieChart.Series["SalesData"].Points.AddXY(item.SalesmanUsername , item.NoOfSales);
             }
+            pieChart.Series = series;
 
         }
        void LoadBarChart() {
