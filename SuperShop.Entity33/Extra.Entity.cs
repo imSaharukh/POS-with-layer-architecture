@@ -9,6 +9,6 @@ namespace SuperShop.Entity
     public class SalesData
     {
         public int NoOfSales{ get; set; }
-        public int SalesmanUsername { get; set; }
+        public string SalesmanUsername { get; set; }
     }
 }

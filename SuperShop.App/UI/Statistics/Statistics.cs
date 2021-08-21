@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SuperShop.Repository;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,21 @@ namespace SuperShop.App.UI.Statistics
 {
     public partial class Statistics : UserControl
     {
+        ExtraRepository extraRepository =new ExtraRepository();
         public Statistics()
         {
             InitializeComponent();
             LoadBarChart();
+            LoadPiChart();
+        }
+        void LoadPiChart()
+        {
+            var result = extraRepository.GetSalesData();
+            foreach (var item in result)
+            {
+                piChart.Series["SalesData"].Points.AddXY(item.SalesmanUsername , item.NoOfSales);
+            }
+
         }
        void LoadBarChart() {
 
