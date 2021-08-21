@@ -135,12 +135,6 @@
     <Compile Include="UI\Seller\ReportControl.Designer.cs">
       <DependentUpon>ReportControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Product\AddUnit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Product\AddUnit.Designer.cs">
-      <DependentUpon>AddUnit.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Seller\InvoiceForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -205,9 +199,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Seller\ReportControl.resx">
       <DependentUpon>ReportControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Product\AddUnit.resx">
-      <DependentUpon>AddUnit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Seller\InvoiceForm.resx">
       <DependentUpon>InvoiceForm.cs</DependentUpon>

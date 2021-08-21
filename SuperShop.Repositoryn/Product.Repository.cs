@@ -10,6 +10,15 @@ namespace SuperShop.Repository
 {
    public class ProductRepository
     {
+
+
+        public int? CreateOneProductCatagory(string catagoryName)
+        {
+            var result = DataAccess.DrmQuery("insert into productCategories (productCategoryName) values (@catagoryName);", new { catagoryName });
+
+            return result;
+
+        }
         public int? CreateOne(Product product)
         {
             //var role = user.userRole.RoleName;

@@ -1,4 +1,5 @@
 ﻿using MetroFramework.Forms;
+using SuperShop.Repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,22 @@ namespace SuperShop.App.UI.Product
 
         private void AddCatagory_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            ProductRepository productRepository = new ProductRepository();
+         var result =    productRepository.CreateOneProductCatagory(this.txtCatagory.Text);
+            if (result == 1) {
+                MessageBox.Show("Catagory Added");
+                this.Hide();
+            
+            } else {
+                MessageBox.Show("Somthing went wrong");
+            
+            }
+
 
         }
     }

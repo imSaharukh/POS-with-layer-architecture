@@ -30,9 +30,9 @@ namespace SuperShop.App.UI.Product
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.txtCatagory = new MetroFramework.Controls.MetroTextBox();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -41,7 +41,7 @@ namespace SuperShop.App.UI.Product
             // 
             this.flowLayoutPanel1.Controls.Add(this.metroLabel2);
             this.flowLayoutPanel1.Controls.Add(this.metroLabel1);
-            this.flowLayoutPanel1.Controls.Add(this.metroTextBox1);
+            this.flowLayoutPanel1.Controls.Add(this.txtCatagory);
             this.flowLayoutPanel1.Controls.Add(this.metroButton1);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(58, 69);
@@ -49,37 +49,14 @@ namespace SuperShop.App.UI.Product
             this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 148);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // metroTextBox1
+            // metroLabel2
             // 
-            // 
-            // 
-            // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(179, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Lines = new string[] {
-        "metroTextBox1"};
-            this.metroTextBox1.Location = new System.Drawing.Point(3, 43);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(201, 23);
-            this.metroTextBox1.TabIndex = 3;
-            this.metroTextBox1.Text = "metroTextBox1";
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(3, 0);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(65, 20);
+            this.metroLabel2.TabIndex = 4;
+            this.metroLabel2.Text = "Catagory";
             // 
             // metroLabel1
             // 
@@ -92,14 +69,35 @@ namespace SuperShop.App.UI.Product
             this.metroLabel1.Text = "error";
             this.metroLabel1.UseCustomForeColor = true;
             // 
-            // metroLabel2
+            // txtCatagory
             // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(3, 0);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(41, 20);
-            this.metroLabel2.TabIndex = 4;
-            this.metroLabel2.Text = "UNIT";
+            // 
+            // 
+            // 
+            this.txtCatagory.CustomButton.Image = null;
+            this.txtCatagory.CustomButton.Location = new System.Drawing.Point(179, 1);
+            this.txtCatagory.CustomButton.Name = "";
+            this.txtCatagory.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtCatagory.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtCatagory.CustomButton.TabIndex = 1;
+            this.txtCatagory.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtCatagory.CustomButton.UseSelectable = true;
+            this.txtCatagory.CustomButton.Visible = false;
+            this.txtCatagory.Lines = new string[0];
+            this.txtCatagory.Location = new System.Drawing.Point(3, 43);
+            this.txtCatagory.MaxLength = 32767;
+            this.txtCatagory.Name = "txtCatagory";
+            this.txtCatagory.PasswordChar = '\0';
+            this.txtCatagory.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtCatagory.SelectedText = "";
+            this.txtCatagory.SelectionLength = 0;
+            this.txtCatagory.SelectionStart = 0;
+            this.txtCatagory.ShortcutsEnabled = true;
+            this.txtCatagory.Size = new System.Drawing.Size(201, 23);
+            this.txtCatagory.TabIndex = 3;
+            this.txtCatagory.UseSelectable = true;
+            this.txtCatagory.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtCatagory.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroButton1
             // 
@@ -109,6 +107,7 @@ namespace SuperShop.App.UI.Product
             this.metroButton1.TabIndex = 5;
             this.metroButton1.Text = "Add";
             this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // AddCatagory
             // 
@@ -130,7 +129,7 @@ namespace SuperShop.App.UI.Product
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox txtCatagory;
         private MetroFramework.Controls.MetroButton metroButton1;
     }
 }

@@ -50,7 +50,6 @@ namespace SuperShop.App
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.btnAddCatagory = new MetroFramework.Controls.MetroButton();
-            this.btnAddUnit = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.txtSearchProduct = new MetroFramework.Controls.MetroTextBox();
             this.btnProductUpdate = new MetroFramework.Controls.MetroButton();
@@ -68,15 +67,15 @@ namespace SuperShop.App
             this.metroPanel1.Controls.Add(this.metroGrid1);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 8;
-            this.metroPanel1.Location = new System.Drawing.Point(2, 115);
-            this.metroPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(3, 124);
+            this.metroPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(646, 311);
+            this.metroPanel1.Size = new System.Drawing.Size(861, 401);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 8;
+            this.metroPanel1.VerticalScrollbarSize = 11;
             // 
             // dgvProduct
             // 
@@ -116,8 +115,8 @@ namespace SuperShop.App
             this.dgvProduct.EnableHeadersVisualStyles = false;
             this.dgvProduct.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvProduct.Location = new System.Drawing.Point(2, 20);
-            this.dgvProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvProduct.Location = new System.Drawing.Point(3, 25);
+            this.dgvProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvProduct.MultiSelect = false;
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.ReadOnly = true;
@@ -134,7 +133,7 @@ namespace SuperShop.App
             this.dgvProduct.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvProduct.RowTemplate.Height = 24;
             this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProduct.Size = new System.Drawing.Size(644, 288);
+            this.dgvProduct.Size = new System.Drawing.Size(859, 354);
             this.dgvProduct.TabIndex = 3;
             // 
             // productID
@@ -257,8 +256,8 @@ namespace SuperShop.App
             this.metroGrid1.EnableHeadersVisualStyles = false;
             this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid1.Location = new System.Drawing.Point(17, 20);
-            this.metroGrid1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroGrid1.Location = new System.Drawing.Point(23, 25);
+            this.metroGrid1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroGrid1.Name = "metroGrid1";
             this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -273,13 +272,12 @@ namespace SuperShop.App
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.RowTemplate.Height = 24;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid1.Size = new System.Drawing.Size(658, 355);
+            this.metroGrid1.Size = new System.Drawing.Size(877, 437);
             this.metroGrid1.TabIndex = 2;
             // 
             // metroPanel2
             // 
             this.metroPanel2.Controls.Add(this.btnAddCatagory);
-            this.metroPanel2.Controls.Add(this.btnAddUnit);
             this.metroPanel2.Controls.Add(this.metroLabel1);
             this.metroPanel2.Controls.Add(this.txtSearchProduct);
             this.metroPanel2.Controls.Add(this.btnProductUpdate);
@@ -287,47 +285,35 @@ namespace SuperShop.App
             this.metroPanel2.Controls.Add(this.btnAddProductform);
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 8;
-            this.metroPanel2.Location = new System.Drawing.Point(2, 24);
-            this.metroPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroPanel2.HorizontalScrollbarSize = 10;
+            this.metroPanel2.Location = new System.Drawing.Point(3, 30);
+            this.metroPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(646, 86);
+            this.metroPanel2.Size = new System.Drawing.Size(861, 90);
             this.metroPanel2.TabIndex = 1;
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 8;
+            this.metroPanel2.VerticalScrollbarSize = 11;
             // 
             // btnAddCatagory
             // 
             this.btnAddCatagory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnAddCatagory.Location = new System.Drawing.Point(393, 52);
-            this.btnAddCatagory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddCatagory.Location = new System.Drawing.Point(704, 28);
+            this.btnAddCatagory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddCatagory.Name = "btnAddCatagory";
-            this.btnAddCatagory.Size = new System.Drawing.Size(122, 24);
+            this.btnAddCatagory.Size = new System.Drawing.Size(147, 30);
             this.btnAddCatagory.TabIndex = 9;
             this.btnAddCatagory.Text = "Add New Catagory";
             this.btnAddCatagory.UseCustomBackColor = true;
             this.btnAddCatagory.UseSelectable = true;
-            // 
-            // btnAddUnit
-            // 
-            this.btnAddUnit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnAddUnit.Location = new System.Drawing.Point(520, 52);
-            this.btnAddUnit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnAddUnit.Name = "btnAddUnit";
-            this.btnAddUnit.Size = new System.Drawing.Size(117, 24);
-            this.btnAddUnit.TabIndex = 8;
-            this.btnAddUnit.Text = "Add New UNIT";
-            this.btnAddUnit.UseCustomBackColor = true;
-            this.btnAddUnit.UseSelectable = true;
+            this.btnAddCatagory.Click += new System.EventHandler(this.btnAddCatagory_Click);
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(26, 4);
-            this.metroLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel1.Location = new System.Drawing.Point(35, 5);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(156, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(164, 20);
             this.metroLabel1.TabIndex = 7;
             this.metroLabel1.Text = "Search by Product Name";
             // 
@@ -337,18 +323,18 @@ namespace SuperShop.App
             // 
             // 
             this.txtSearchProduct.CustomButton.Image = null;
-            this.txtSearchProduct.CustomButton.Location = new System.Drawing.Point(135, 1);
-            this.txtSearchProduct.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearchProduct.CustomButton.Location = new System.Drawing.Point(323, 1);
+            this.txtSearchProduct.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearchProduct.CustomButton.Name = "";
-            this.txtSearchProduct.CustomButton.Size = new System.Drawing.Size(13, 14);
+            this.txtSearchProduct.CustomButton.Size = new System.Drawing.Size(28, 26);
             this.txtSearchProduct.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtSearchProduct.CustomButton.TabIndex = 1;
             this.txtSearchProduct.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtSearchProduct.CustomButton.UseSelectable = true;
             this.txtSearchProduct.CustomButton.Visible = false;
             this.txtSearchProduct.Lines = new string[0];
-            this.txtSearchProduct.Location = new System.Drawing.Point(26, 23);
-            this.txtSearchProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearchProduct.Location = new System.Drawing.Point(35, 28);
+            this.txtSearchProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearchProduct.MaxLength = 32767;
             this.txtSearchProduct.Name = "txtSearchProduct";
             this.txtSearchProduct.PasswordChar = '\0';
@@ -357,7 +343,7 @@ namespace SuperShop.App
             this.txtSearchProduct.SelectionLength = 0;
             this.txtSearchProduct.SelectionStart = 0;
             this.txtSearchProduct.ShortcutsEnabled = true;
-            this.txtSearchProduct.Size = new System.Drawing.Size(198, 19);
+            this.txtSearchProduct.Size = new System.Drawing.Size(264, 23);
             this.txtSearchProduct.TabIndex = 6;
             this.txtSearchProduct.UseSelectable = true;
             this.txtSearchProduct.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -367,10 +353,10 @@ namespace SuperShop.App
             // btnProductUpdate
             // 
             this.btnProductUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnProductUpdate.Location = new System.Drawing.Point(482, 23);
-            this.btnProductUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProductUpdate.Location = new System.Drawing.Point(492, 28);
+            this.btnProductUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnProductUpdate.Name = "btnProductUpdate";
-            this.btnProductUpdate.Size = new System.Drawing.Size(67, 24);
+            this.btnProductUpdate.Size = new System.Drawing.Size(89, 30);
             this.btnProductUpdate.TabIndex = 4;
             this.btnProductUpdate.Text = "Update";
             this.btnProductUpdate.UseCustomBackColor = true;
@@ -380,10 +366,10 @@ namespace SuperShop.App
             // metroButton4
             // 
             this.metroButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroButton4.Location = new System.Drawing.Point(570, 23);
-            this.metroButton4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroButton4.Location = new System.Drawing.Point(598, 28);
+            this.metroButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(67, 24);
+            this.metroButton4.Size = new System.Drawing.Size(89, 30);
             this.metroButton4.TabIndex = 5;
             this.metroButton4.Text = "Delete";
             this.metroButton4.UseCustomBackColor = true;
@@ -392,10 +378,10 @@ namespace SuperShop.App
             // btnAddProductform
             // 
             this.btnAddProductform.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnAddProductform.Location = new System.Drawing.Point(393, 23);
-            this.btnAddProductform.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddProductform.Location = new System.Drawing.Point(388, 28);
+            this.btnAddProductform.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddProductform.Name = "btnAddProductform";
-            this.btnAddProductform.Size = new System.Drawing.Size(67, 24);
+            this.btnAddProductform.Size = new System.Drawing.Size(89, 30);
             this.btnAddProductform.TabIndex = 3;
             this.btnAddProductform.Text = "Add";
             this.btnAddProductform.UseCustomBackColor = true;
@@ -404,13 +390,13 @@ namespace SuperShop.App
             // 
             // ProductControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.metroPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ProductControl";
-            this.Size = new System.Drawing.Size(650, 428);
+            this.Size = new System.Drawing.Size(867, 527);
             this.Load += new System.EventHandler(this.ProductControl_Load);
             this.metroPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
@@ -433,7 +419,6 @@ namespace SuperShop.App
         private MetroFramework.Controls.MetroTextBox txtSearchProduct;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroButton btnAddCatagory;
-        private MetroFramework.Controls.MetroButton btnAddUnit;
         private System.Windows.Forms.DataGridViewTextBoxColumn productID;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryID;
         private System.Windows.Forms.DataGridViewTextBoxColumn productCategoryID;

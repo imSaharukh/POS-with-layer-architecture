@@ -1,4 +1,5 @@
-﻿using SuperShop.Entity;
+﻿using SuperShop.App.UI.Product;
+using SuperShop.Entity;
 using SuperShop.Repository;
 using System;
 using System.Collections.Generic;
@@ -74,6 +75,12 @@ namespace SuperShop.App
         {
             Console.WriteLine(this.txtSearchProduct.Text);
         this.dgvProduct.DataSource= productRepository.SearchByProductname(this.txtSearchProduct.Text);
+        }
+
+        private void btnAddCatagory_Click(object sender, EventArgs e)
+        {
+            AddCatagory addCatagory =new AddCatagory();
+            addCatagory.Show();
         }
     }
 }
