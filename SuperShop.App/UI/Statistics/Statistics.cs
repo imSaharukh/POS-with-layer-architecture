@@ -24,7 +24,7 @@ namespace SuperShop.App.UI.Statistics
         }
         void LoadPiChart()
         {
-            var result = extraRepository.GetSalesData();
+            var result = extraRepository.GetSellersData();
             foreach (var item in result)
             {
                 piChart.Series["SalesData"].Points.AddXY(item.SalesmanUsername , item.NoOfSales);
@@ -32,20 +32,24 @@ namespace SuperShop.App.UI.Statistics
 
         }
        void LoadBarChart() {
+            this.lineChart.Series.Clear();
             SeriesCollection series = new SeriesCollection();
-            //series.Add(new LineSeries() { Title = "1", Values = new ChartValues<double>("1") });
-            ////AddXY value in chart1 in series named as Salary  
-            //this.lineChart.Series.Add();
-            //this.lineChart.Series["Salary"].Points.AddXY("0", "8000");
-            //this.lineChart.Series["Salary"].Points.AddXY("Ankit", "7000");
-            //this.lineChart.Series["Salary"].Points.AddXY("Gurmeet", "10000");
-            //this.lineChart.Series["Salary"].Points.AddXY("Suresh", "8500");
-            //this.lineChart.Series["Salary"].Points.AddXY("0", "10000");
-            //this.lineChart.Series["Salary"].Points.AddXY("0", "8000");
+            List<double> value =new List<double>();
 
-            
-            ////chart title  
-            //barChart.Titles.Add("Salary Chart");
+       var result = extraRepository.GetSealsNumberByDate();
+            //value.Add(1);
+            //value.Add(2);
+            //value.Add(3);
+            //value.Add(5);
+            foreach (var item in result)
+            {
+                value.Add(item.TotalSales);
+                Console.WriteLine("sub total-> "+item.TotalSales);
+            }
+            series.Add(new LineSeries() { Title = "Total Sales", Values = new ChartValues<double>(value) });
+
+            this.lineChart.Series = series;
+
         }
 
         private void barChart_Click(object sender, EventArgs e)

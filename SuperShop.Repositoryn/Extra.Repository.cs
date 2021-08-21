@@ -10,9 +10,15 @@ namespace SuperShop.Repository
 {
   public class ExtraRepository
     {
-        public List<SalesData> GetSalesData()
+        public List<SalesData> GetSellersData()
         {
-        var result =    DataAccess.SelectQuery<SalesData>(@"select COUNT(*) 'NoOfSales', SalesmanUsername from invoice group by SalesmanUsername");
+        var result = DataAccess.SelectQuery<SalesData>(@"select COUNT(*) 'NoOfSales', SalesmanUsername from invoice group by SalesmanUsername");
+            return result;
+        }
+
+        public List<SealsByDate> GetSealsNumberByDate()
+        {
+            var result = DataAccess.SelectQuery<SealsByDate>(@"Select SUM(SubTotal) 'TotalSales',PurchaseDate from invoice group by PurchaseDate;");
             return result;
         }
     }
