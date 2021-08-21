@@ -1,5 +1,6 @@
 ﻿using MetroFramework.Forms;
 using SuperShop.App.UI.Seller;
+using SuperShop.App.UI.Statistics;
 using SuperShop.Repository;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,8 @@ namespace SuperShop.App
         ProductControl ProductControl { get; set; }
         ReportControl ReportControl { get; set; }
         InvoiceForm Invoice { get; set; }
+        Statistics statistics { get; set; }
+
         public AdminDashboard(string username)
         {
             InitializeComponent();
@@ -27,6 +30,7 @@ namespace SuperShop.App
              ProductControl = new ProductControl();
              ReportControl = new ReportControl();
              Invoice = new InvoiceForm(username);
+            statistics = new Statistics();
             showControll(AllUsersControl);
         }
 
@@ -106,7 +110,7 @@ namespace SuperShop.App
 
         private void btnStats_Click(object sender, EventArgs e)
         {
-
+            showControll(statistics);
         }
     }
 }

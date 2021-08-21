@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extra.Entity.cs" />
     <Compile Include="Invoice.Entity.cs" />
     <Compile Include="Product.Entity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
