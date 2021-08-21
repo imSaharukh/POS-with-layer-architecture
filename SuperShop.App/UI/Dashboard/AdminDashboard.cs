@@ -103,5 +103,10 @@ namespace SuperShop.App
         
             Application.Restart();
         }
+
+        private void btnStats_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
