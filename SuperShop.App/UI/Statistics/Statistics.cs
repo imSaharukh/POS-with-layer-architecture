@@ -68,5 +68,11 @@ namespace SuperShop.App.UI.Statistics
         {
 
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            LoadBarChart();
+            LoadPiChart();
+        }
     }
 }
