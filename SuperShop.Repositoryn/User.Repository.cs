@@ -72,7 +72,21 @@ namespace SuperShop.Repository
 
         public List<User> GetAllSeller()
         {
-             var result = DataAccess.SelectQuery<User>("select * from users where roleID = 2");
+             var result = DataAccess.SelectQuery<User>("select * from users where roleID = 3");
+            return result;
+        }
+
+
+
+        public int? DeleteOne(string username)
+        {
+            //var role = user.userRole.RoleName;
+            //var id = DataAccess.SelectQuery<UserRole>("select * from userRoles where RoleName = @role", new { role })[0].roleID;
+
+
+            var result = DataAccess.sqlcon.Execute(@"delete from users where username;", new { username});
+
+
             return result;
         }
     }

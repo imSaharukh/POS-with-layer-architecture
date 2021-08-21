@@ -62,7 +62,7 @@ namespace SuperShop.App.UI.Seller
                     this.dgvInvoiceProduct.Rows.Insert(0,productID, productName, productQuantity, unitPrice);
                     /* Total += (Convert.ToDouble(productQuantity) * Convert.ToDouble(unitPrice));
                      lblTotal.Text = CalculateTotal();*/
-                    CalculateTotal();
+                    CalculateSubTotal();
                     products.Add(productID);
 
                 }

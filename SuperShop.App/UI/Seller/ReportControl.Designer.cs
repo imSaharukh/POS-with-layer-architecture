@@ -33,6 +33,8 @@ namespace SuperShop.App
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.btnSearch = new MetroFramework.Controls.MetroButton();
+            this.cmbUsername = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.dtTo = new MetroFramework.Controls.MetroDateTime();
             this.dtFrom = new MetroFramework.Controls.MetroDateTime();
@@ -40,13 +42,11 @@ namespace SuperShop.App
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-            this.cmbUsername = new MetroFramework.Controls.MetroComboBox();
             this.invoiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SelsmanUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SalesmanUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PurchaseDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSearch = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
@@ -72,6 +72,26 @@ namespace SuperShop.App
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(719, 56);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(111, 30);
+            this.btnSearch.TabIndex = 11;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseSelectable = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // cmbUsername
+            // 
+            this.cmbUsername.FormattingEnabled = true;
+            this.cmbUsername.ItemHeight = 24;
+            this.cmbUsername.Location = new System.Drawing.Point(36, 56);
+            this.cmbUsername.Name = "cmbUsername";
+            this.cmbUsername.Size = new System.Drawing.Size(186, 30);
+            this.cmbUsername.TabIndex = 10;
+            this.cmbUsername.UseSelectable = true;
             // 
             // metroLabel3
             // 
@@ -148,7 +168,7 @@ namespace SuperShop.App
             this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.metroGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.invoiceID,
-            this.SelsmanUsername,
+            this.SalesmanUsername,
             this.TotalPrice,
             this.SubTotal,
             this.PurchaseDate});
@@ -181,30 +201,21 @@ namespace SuperShop.App
             this.metroGrid1.Size = new System.Drawing.Size(858, 409);
             this.metroGrid1.TabIndex = 2;
             // 
-            // cmbUsername
-            // 
-            this.cmbUsername.FormattingEnabled = true;
-            this.cmbUsername.ItemHeight = 24;
-            this.cmbUsername.Location = new System.Drawing.Point(36, 56);
-            this.cmbUsername.Name = "cmbUsername";
-            this.cmbUsername.Size = new System.Drawing.Size(186, 30);
-            this.cmbUsername.TabIndex = 10;
-            this.cmbUsername.UseSelectable = true;
-            // 
             // invoiceID
             // 
             this.invoiceID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.invoiceID.DataPropertyName = "invoiceID";
             this.invoiceID.HeaderText = "Invoice ID";
             this.invoiceID.MinimumWidth = 6;
             this.invoiceID.Name = "invoiceID";
             // 
-            // SelsmanUsername
+            // SalesmanUsername
             // 
-            this.SelsmanUsername.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SelsmanUsername.DataPropertyName = "SelsmanUsername";
-            this.SelsmanUsername.HeaderText = "username ";
-            this.SelsmanUsername.MinimumWidth = 6;
-            this.SelsmanUsername.Name = "SelsmanUsername";
+            this.SalesmanUsername.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SalesmanUsername.DataPropertyName = "SalesmanUsername";
+            this.SalesmanUsername.HeaderText = "username ";
+            this.SalesmanUsername.MinimumWidth = 6;
+            this.SalesmanUsername.Name = "SalesmanUsername";
             // 
             // TotalPrice
             // 
@@ -229,16 +240,6 @@ namespace SuperShop.App
             this.PurchaseDate.HeaderText = "Date";
             this.PurchaseDate.MinimumWidth = 6;
             this.PurchaseDate.Name = "PurchaseDate";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(719, 56);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(111, 30);
-            this.btnSearch.TabIndex = 11;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseSelectable = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // ReportControl
             // 
@@ -267,11 +268,11 @@ namespace SuperShop.App
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroGrid metroGrid1;
         private MetroFramework.Controls.MetroComboBox cmbUsername;
+        private MetroFramework.Controls.MetroButton btnSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn invoiceID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SelsmanUsername;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SalesmanUsername;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn PurchaseDate;
-        private MetroFramework.Controls.MetroButton btnSearch;
     }
 }

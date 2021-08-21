@@ -9,8 +9,6 @@ namespace SuperShop.Entity
    public class Invoice
     {
         public string invoiceID { get; set; }
-        public int ProductID { get; set; }
-        public double Qty { get; set;}
         public double SubTotal { get; set; }
         public double TotalPrice { get; set; }
         public double Discount { set; get; }

@@ -15,14 +15,14 @@ namespace SuperShop.App.UI.Dashboard
 
     public partial class SellerDashboard : MetroForm
     {
-        InvoiceForm invoiceForm { get; set; }
-        ReportControl reportControl { get; set; }
+        InvoiceForm InvoiceForm { get; set; }
+        ReportControl ReportControl { get; set; }
         public SellerDashboard(string Username)
         {
             InitializeComponent();
-            invoiceForm = new InvoiceForm(Username);
-            reportControl = new ReportControl();
-            showControl(invoiceForm);
+            InvoiceForm = new InvoiceForm(Username);
+            ReportControl = new ReportControl();
+            showControl(InvoiceForm);
         }
 
         private void SellerDashboard_Load(object sender, EventArgs e)
@@ -39,7 +39,8 @@ namespace SuperShop.App.UI.Dashboard
         }
         private void btnSalesReport_Click(object sender, EventArgs e)
         {
-            showReportControl(reportControl);
+            ReportControl = new ReportControl();
+            showReportControl(ReportControl);
         }
         void showControl(Control control)
         {
@@ -55,7 +56,7 @@ namespace SuperShop.App.UI.Dashboard
         private void btnSales_Click(object sender, EventArgs e)
         {
             
-            showControl(invoiceForm);
+            showControl(InvoiceForm);
            // invoiceForm.Show();
 
 

@@ -100,5 +100,26 @@ namespace SuperShop.App
             //Console.WriteLine(result[0]?.userRole.RoleName);
             this.dgv.DataSource = result;
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (this.dgv.SelectedRows.Count == 0)
+            {
+
+                MessageBox.Show("please select a row");
+            }
+            else
+            {
+                DataGridViewRow row = this.dgv.SelectedRows[0];
+             var result =   userRepository.DeleteOne(row.Cells["password"].Value.ToString());
+
+                if(result == 1)
+                {
+                    MessageBox.Show("User deleted");
+                    LoadGridView();
+                }
+                else { MessageBox.Show("Somthing went wrong"); }
+            }
+        }
     }
 }
