@@ -31,7 +31,6 @@ namespace SuperShop.App.UI.Dashboard
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.btnLogoutManager = new MetroFramework.Controls.MetroButton();
             this.btnCustomize = new MetroFramework.Controls.MetroButton();
             this.btnSalesReport = new MetroFramework.Controls.MetroButton();
             this.btnlogout = new MetroFramework.Controls.MetroButton();
@@ -58,7 +57,6 @@ namespace SuperShop.App.UI.Dashboard
             // 
             // metroPanel2
             // 
-            this.metroPanel2.Controls.Add(this.btnLogoutManager);
             this.metroPanel2.Controls.Add(this.btnCustomize);
             this.metroPanel2.Controls.Add(this.btnSalesReport);
             this.metroPanel2.Controls.Add(this.btnlogout);
@@ -77,16 +75,6 @@ namespace SuperShop.App.UI.Dashboard
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 11;
-            // 
-            // btnLogoutManager
-            // 
-            this.btnLogoutManager.Location = new System.Drawing.Point(23, 314);
-            this.btnLogoutManager.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnLogoutManager.Name = "btnLogoutManager";
-            this.btnLogoutManager.Size = new System.Drawing.Size(153, 23);
-            this.btnLogoutManager.TabIndex = 9;
-            this.btnLogoutManager.Text = "Logout";
-            this.btnLogoutManager.UseSelectable = true;
             // 
             // btnCustomize
             // 
@@ -188,6 +176,5 @@ namespace SuperShop.App.UI.Dashboard
         private MetroFramework.Controls.MetroButton btnStats;
         private MetroFramework.Controls.MetroButton btnProductlist;
         private MetroFramework.Controls.MetroButton btnSalesEmp;
-        private MetroFramework.Controls.MetroButton btnLogoutManager;
     }
 }
