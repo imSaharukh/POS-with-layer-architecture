@@ -69,5 +69,13 @@ namespace SuperShop.Repository
             Console.WriteLine("SearchByUserName --> " + result.Count);
             return result;
         }
+
+        public List<InvoiceProduct> GetAllInvoiceProduct(string invoice)
+        {
+            var result = DataAccess.sqlcon.Query<InvoiceProduct>("select * from invoiceItems i join products p on i.productID = p.productID where invoiceID = @invoice;" , new { invoice}).Distinct()
+        .ToList();
+            return result;
+        }
+
     }
 }

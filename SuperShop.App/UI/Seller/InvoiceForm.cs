@@ -149,7 +149,7 @@ namespace SuperShop.App.UI.Seller
             {
                 var product = new InvoiceItem();
                 product.qty = Convert.ToInt32(item.Cells[2].Value);
-                product.productID = Convert.ToInt32(item.Cells[3].Value);
+                product.productID = Convert.ToInt32(item.Cells[0].Value);
                 invoice.InvoiceItems.Add(product);
             }
 

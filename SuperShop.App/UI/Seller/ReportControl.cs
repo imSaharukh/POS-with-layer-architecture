@@ -1,4 +1,5 @@
-﻿using SuperShop.Repository;
+﻿using SuperShop.App.UI.Seller;
+using SuperShop.Repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,7 +41,7 @@ namespace SuperShop.App
         }
        void loadGridView() {
             
-            this.metroGrid1.DataSource = InvoiceRepository.GetAll();
+            this.dgvInvoice.DataSource = InvoiceRepository.GetAll();
         }
 
 
@@ -48,7 +49,14 @@ namespace SuperShop.App
         private void btnSearch_Click(object sender, EventArgs e)
         {
             Console.WriteLine(dtFrom.Value.ToShortDateString() +"  " + dtTo.Value.ToShortDateString());
-            this.metroGrid1.DataSource = InvoiceRepository.GetByUsernameAndDateRange(this.cmbUsername.Text,dtFrom.Value.ToShortDateString(), dtTo.Value.ToShortDateString());
+            this.dgvInvoice.DataSource = InvoiceRepository.GetByUsernameAndDateRange(this.cmbUsername.Text,dtFrom.Value.ToShortDateString(), dtTo.Value.ToShortDateString());
+        }
+
+        private void dgvInvoice_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Console.WriteLine("cell content click");
+            ProductList productList = new ProductList(this.dgvInvoice.SelectedRows[0].Cells[0].Value.ToString());
+            productList.Show();
         }
     }
 }

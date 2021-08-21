@@ -50,4 +50,12 @@ namespace SuperShop.Entity
             return this.ProductUnitName;
         }
     }
+
+
+    public class InvoiceProduct : Product
+    {
+     public int qty { get; set; }
+
+
+    }
 }

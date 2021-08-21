@@ -41,6 +41,7 @@ namespace SuperShop.App
                 this.dtExpireDate.Value = product.expireDate;
                 this.cmbUnit.Text = product.ProductUnit.ProductUnitName;
                 this.productID = product.productID;
+                this.Text = "Update Product";
 
 
             }    
