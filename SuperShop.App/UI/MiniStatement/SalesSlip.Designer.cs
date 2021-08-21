@@ -29,9 +29,9 @@ namespace SuperShop.App.UI.MiniStatement
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesSlip));
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.SlipPrint = new MetroFramework.Controls.MetroButton();
@@ -531,7 +531,7 @@ namespace SuperShop.App.UI.MiniStatement
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(83, 20);
             this.metroLabel5.TabIndex = 6;
-            this.metroLabel5.Text = "Invoice No :";
+            this.metroLabel5.Text = "Invoice No";
             // 
             // metroLabel4
             // 
@@ -549,7 +549,7 @@ namespace SuperShop.App.UI.MiniStatement
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(85, 20);
             this.metroLabel3.TabIndex = 4;
-            this.metroLabel3.Text = "Contact No-";
+            this.metroLabel3.Text = "Contact No";
             // 
             // metroLabel2
             // 
