@@ -78,7 +78,7 @@ namespace SuperShop.App
             this.flowLayoutPanel1.Location = new System.Drawing.Point(108, 51);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(263, 420);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(263, 464);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // metroLabel1
@@ -360,7 +360,7 @@ namespace SuperShop.App
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(151, 2);
+            this.metroButton1.Location = new System.Drawing.Point(2, 401);
             this.metroButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(144, 24);
@@ -373,7 +373,7 @@ namespace SuperShop.App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(388, 485);
+            this.ClientSize = new System.Drawing.Size(388, 562);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
