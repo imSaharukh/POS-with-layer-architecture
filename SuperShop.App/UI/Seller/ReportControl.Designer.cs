@@ -64,23 +64,23 @@ namespace SuperShop.App
             this.metroPanel1.Controls.Add(this.metroLabel1);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 8;
-            this.metroPanel1.Location = new System.Drawing.Point(2, 2);
-            this.metroPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(3, 2);
+            this.metroPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(646, 81);
+            this.metroPanel1.Size = new System.Drawing.Size(861, 100);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 8;
+            this.metroPanel1.VerticalScrollbarSize = 11;
             this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(539, 46);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Location = new System.Drawing.Point(719, 57);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(83, 24);
+            this.btnSearch.Size = new System.Drawing.Size(111, 30);
             this.btnSearch.TabIndex = 11;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseSelectable = true;
@@ -89,59 +89,56 @@ namespace SuperShop.App
             // cmbUsername
             // 
             this.cmbUsername.FormattingEnabled = true;
-            this.cmbUsername.ItemHeight = 23;
-            this.cmbUsername.Location = new System.Drawing.Point(27, 46);
-            this.cmbUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbUsername.ItemHeight = 24;
+            this.cmbUsername.Location = new System.Drawing.Point(36, 57);
+            this.cmbUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbUsername.Name = "cmbUsername";
-            this.cmbUsername.Size = new System.Drawing.Size(140, 29);
+            this.cmbUsername.Size = new System.Drawing.Size(185, 30);
             this.cmbUsername.TabIndex = 10;
             this.cmbUsername.UseSelectable = true;
             // 
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(342, 49);
-            this.metroLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel3.Location = new System.Drawing.Point(456, 60);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(22, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(23, 20);
             this.metroLabel3.TabIndex = 9;
             this.metroLabel3.Text = "To";
             // 
             // dtTo
             // 
-            this.dtTo.Location = new System.Drawing.Point(372, 46);
-            this.dtTo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dtTo.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtTo.Location = new System.Drawing.Point(496, 57);
+            this.dtTo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtTo.MinimumSize = new System.Drawing.Size(0, 30);
             this.dtTo.Name = "dtTo";
-            this.dtTo.Size = new System.Drawing.Size(151, 30);
+            this.dtTo.Size = new System.Drawing.Size(200, 30);
             this.dtTo.TabIndex = 8;
             // 
             // dtFrom
             // 
-            this.dtFrom.Location = new System.Drawing.Point(178, 46);
-            this.dtFrom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dtFrom.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtFrom.Location = new System.Drawing.Point(237, 57);
+            this.dtFrom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtFrom.MinimumSize = new System.Drawing.Size(0, 30);
             this.dtFrom.Name = "dtFrom";
-            this.dtFrom.Size = new System.Drawing.Size(151, 30);
+            this.dtFrom.Size = new System.Drawing.Size(200, 30);
             this.dtFrom.TabIndex = 7;
             // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(178, 27);
-            this.metroLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel2.Location = new System.Drawing.Point(237, 33);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(97, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(103, 20);
             this.metroLabel2.TabIndex = 6;
             this.metroLabel2.Text = "Search by Date";
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(27, 27);
-            this.metroLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel1.Location = new System.Drawing.Point(36, 33);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(127, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(136, 20);
             this.metroLabel1.TabIndex = 5;
             this.metroLabel1.Text = "Search by username";
             // 
@@ -151,23 +148,22 @@ namespace SuperShop.App
             this.metroPanel2.Controls.Add(this.dgvInvoice);
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 8;
-            this.metroPanel2.Location = new System.Drawing.Point(2, 89);
-            this.metroPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroPanel2.HorizontalScrollbarSize = 10;
+            this.metroPanel2.Location = new System.Drawing.Point(3, 110);
+            this.metroPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(648, 337);
+            this.metroPanel2.Size = new System.Drawing.Size(864, 415);
             this.metroPanel2.TabIndex = 1;
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 8;
+            this.metroPanel2.VerticalScrollbarSize = 11;
             // 
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(2, 10);
-            this.metroLabel4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel4.Location = new System.Drawing.Point(3, 12);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(230, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(243, 20);
             this.metroLabel4.TabIndex = 3;
             this.metroLabel4.Text = "*Double Click To See Full Product List ";
             // 
@@ -204,8 +200,8 @@ namespace SuperShop.App
             this.dgvInvoice.EnableHeadersVisualStyles = false;
             this.dgvInvoice.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvInvoice.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvInvoice.Location = new System.Drawing.Point(2, 28);
-            this.dgvInvoice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvInvoice.Location = new System.Drawing.Point(3, 34);
+            this.dgvInvoice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvInvoice.MultiSelect = false;
             this.dgvInvoice.Name = "dgvInvoice";
             this.dgvInvoice.ReadOnly = true;
@@ -222,7 +218,7 @@ namespace SuperShop.App
             this.dgvInvoice.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvInvoice.RowTemplate.Height = 24;
             this.dgvInvoice.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInvoice.Size = new System.Drawing.Size(644, 306);
+            this.dgvInvoice.Size = new System.Drawing.Size(859, 377);
             this.dgvInvoice.TabIndex = 2;
             this.dgvInvoice.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInvoice_CellContentClick);
             // 
@@ -273,13 +269,13 @@ namespace SuperShop.App
             // 
             // ReportControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.metroPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ReportControl";
-            this.Size = new System.Drawing.Size(650, 428);
+            this.Size = new System.Drawing.Size(867, 527);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
             this.metroPanel2.ResumeLayout(false);

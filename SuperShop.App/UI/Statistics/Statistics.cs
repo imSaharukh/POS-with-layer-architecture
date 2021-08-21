@@ -19,6 +19,8 @@ namespace SuperShop.App.UI.Statistics
         public Statistics()
         {
             InitializeComponent();
+          
+            this.dtForm.Value = DateTime.Now.AddDays(-30);
             LoadBarChart();
             LoadPiChart();
         }
@@ -26,7 +28,7 @@ namespace SuperShop.App.UI.Statistics
         {
             Func<ChartPoint, string> lablePoint = chartPoint => string.Format("{0} ({1:P})",chartPoint.Y ,chartPoint.Participation);
             SeriesCollection series = new SeriesCollection();
-            var result = extraRepository.GetSellersData();
+            var result = extraRepository.GetSellersData(dtForm.Value.ToShortDateString(), dtTo.Value.ToShortDateString());
             foreach (var item in result)
             {
                 series.Add(new PieSeries() {Title = item.SalesmanUsername,Values = new ChartValues<double> {item.NoOfSales },DataLabels = true, LabelPoint = lablePoint });
@@ -41,7 +43,7 @@ namespace SuperShop.App.UI.Statistics
             List<double> value =new List<double>();
             List<string> dates = new List<string>();
 
-            var result = extraRepository.GetSealsNumberByDate();
+            var result = extraRepository.GetSealsNumberByDate(dtForm.Value.ToShortDateString(), dtTo.Value.ToShortDateString());
             //value.Add(1);
             //value.Add(2);
             //value.Add(3);

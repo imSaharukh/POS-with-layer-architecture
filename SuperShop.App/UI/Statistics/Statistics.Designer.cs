@@ -33,13 +33,11 @@ namespace SuperShop.App.UI.Statistics
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.btnSearch = new MetroFramework.Controls.MetroButton();
-            this.metroDateTime2 = new MetroFramework.Controls.MetroDateTime();
-            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
+            this.dtTo = new MetroFramework.Controls.MetroDateTime();
+            this.dtForm = new MetroFramework.Controls.MetroDateTime();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.pieChart = new LiveCharts.WinForms.PieChart();
             this.lineChart = new LiveCharts.WinForms.CartesianChart();
@@ -54,13 +52,11 @@ namespace SuperShop.App.UI.Statistics
             // 
             // metroPanel1
             // 
-            this.metroPanel1.Controls.Add(this.metroLabel3);
-            this.metroPanel1.Controls.Add(this.metroComboBox1);
             this.metroPanel1.Controls.Add(this.metroLabel2);
             this.metroPanel1.Controls.Add(this.metroLabel1);
             this.metroPanel1.Controls.Add(this.btnSearch);
-            this.metroPanel1.Controls.Add(this.metroDateTime2);
-            this.metroPanel1.Controls.Add(this.metroDateTime1);
+            this.metroPanel1.Controls.Add(this.dtTo);
+            this.metroPanel1.Controls.Add(this.dtForm);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
@@ -72,35 +68,10 @@ namespace SuperShop.App.UI.Statistics
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(17, 21);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(83, 20);
-            this.metroLabel3.TabIndex = 7;
-            this.metroLabel3.Text = "Select index";
-            // 
-            // metroComboBox1
-            // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 24;
-            this.metroComboBox1.Items.AddRange(new object[] {
-            "Total Sales (monthly)",
-            "Total Sales (3 months)",
-            "Total Sales (6 months)",
-            "Total Sales (1 year)",
-            "Salesman Contribution  "});
-            this.metroComboBox1.Location = new System.Drawing.Point(17, 44);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(155, 30);
-            this.metroComboBox1.TabIndex = 3;
-            this.metroComboBox1.UseSelectable = true;
-            // 
             // metroLabel2
             // 
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.Location = new System.Drawing.Point(199, 44);
+            this.metroLabel2.Location = new System.Drawing.Point(17, 44);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(65, 30);
             this.metroLabel2.TabIndex = 6;
@@ -109,7 +80,7 @@ namespace SuperShop.App.UI.Statistics
             // metroLabel1
             // 
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(476, 44);
+            this.metroLabel1.Location = new System.Drawing.Point(341, 44);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(32, 30);
             this.metroLabel1.TabIndex = 5;
@@ -126,21 +97,21 @@ namespace SuperShop.App.UI.Statistics
             this.btnSearch.UseCustomBackColor = true;
             this.btnSearch.UseSelectable = true;
             // 
-            // metroDateTime2
+            // dtTo
             // 
-            this.metroDateTime2.Location = new System.Drawing.Point(514, 44);
-            this.metroDateTime2.MinimumSize = new System.Drawing.Size(0, 30);
-            this.metroDateTime2.Name = "metroDateTime2";
-            this.metroDateTime2.Size = new System.Drawing.Size(200, 30);
-            this.metroDateTime2.TabIndex = 3;
+            this.dtTo.Location = new System.Drawing.Point(379, 44);
+            this.dtTo.MinimumSize = new System.Drawing.Size(0, 30);
+            this.dtTo.Name = "dtTo";
+            this.dtTo.Size = new System.Drawing.Size(200, 30);
+            this.dtTo.TabIndex = 3;
             // 
-            // metroDateTime1
+            // dtForm
             // 
-            this.metroDateTime1.Location = new System.Drawing.Point(270, 44);
-            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 30);
-            this.metroDateTime1.Name = "metroDateTime1";
-            this.metroDateTime1.Size = new System.Drawing.Size(200, 30);
-            this.metroDateTime1.TabIndex = 2;
+            this.dtForm.Location = new System.Drawing.Point(88, 44);
+            this.dtForm.MinimumSize = new System.Drawing.Size(0, 30);
+            this.dtForm.Name = "dtForm";
+            this.dtForm.Size = new System.Drawing.Size(200, 30);
+            this.dtForm.TabIndex = 2;
             // 
             // metroPanel2
             // 
@@ -263,7 +234,6 @@ namespace SuperShop.App.UI.Statistics
             this.Name = "Statistics";
             this.Size = new System.Drawing.Size(867, 527);
             this.metroPanel1.ResumeLayout(false);
-            this.metroPanel1.PerformLayout();
             this.metroPanel2.ResumeLayout(false);
             this.metroPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
@@ -277,12 +247,10 @@ namespace SuperShop.App.UI.Statistics
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroButton btnSearch;
-        private MetroFramework.Controls.MetroDateTime metroDateTime2;
-        private MetroFramework.Controls.MetroDateTime metroDateTime1;
+        private MetroFramework.Controls.MetroDateTime dtTo;
+        private MetroFramework.Controls.MetroDateTime dtForm;
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private MetroFramework.Controls.MetroGrid metroGrid1;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel5;
