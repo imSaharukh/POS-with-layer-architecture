@@ -1,4 +1,6 @@
-﻿using SuperShop.Repository;
+﻿using LiveCharts;
+using LiveCharts.Wpf;
+using SuperShop.Repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,42 +32,20 @@ namespace SuperShop.App.UI.Statistics
 
         }
        void LoadBarChart() {
+            SeriesCollection series = new SeriesCollection();
+            //series.Add(new LineSeries() { Title = "1", Values = new ChartValues<double>("1") });
+            ////AddXY value in chart1 in series named as Salary  
+            //this.lineChart.Series.Add();
+            //this.lineChart.Series["Salary"].Points.AddXY("0", "8000");
+            //this.lineChart.Series["Salary"].Points.AddXY("Ankit", "7000");
+            //this.lineChart.Series["Salary"].Points.AddXY("Gurmeet", "10000");
+            //this.lineChart.Series["Salary"].Points.AddXY("Suresh", "8500");
+            //this.lineChart.Series["Salary"].Points.AddXY("0", "10000");
+            //this.lineChart.Series["Salary"].Points.AddXY("0", "8000");
 
-            //AddXY value in chart1 in series named as Salary  
-            barChart.Series["Salary"].Points.AddXY("0", "10000");
-            barChart.Series["Salary"].Points.AddXY("0", "8000");
-            barChart.Series["Salary"].Points.AddXY("Ankit", "7000");
-            barChart.Series["Salary"].Points.AddXY("Gurmeet", "10000");
-            barChart.Series["Salary"].Points.AddXY("Suresh", "8500");
-            barChart.Series["Salary"].Points.AddXY("0", "10000");
-            barChart.Series["Salary"].Points.AddXY("0", "8000");
-            barChart.Series["Salary"].Points.AddXY("Ankit", "7000");
-            barChart.Series["Salary"].Points.AddXY("Gurmeet", "10000");
-            barChart.Series["Salary"].Points.AddXY("Suresh", "8500");
-            barChart.Series["Salary"].Points.AddXY("0", "10000");
-            barChart.Series["Salary"].Points.AddXY("0", "8000");
-            barChart.Series["Salary"].Points.AddXY("Ankit", "7000");
-            barChart.Series["Salary"].Points.AddXY("Gurmeet", "10000");
-            barChart.Series["Salary"].Points.AddXY("Suresh", "8500");
-            barChart.Series["Salary"].Points.AddXY("0", "10000");
-            barChart.Series["Salary"].Points.AddXY("0", "8000");
-            barChart.Series["Salary"].Points.AddXY("Ankit", "7000");
-            barChart.Series["Salary"].Points.AddXY("Gurmeet", "10000");
-            barChart.Series["Salary"].Points.AddXY("Suresh", "8500");
-            barChart.Series["Salary"].Points.AddXY("Gurmeet", "10000");
-            barChart.Series["Salary"].Points.AddXY("Suresh", "8500");
-            barChart.Series["Salary"].Points.AddXY("0", "10000");
-            barChart.Series["Salary"].Points.AddXY("0", "8000");
-            barChart.Series["Salary"].Points.AddXY("Ankit", "7000");
-            barChart.Series["Salary"].Points.AddXY("Gurmeet", "10000");
-            barChart.Series["Salary"].Points.AddXY("Suresh", "8500");
-            barChart.Series["Salary"].Points.AddXY("0", "10000");
-            barChart.Series["Salary"].Points.AddXY("0", "8000");
-            barChart.Series["Salary"].Points.AddXY("Ankit", "7000");
-            barChart.Series["Salary"].Points.AddXY("Gurmeet", "10000");
-            barChart.Series["Salary"].Points.AddXY("Suresh", "8500");
-            //chart title  
-            barChart.Titles.Add("Salary Chart");
+            
+            ////chart title  
+            //barChart.Titles.Add("Salary Chart");
         }
 
         private void barChart_Click(object sender, EventArgs e)
