@@ -29,12 +29,9 @@ namespace SuperShop.App.UI.Statistics
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
@@ -48,11 +45,10 @@ namespace SuperShop.App.UI.Statistics
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.piChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
+            this.pieChart1 = new LiveCharts.WinForms.PieChart();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.piChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,11 +144,11 @@ namespace SuperShop.App.UI.Statistics
             // 
             // metroPanel2
             // 
+            this.metroPanel2.Controls.Add(this.pieChart1);
             this.metroPanel2.Controls.Add(this.lineChart);
             this.metroPanel2.Controls.Add(this.metroLabel6);
             this.metroPanel2.Controls.Add(this.metroLabel5);
             this.metroPanel2.Controls.Add(this.metroLabel4);
-            this.metroPanel2.Controls.Add(this.piChart);
             this.metroPanel2.Controls.Add(this.metroGrid1);
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
@@ -204,24 +200,6 @@ namespace SuperShop.App.UI.Statistics
             this.metroLabel4.UseCustomBackColor = true;
             this.metroLabel4.UseCustomForeColor = true;
             // 
-            // piChart
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.piChart.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.piChart.Legends.Add(legend2);
-            this.piChart.Location = new System.Drawing.Point(432, 94);
-            this.piChart.Name = "piChart";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.CustomProperties = "PieLabelStyle=Disabled";
-            series2.Legend = "Legend1";
-            series2.Name = "SalesData";
-            this.piChart.Series.Add(series2);
-            this.piChart.Size = new System.Drawing.Size(408, 304);
-            this.piChart.TabIndex = 4;
-            this.piChart.Text = "chart2";
-            // 
             // metroGrid1
             // 
             this.metroGrid1.AllowUserToResizeRows = false;
@@ -229,37 +207,37 @@ namespace SuperShop.App.UI.Statistics
             this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle2;
             this.metroGrid1.EnableHeadersVisualStyles = false;
             this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.metroGrid1.Location = new System.Drawing.Point(3, 74);
             this.metroGrid1.Name = "metroGrid1";
             this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.metroGrid1.RowHeadersWidth = 51;
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.RowTemplate.Height = 24;
@@ -267,6 +245,14 @@ namespace SuperShop.App.UI.Statistics
             this.metroGrid1.Size = new System.Drawing.Size(855, 338);
             this.metroGrid1.TabIndex = 2;
             this.metroGrid1.UseCustomBackColor = true;
+            // 
+            // pieChart1
+            // 
+            this.pieChart1.Location = new System.Drawing.Point(432, 94);
+            this.pieChart1.Name = "pieChart1";
+            this.pieChart1.Size = new System.Drawing.Size(410, 304);
+            this.pieChart1.TabIndex = 9;
+            this.pieChart1.Text = "pieChart1";
             // 
             // Statistics
             // 
@@ -280,7 +266,6 @@ namespace SuperShop.App.UI.Statistics
             this.metroPanel1.PerformLayout();
             this.metroPanel2.ResumeLayout(false);
             this.metroPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.piChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             this.ResumeLayout(false);
 
@@ -299,9 +284,9 @@ namespace SuperShop.App.UI.Statistics
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroComboBox metroComboBox1;
         private MetroFramework.Controls.MetroLabel metroLabel4;
-        private System.Windows.Forms.DataVisualization.Charting.Chart piChart;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private LiveCharts.WinForms.CartesianChart lineChart;
+        private LiveCharts.WinForms.PieChart pieChart1;
     }
 }
