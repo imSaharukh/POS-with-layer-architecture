@@ -192,6 +192,7 @@ namespace SuperShop.App.UI.Statistics
             this.piChart.Name = "piChart";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.CustomProperties = "PieLabelStyle=Disabled";
             series1.Legend = "Legend1";
             series1.Name = "SalesData";
             this.piChart.Series.Add(series1);
