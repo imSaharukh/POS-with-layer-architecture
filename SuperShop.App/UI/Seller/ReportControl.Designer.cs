@@ -41,13 +41,13 @@ namespace SuperShop.App
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.dgvInvoice = new MetroFramework.Controls.MetroGrid();
             this.invoiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SalesmanUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PurchaseDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoice)).BeginInit();
@@ -152,6 +152,15 @@ namespace SuperShop.App
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
             // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(3, 12);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(243, 20);
+            this.metroLabel4.TabIndex = 3;
+            this.metroLabel4.Text = "*Double Click To See Full Product List ";
+            // 
             // dgvInvoice
             // 
             this.dgvInvoice.AllowUserToResizeRows = false;
@@ -249,15 +258,6 @@ namespace SuperShop.App
             this.PurchaseDate.MinimumWidth = 6;
             this.PurchaseDate.Name = "PurchaseDate";
             this.PurchaseDate.ReadOnly = true;
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(3, 12);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(241, 20);
-            this.metroLabel4.TabIndex = 3;
-            this.metroLabel4.Text = "*Double Click To Sell Full Product List ";
             // 
             // ReportControl
             // 
