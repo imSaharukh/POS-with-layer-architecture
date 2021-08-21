@@ -86,6 +86,12 @@ namespace SuperShop.App
                 this.lblErrUnitPrice.Text = "Unit Price can't be empty";
                 this.lblErrUnitPrice.Visible = true;
             }
+            else if(Convert.ToDouble(this.txtUnitPrice.Text)<=0)
+            {
+                result = false;
+                this.lblErrUnitPrice.Text = "Unit Price can't be less than 1";
+                this.lblErrUnitPrice.Visible = true;
+            }
                 return result;
         }
         private void AddProductForm_Load(object sender, EventArgs e)
@@ -148,6 +154,11 @@ namespace SuperShop.App
             {
                 CreateProduct();
             }
+        }
+
+        private void txtUnitPrice_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
