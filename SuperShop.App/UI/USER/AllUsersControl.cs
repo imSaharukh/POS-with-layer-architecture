@@ -111,7 +111,7 @@ namespace SuperShop.App
             else
             {
                 DataGridViewRow row = this.dgv.SelectedRows[0];
-             var result =   userRepository.DeleteOne(row.Cells["username"].Value.ToString());
+             var result =   userRepository.DeleteOne(row.Cells["password"].Value.ToString());
 
                 if(result == 1)
                 {

@@ -365,6 +365,7 @@ namespace SuperShop.App
             this.ClientSize = new System.Drawing.Size(517, 597);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "AddProductForm";
             this.Padding = new System.Windows.Forms.Padding(20, 74, 20, 20);
             this.Text = "Add Product Details";
