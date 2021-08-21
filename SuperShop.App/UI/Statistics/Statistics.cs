@@ -35,8 +35,9 @@ namespace SuperShop.App.UI.Statistics
             this.lineChart.Series.Clear();
             SeriesCollection series = new SeriesCollection();
             List<double> value =new List<double>();
+            List<string> dates = new List<string>();
 
-       var result = extraRepository.GetSealsNumberByDate();
+            var result = extraRepository.GetSealsNumberByDate();
             //value.Add(1);
             //value.Add(2);
             //value.Add(3);
@@ -44,10 +45,15 @@ namespace SuperShop.App.UI.Statistics
             foreach (var item in result)
             {
                 value.Add(item.TotalSales);
+                dates.Add(item.PurchaseDate.ToShortDateString());
                 Console.WriteLine("sub total-> "+item.TotalSales);
+               
             }
             series.Add(new LineSeries() { Title = "Total Sales", Values = new ChartValues<double>(value) });
 
+
+
+            this.lineChart.AxisX.Add(new Axis {Title="Date" ,Labels = dates });
             this.lineChart.Series = series;
 
         }
