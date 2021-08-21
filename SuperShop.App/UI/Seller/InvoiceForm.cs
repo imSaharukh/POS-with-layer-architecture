@@ -54,11 +54,16 @@ namespace SuperShop.App.UI.Seller
             var productName = row.Cells["productName"].Value.ToString();
             var unitPrice = row.Cells["unitPrice"].Value.ToString();
             var productQuantity = txtProductQty.Text;
-            
+            var stock = Convert.ToDouble(row.Cells["stock"].Value.ToString());
             if (!String.IsNullOrEmpty(productQuantity) && Convert.ToDouble(productQuantity)>0)
             {
                 if (!products.Contains(productID))
                 {
+                    if (Convert.ToInt32(productQuantity) > stock)
+                    {
+                        MessageBox.Show("qty can't be more then stock");
+                        return;
+                    }
                     this.dgvInvoiceProduct.Rows.Insert(0,productID, productName, productQuantity, unitPrice);
                     /* Total += (Convert.ToDouble(productQuantity) * Convert.ToDouble(unitPrice));
                      lblTotal.Text = CalculateTotal();*/
@@ -159,6 +164,7 @@ namespace SuperShop.App.UI.Seller
                 UI.MiniStatement.SalesSlip salesSlip = new UI.MiniStatement.SalesSlip();
                 salesSlip.Location = new Point(0, 0);
                 salesSlip.Show();
+                loadGridView();
 
                 //Hide();
             }

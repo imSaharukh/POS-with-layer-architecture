@@ -55,7 +55,7 @@ namespace SuperShop.App
         private void dgvInvoice_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Console.WriteLine("cell content click");
-            ProductList productList = new ProductList(this.dgvInvoice.SelectedRows[0].Cells[0].Value.ToString());
+            InvoiceProductList productList = new InvoiceProductList(this.dgvInvoice.SelectedRows[0].Cells[0].Value.ToString());
             productList.Show();
         }
     }

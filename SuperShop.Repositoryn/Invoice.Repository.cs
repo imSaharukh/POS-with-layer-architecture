@@ -25,6 +25,11 @@ namespace SuperShop.Repository
             invoice.PurchaseDate = DateTime.Now;
             foreach (var item in invoice.InvoiceItems)
             {
+                //decrease stock
+                DataAccess.DrmQuery("UPDATE products SET stock = stock - 1 WHERE productId = @productId",
+                    new { item.productID });
+
+
                 DataAccess.DrmQuery(@"insert into invoiceItems (invoiceID,productID,qty) 
                 values (@invoiceID,@productID,@qty);", 
                 new { invoiceID, item.productID,item.qty });
