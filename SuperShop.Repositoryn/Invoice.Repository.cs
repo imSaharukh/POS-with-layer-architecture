@@ -36,7 +36,7 @@ namespace SuperShop.Repository
                 values 
                (@invoiceID,@SubTotal,@TotalPrice,@Discount,@SalesmanUsername,@PurchaseDate);",
                 new {
-                    invoiceID,  invoice.SubTotal,invoice.TotalPrice,invoice.Discount,invoice.SalesmanUsername,
+                    invoice.  invoiceID,  invoice.SubTotal,invoice.TotalPrice,invoice.Discount,invoice.SalesmanUsername,
                     PurchaseDate
                 });
 
