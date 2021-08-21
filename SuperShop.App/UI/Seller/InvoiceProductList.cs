@@ -28,5 +28,10 @@ namespace SuperShop.App.UI.Seller
         {
 
         }
+
+        private void dgvInvoice_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
