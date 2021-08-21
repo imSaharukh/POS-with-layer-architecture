@@ -1,4 +1,6 @@
-﻿using SuperShop.Entity;
+﻿using shortid;
+using shortid.Configuration;
+using SuperShop.Entity;
 using SuperShop.Repository;
 using System;
 using System.Collections.Generic;
@@ -146,6 +148,12 @@ namespace SuperShop.App.UI.Seller
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             Invoice invoice = new Invoice();
+            var options = new GenerationOptions
+            {
+                Length = 9
+            };
+          
+            invoice.invoiceID = ShortId.Generate(options);
             invoice.SalesmanUsername = Username;
             invoice.InvoiceItems =new List<InvoiceItem>();
             invoice.TotalPrice = this.Total;

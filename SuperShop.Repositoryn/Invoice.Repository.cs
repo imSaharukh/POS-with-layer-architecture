@@ -17,11 +17,7 @@ namespace SuperShop.Repository
 
             //var invoiceID = Guid.NewGuid().ToString();
 
-            var options = new GenerationOptions
-            {
-                Length = 9
-            };
-            string invoiceID = ShortId.Generate(options);
+      
             invoice.PurchaseDate = DateTime.Now;
             foreach (var item in invoice.InvoiceItems)
             {
@@ -32,7 +28,7 @@ namespace SuperShop.Repository
 
                 DataAccess.DrmQuery(@"insert into invoiceItems (invoiceID,productID,qty) 
                 values (@invoiceID,@productID,@qty);", 
-                new { invoiceID, item.productID,item.qty });
+                new { invoice.invoiceID, item.productID,item.qty });
             }
 
             var PurchaseDate = invoice.PurchaseDate.ToShortDateString();
