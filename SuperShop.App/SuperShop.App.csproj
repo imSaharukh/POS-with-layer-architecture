@@ -129,6 +129,12 @@
     <Compile Include="UI\Seller\InvoiceForm.Designer.cs">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Seller\ViewInvoiceProductList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Seller\ViewInvoiceProductList.Designer.cs">
+      <DependentUpon>ViewInvoiceProductList.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\USER\AddUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Seller\InvoiceForm.resx">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Seller\ViewInvoiceProductList.resx">
+      <DependentUpon>ViewInvoiceProductList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\USER\AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
