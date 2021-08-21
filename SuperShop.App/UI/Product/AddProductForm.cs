@@ -148,17 +148,19 @@ namespace SuperShop.App
             
         }
 
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
-            if (validate())
-            {
-                CreateProduct();
-            }
-        }
+       
 
         private void txtUnitPrice_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnConfirmAdd_Click(object sender, EventArgs e)
+        {
+            if(validate())
+            {
+                CreateProduct();
+            }
         }
     }
 }

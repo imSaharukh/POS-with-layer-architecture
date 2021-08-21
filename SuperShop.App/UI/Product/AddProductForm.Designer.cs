@@ -48,7 +48,7 @@ namespace SuperShop.App
             this.txtUnitPrice = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.dtExpireDate = new MetroFramework.Controls.MetroDateTime();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.btnConfirmAdd = new MetroFramework.Controls.MetroButton();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,13 +72,13 @@ namespace SuperShop.App
             this.flowLayoutPanel1.Controls.Add(this.txtUnitPrice);
             this.flowLayoutPanel1.Controls.Add(this.metroLabel6);
             this.flowLayoutPanel1.Controls.Add(this.dtExpireDate);
-            this.flowLayoutPanel1.Controls.Add(this.metroButton1);
+            this.flowLayoutPanel1.Controls.Add(this.btnConfirmAdd);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.ForeColor = System.Drawing.Color.Red;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(144, 63);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(88, 66);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(263, 464);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(267, 551);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // metroLabel1
@@ -107,10 +107,10 @@ namespace SuperShop.App
             // 
             // 
             this.txtProductName.CustomButton.Image = null;
-            this.txtProductName.CustomButton.Location = new System.Drawing.Point(219, 2);
+            this.txtProductName.CustomButton.Location = new System.Drawing.Point(164, 2);
             this.txtProductName.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtProductName.CustomButton.Name = "";
-            this.txtProductName.CustomButton.Size = new System.Drawing.Size(33, 31);
+            this.txtProductName.CustomButton.Size = new System.Drawing.Size(25, 25);
             this.txtProductName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtProductName.CustomButton.TabIndex = 1;
             this.txtProductName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -157,7 +157,7 @@ namespace SuperShop.App
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(3, 124);
+            this.metroLabel5.Location = new System.Drawing.Point(3, 125);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(101, 20);
             this.metroLabel5.TabIndex = 23;
@@ -167,7 +167,7 @@ namespace SuperShop.App
             // 
             this.lblErrPrice.AutoSize = true;
             this.lblErrPrice.ForeColor = System.Drawing.Color.Red;
-            this.lblErrPrice.Location = new System.Drawing.Point(3, 144);
+            this.lblErrPrice.Location = new System.Drawing.Point(3, 145);
             this.lblErrPrice.Name = "lblErrPrice";
             this.lblErrPrice.Size = new System.Drawing.Size(46, 17);
             this.lblErrPrice.TabIndex = 35;
@@ -179,17 +179,17 @@ namespace SuperShop.App
             // 
             // 
             this.txtPurchasePrice.CustomButton.Image = null;
-            this.txtPurchasePrice.CustomButton.Location = new System.Drawing.Point(219, 2);
+            this.txtPurchasePrice.CustomButton.Location = new System.Drawing.Point(164, 2);
             this.txtPurchasePrice.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPurchasePrice.CustomButton.Name = "";
-            this.txtPurchasePrice.CustomButton.Size = new System.Drawing.Size(33, 31);
+            this.txtPurchasePrice.CustomButton.Size = new System.Drawing.Size(25, 25);
             this.txtPurchasePrice.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtPurchasePrice.CustomButton.TabIndex = 1;
             this.txtPurchasePrice.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtPurchasePrice.CustomButton.UseSelectable = true;
             this.txtPurchasePrice.CustomButton.Visible = false;
             this.txtPurchasePrice.Lines = new string[0];
-            this.txtPurchasePrice.Location = new System.Drawing.Point(3, 163);
+            this.txtPurchasePrice.Location = new System.Drawing.Point(3, 164);
             this.txtPurchasePrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPurchasePrice.MaxLength = 32767;
             this.txtPurchasePrice.Name = "txtPurchasePrice";
@@ -208,7 +208,7 @@ namespace SuperShop.App
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(3, 195);
+            this.metroLabel7.Location = new System.Drawing.Point(3, 196);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(41, 20);
             this.metroLabel7.TabIndex = 32;
@@ -219,7 +219,7 @@ namespace SuperShop.App
             this.cmbUnit.FormattingEnabled = true;
             this.cmbUnit.IntegralHeight = false;
             this.cmbUnit.ItemHeight = 24;
-            this.cmbUnit.Location = new System.Drawing.Point(3, 217);
+            this.cmbUnit.Location = new System.Drawing.Point(3, 218);
             this.cmbUnit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbUnit.Name = "cmbUnit";
             this.cmbUnit.Size = new System.Drawing.Size(192, 30);
@@ -229,7 +229,7 @@ namespace SuperShop.App
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(3, 248);
+            this.metroLabel3.Location = new System.Drawing.Point(3, 250);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(42, 20);
             this.metroLabel3.TabIndex = 21;
@@ -239,7 +239,7 @@ namespace SuperShop.App
             // 
             this.lblErrStock.AutoSize = true;
             this.lblErrStock.ForeColor = System.Drawing.Color.Red;
-            this.lblErrStock.Location = new System.Drawing.Point(3, 268);
+            this.lblErrStock.Location = new System.Drawing.Point(3, 270);
             this.lblErrStock.Name = "lblErrStock";
             this.lblErrStock.Size = new System.Drawing.Size(46, 17);
             this.lblErrStock.TabIndex = 37;
@@ -251,17 +251,17 @@ namespace SuperShop.App
             // 
             // 
             this.txtStock.CustomButton.Image = null;
-            this.txtStock.CustomButton.Location = new System.Drawing.Point(219, 2);
+            this.txtStock.CustomButton.Location = new System.Drawing.Point(164, 2);
             this.txtStock.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStock.CustomButton.Name = "";
-            this.txtStock.CustomButton.Size = new System.Drawing.Size(33, 31);
+            this.txtStock.CustomButton.Size = new System.Drawing.Size(25, 25);
             this.txtStock.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtStock.CustomButton.TabIndex = 1;
             this.txtStock.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtStock.CustomButton.UseSelectable = true;
             this.txtStock.CustomButton.Visible = false;
             this.txtStock.Lines = new string[0];
-            this.txtStock.Location = new System.Drawing.Point(3, 287);
+            this.txtStock.Location = new System.Drawing.Point(3, 289);
             this.txtStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStock.MaxLength = 32767;
             this.txtStock.Name = "txtStock";
@@ -280,7 +280,7 @@ namespace SuperShop.App
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(3, 319);
+            this.metroLabel2.Location = new System.Drawing.Point(3, 321);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(69, 20);
             this.metroLabel2.TabIndex = 20;
@@ -290,7 +290,7 @@ namespace SuperShop.App
             // 
             this.lblErrUnitPrice.AutoSize = true;
             this.lblErrUnitPrice.ForeColor = System.Drawing.Color.Red;
-            this.lblErrUnitPrice.Location = new System.Drawing.Point(3, 339);
+            this.lblErrUnitPrice.Location = new System.Drawing.Point(3, 341);
             this.lblErrUnitPrice.Name = "lblErrUnitPrice";
             this.lblErrUnitPrice.Size = new System.Drawing.Size(46, 17);
             this.lblErrUnitPrice.TabIndex = 38;
@@ -302,17 +302,17 @@ namespace SuperShop.App
             // 
             // 
             this.txtUnitPrice.CustomButton.Image = null;
-            this.txtUnitPrice.CustomButton.Location = new System.Drawing.Point(219, 2);
+            this.txtUnitPrice.CustomButton.Location = new System.Drawing.Point(164, 2);
             this.txtUnitPrice.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUnitPrice.CustomButton.Name = "";
-            this.txtUnitPrice.CustomButton.Size = new System.Drawing.Size(33, 31);
+            this.txtUnitPrice.CustomButton.Size = new System.Drawing.Size(25, 25);
             this.txtUnitPrice.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtUnitPrice.CustomButton.TabIndex = 1;
             this.txtUnitPrice.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtUnitPrice.CustomButton.UseSelectable = true;
             this.txtUnitPrice.CustomButton.Visible = false;
             this.txtUnitPrice.Lines = new string[0];
-            this.txtUnitPrice.Location = new System.Drawing.Point(3, 358);
+            this.txtUnitPrice.Location = new System.Drawing.Point(3, 360);
             this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUnitPrice.MaxLength = 32767;
             this.txtUnitPrice.Name = "txtUnitPrice";
@@ -332,7 +332,7 @@ namespace SuperShop.App
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(3, 390);
+            this.metroLabel6.Location = new System.Drawing.Point(3, 392);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(80, 20);
             this.metroLabel6.TabIndex = 29;
@@ -340,29 +340,28 @@ namespace SuperShop.App
             // 
             // dtExpireDate
             // 
-            this.dtExpireDate.Location = new System.Drawing.Point(3, 412);
+            this.dtExpireDate.Location = new System.Drawing.Point(3, 414);
             this.dtExpireDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtExpireDate.MinimumSize = new System.Drawing.Size(0, 30);
             this.dtExpireDate.Name = "dtExpireDate";
             this.dtExpireDate.Size = new System.Drawing.Size(192, 30);
             this.dtExpireDate.TabIndex = 30;
             // 
-            // metroButton1
+            // btnConfirmAdd
             // 
-            this.metroButton1.Location = new System.Drawing.Point(2, 401);
-            this.metroButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(192, 30);
-            this.metroButton1.TabIndex = 28;
-            this.metroButton1.Text = "Confirm";
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            this.btnConfirmAdd.Location = new System.Drawing.Point(3, 449);
+            this.btnConfirmAdd.Name = "btnConfirmAdd";
+            this.btnConfirmAdd.Size = new System.Drawing.Size(165, 23);
+            this.btnConfirmAdd.TabIndex = 40;
+            this.btnConfirmAdd.Text = "Confirm";
+            this.btnConfirmAdd.UseSelectable = true;
+            this.btnConfirmAdd.Click += new System.EventHandler(this.btnConfirmAdd_Click);
             // 
             // AddProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(388, 562);
+            this.ClientSize = new System.Drawing.Size(378, 639);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
@@ -396,7 +395,7 @@ namespace SuperShop.App
         private MetroFramework.Controls.MetroTextBox txtUnitPrice;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroDateTime dtExpireDate;
-        private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroComboBox cmbUnit;
+        private MetroFramework.Controls.MetroButton btnConfirmAdd;
     }
 }

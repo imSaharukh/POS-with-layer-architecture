@@ -98,7 +98,7 @@ namespace SuperShop.App.UI.Dashboard
             // 
             // btnlogout
             // 
-            this.btnlogout.Location = new System.Drawing.Point(23, 449);
+            this.btnlogout.Location = new System.Drawing.Point(23, 438);
             this.btnlogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnlogout.Name = "btnlogout";
             this.btnlogout.Size = new System.Drawing.Size(153, 23);
@@ -142,7 +142,7 @@ namespace SuperShop.App.UI.Dashboard
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(3, 486);
+            this.metroLabel1.Location = new System.Drawing.Point(3, 474);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(114, 20);
             this.metroLabel1.TabIndex = 2;
