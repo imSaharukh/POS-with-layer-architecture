@@ -27,5 +27,15 @@ namespace SuperShop.App.UI.Dashboard
         {
             Application.Restart();
         }
+
+        private void btnStats_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnProductlist_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
