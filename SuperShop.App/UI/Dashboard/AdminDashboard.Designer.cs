@@ -143,6 +143,7 @@ namespace SuperShop.App
             this.metroButton1.TabIndex = 7;
             this.metroButton1.Text = "Log Out";
             this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.btnLogut_Click);
             // 
             // AdminDashboard
             // 

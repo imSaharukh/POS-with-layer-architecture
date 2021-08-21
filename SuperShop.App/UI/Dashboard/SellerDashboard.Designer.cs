@@ -99,6 +99,7 @@ namespace SuperShop.App.UI.Dashboard
             this.btnLogOut.TabIndex = 5;
             this.btnLogOut.Text = "Logout";
             this.btnLogOut.UseSelectable = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnSalesReport
             // 

@@ -95,5 +95,13 @@ namespace SuperShop.App
         {
            
         }
+
+      
+
+        private void btnLogut_Click(object sender, EventArgs e)
+        {
+        
+            Application.Restart();
+        }
     }
 }

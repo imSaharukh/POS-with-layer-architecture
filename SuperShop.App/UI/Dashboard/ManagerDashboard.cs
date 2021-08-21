@@ -22,5 +22,10 @@ namespace SuperShop.App.UI.Dashboard
         {
 
         }
+
+        private void btnlogout_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
     }
 }
