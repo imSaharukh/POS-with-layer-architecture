@@ -112,7 +112,8 @@ namespace SuperShop.App.UI.Seller
                 this.dgvInvoiceProduct.Rows.Remove(row);
                 /*  Total -= Convert.ToDouble(row.Cells[1].Value)*Convert.ToDouble(row.Cells[2].Value);
                   lblTotal.Text = Total.ToString();*/
-                CalculateTotal();
+                this.products.Remove(Convert.ToInt32(row.Cells[0].Value));
+                CalculateSubTotal();
             }
             else
                 MessageBox.Show("U drunk !!!! go home and sleep");
@@ -161,7 +162,7 @@ namespace SuperShop.App.UI.Seller
            var result =  InvoiceRepository.CreateOne(invoice);
             if (result == 1)
             {
-                UI.MiniStatement.SalesSlip salesSlip = new UI.MiniStatement.SalesSlip();
+                UI.MiniStatement.SalesSlip salesSlip = new UI.MiniStatement.SalesSlip(invoice);
                 salesSlip.Location = new Point(0, 0);
                 salesSlip.Show();
                 loadGridView();
@@ -187,8 +188,19 @@ namespace SuperShop.App.UI.Seller
         private void btnClearAll_Click(object sender, EventArgs e)
         {
             this.dgvInvoiceProduct.Rows.Clear();
-           
+            this.products.Clear();
             CalculateSubTotal();
+        }
+
+        private void dgvInvoiceProduct_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            CalculateSubTotal();
+            Console.WriteLine("Value_Changed");
+        }
+
+        private void dgvInvoiceProduct_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            Console.WriteLine("Value_+Changed");
         }
     }
 }

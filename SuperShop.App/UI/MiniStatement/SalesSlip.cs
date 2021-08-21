@@ -14,11 +14,22 @@ namespace SuperShop.App.UI.MiniStatement
 {
     public partial class SalesSlip : MetroForm
     {
-        public SalesSlip()
+        Entity.Invoice invoice { get; set; }
+        public SalesSlip(Entity.Invoice invoice)
         {
             InitializeComponent();
+            this.invoice = invoice;
+            LoadData(invoice);
         }
-
+        void LoadData(Entity.Invoice invoice)
+        {
+            this.txtInvoiceNo.Text = invoice.invoiceID;
+            this.txtDate.Text = DateTime.Now.ToShortDateString();
+            this.txtSellerID.Text = invoice.SalesmanUsername;
+            this.txtSubtotal.Text = invoice.SubTotal.ToString();
+            this.txtTotalBDT.Text = invoice.TotalPrice.ToString();
+            this.txtDiscountBDT.Text = invoice.Discount.ToString();
+        }
         private void SalesSlip_Load(object sender, EventArgs e)
         {
 
