@@ -147,6 +147,14 @@ namespace SuperShop.App.UI.Seller
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            CalculateSubTotal();
+            if (SubTotal > Convert.ToDouble(this.txtGivenAmount.Text)) 
+            {
+                MessageBox.Show("Given Amount is less then SubTotal" ,"Error" , MessageBoxButtons.OK);
+                return;
+            }
+
+
             Invoice invoice = new Invoice();
             var options = new GenerationOptions
             {
@@ -162,6 +170,10 @@ namespace SuperShop.App.UI.Seller
             foreach (DataGridViewRow item in this.dgvInvoiceProduct.Rows)
             {
                 var product = new InvoiceItem();
+                product.Product = new Entity.Product();
+              
+                product.Product.productName = item.Cells[1].Value.ToString();
+                product.Product.unitPrice = Convert.ToDouble(item.Cells[3].Value);
                 product.qty = Convert.ToInt32(item.Cells[2].Value);
                 product.productID = Convert.ToInt32(item.Cells[0].Value);
                 invoice.InvoiceItems.Add(product);
@@ -170,11 +182,16 @@ namespace SuperShop.App.UI.Seller
            var result =  InvoiceRepository.CreateOne(invoice);
             if (result == 1)
             {
-                UI.MiniStatement.SalesSlip salesSlip = new UI.MiniStatement.SalesSlip(invoice);
+                var exhangeAmount =  Convert.ToDouble(txtGivenAmount.Text) - SubTotal;
+
+                MessageBox.Show("Excahnge Amount "+ exhangeAmount+" TK" ,"Message", MessageBoxButtons.OK);
+
+                UI.MiniStatement.SalesSlip salesSlip = new UI.MiniStatement.SalesSlip(invoice,this.txtGivenAmount.Text, exhangeAmount.ToString());
                 salesSlip.Location = new Point(0, 0);
                 salesSlip.Show();
+                ClearAll();
                 loadGridView();
-
+                
                 //Hide();
             }
             else
@@ -183,6 +200,14 @@ namespace SuperShop.App.UI.Seller
             }
         }
 
+        void ClearAll()
+        {
+            this.products.Clear();
+            this.dgvInvoiceProduct.Rows.Clear();
+            CalculateSubTotal();
+            this.txtBoxDiscount.Text = "";
+            this.txtGivenAmount.Text = "";
+        }
         private void search_changed(object sender, EventArgs e)
         {
         this.dgvAllProduct.DataSource=    productRepository.SearchByProductname(this.txtSearch.Text);
