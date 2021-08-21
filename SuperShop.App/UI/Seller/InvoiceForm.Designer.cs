@@ -90,7 +90,7 @@ namespace SuperShop.App.UI.Seller
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(0, 0);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(877, 527);
+            this.metroPanel1.Size = new System.Drawing.Size(875, 527);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -209,7 +209,7 @@ namespace SuperShop.App.UI.Seller
             this.metroPanel2.HorizontalScrollbarSize = 10;
             this.metroPanel2.Location = new System.Drawing.Point(573, 0);
             this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(301, 524);
+            this.metroPanel2.Size = new System.Drawing.Size(290, 524);
             this.metroPanel2.TabIndex = 5;
             this.metroPanel2.UseCustomBackColor = true;
             this.metroPanel2.VerticalScrollbarBarColor = true;
@@ -419,7 +419,7 @@ namespace SuperShop.App.UI.Seller
             this.dgvInvoiceProduct.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvInvoiceProduct.RowTemplate.Height = 24;
             this.dgvInvoiceProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInvoiceProduct.Size = new System.Drawing.Size(301, 214);
+            this.dgvInvoiceProduct.Size = new System.Drawing.Size(282, 214);
             this.dgvInvoiceProduct.TabIndex = 8;
             this.dgvInvoiceProduct.UseCustomBackColor = true;
             this.dgvInvoiceProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick);
@@ -460,7 +460,7 @@ namespace SuperShop.App.UI.Seller
             // 
             this.btnConfirm.Location = new System.Drawing.Point(3, 456);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(295, 23);
+            this.btnConfirm.Size = new System.Drawing.Size(282, 23);
             this.btnConfirm.TabIndex = 7;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseSelectable = true;
@@ -626,7 +626,7 @@ namespace SuperShop.App.UI.Seller
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.metroPanel1);
             this.Name = "InvoiceForm";
-            this.Size = new System.Drawing.Size(877, 527);
+            this.Size = new System.Drawing.Size(875, 527);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
             this.metroPanel2.ResumeLayout(false);
