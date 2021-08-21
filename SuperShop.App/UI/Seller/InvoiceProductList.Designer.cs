@@ -56,7 +56,7 @@ namespace SuperShop.App.UI.Seller
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 8;
             this.metroPanel1.Location = new System.Drawing.Point(17, 52);
-            this.metroPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.metroPanel1.Name = "metroPanel1";
             this.metroPanel1.Size = new System.Drawing.Size(460, 307);
             this.metroPanel1.TabIndex = 0;
@@ -106,7 +106,8 @@ namespace SuperShop.App.UI.Seller
             this.dgvInvoice.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvInvoice.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvInvoice.Location = new System.Drawing.Point(-2, -1);
-            this.dgvInvoice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvInvoice.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvInvoice.MultiSelect = false;
             this.dgvInvoice.Name = "dgvInvoice";
             this.dgvInvoice.ReadOnly = true;
             this.dgvInvoice.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -220,9 +221,9 @@ namespace SuperShop.App.UI.Seller
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(475, 324);
             this.Controls.Add(this.metroPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "InvoiceProductList";
-            this.Padding = new System.Windows.Forms.Padding(15, 49, 15, 16);
+            this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Text = "InvoiceProductList";
             this.Load += new System.EventHandler(this.InvoiceProductList_Load);
             this.metroPanel1.ResumeLayout(false);
