@@ -59,7 +59,7 @@ namespace SuperShop.Repository
             Console.WriteLine(username);
             if (username == null)
             {
-                sql = "select * from invoice"; 
+                sql = "select * from invoice ORDER BY PurchaseDate desc"; 
             }
             else
             {

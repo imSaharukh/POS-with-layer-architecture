@@ -62,17 +62,17 @@ namespace SuperShop.App
 
         }
        void loadGridView() {
-            //try
+            try
             {
                 this.dgvInvoice.DataSource = InvoiceRepository.GetAll(Username);
             }
-            //catch(Exception err2)
-            //{
+            catch (Exception err2)
+            {
 
-            //    Console.WriteLine(err2);
-            //    MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-          
+                Console.WriteLine(err2);
+                MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
 
