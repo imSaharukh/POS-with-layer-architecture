@@ -28,11 +28,18 @@ namespace SuperShop.App.UI.Statistics
         {
             Func<ChartPoint, string> lablePoint = chartPoint => string.Format("{0} ({1:P})",chartPoint.Y ,chartPoint.Participation);
             SeriesCollection series = new SeriesCollection();
-            var result = extraRepository.GetSellersData(dtForm.Value.ToShortDateString(), dtTo.Value.ToShortDateString());
-            foreach (var item in result)
+            try
             {
-                series.Add(new PieSeries() {Title = item.SalesmanUsername,Values = new ChartValues<double> {item.NoOfSales },DataLabels = true, LabelPoint = lablePoint });
-                //pieChart.Series["SalesData"].Points.AddXY(item.SalesmanUsername , item.NoOfSales);
+                var result = extraRepository.GetSellersData(dtForm.Value.ToShortDateString(), dtTo.Value.ToShortDateString());
+                foreach (var item in result)
+                {
+                    series.Add(new PieSeries() { Title = item.SalesmanUsername, Values = new ChartValues<double> { item.NoOfSales }, DataLabels = true, LabelPoint = lablePoint });
+                    //pieChart.Series["SalesData"].Points.AddXY(item.SalesmanUsername , item.NoOfSales);
+                }
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             pieChart.Series = series;
 
@@ -43,22 +50,26 @@ namespace SuperShop.App.UI.Statistics
             List<double> value =new List<double>();
             List<string> dates = new List<string>();
 
-            var result = extraRepository.GetSealsNumberByDate(dtForm.Value.ToShortDateString(), dtTo.Value.ToShortDateString());
-            //value.Add(1);
-            //value.Add(2);
-            //value.Add(3);
-            //value.Add(5);
-            foreach (var item in result)
+            try
             {
-                value.Add(item.TotalSales);
-                dates.Add(item.PurchaseDate.ToShortDateString());
-                Console.WriteLine("sub total-> "+item.TotalSales);
-               
+                var result = extraRepository.GetSealsNumberByDate(dtForm.Value.ToShortDateString(), dtTo.Value.ToShortDateString());
+
+                foreach (var item in result)
+                {
+                    value.Add(item.TotalSales);
+                    dates.Add(item.PurchaseDate.ToShortDateString());
+                    Console.WriteLine("sub total-> " + item.TotalSales);
+
+                }
+            }
+            catch(Exception err1)
+            {
+                MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             series.Add(new LineSeries() { Title = "Total Sales", Values = new ChartValues<double>(value) });
 
 
-
+            this.lineChart.AxisX.Clear();
             this.lineChart.AxisX.Add(new Axis {Title="Date" ,Labels = dates });
             this.lineChart.Series = series;
 

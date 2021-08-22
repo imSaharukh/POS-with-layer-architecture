@@ -31,7 +31,6 @@ namespace SuperShop.App.UI.Dashboard
         {
             this.managerPanel2 = new MetroFramework.Controls.MetroPanel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.btnCustomize = new MetroFramework.Controls.MetroButton();
             this.btnSalesReport = new MetroFramework.Controls.MetroButton();
             this.btnlogout = new MetroFramework.Controls.MetroButton();
             this.btnStats = new MetroFramework.Controls.MetroButton();
@@ -57,7 +56,6 @@ namespace SuperShop.App.UI.Dashboard
             // 
             // metroPanel2
             // 
-            this.metroPanel2.Controls.Add(this.btnCustomize);
             this.metroPanel2.Controls.Add(this.btnSalesReport);
             this.metroPanel2.Controls.Add(this.btnlogout);
             this.metroPanel2.Controls.Add(this.btnStats);
@@ -75,16 +73,6 @@ namespace SuperShop.App.UI.Dashboard
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 11;
-            // 
-            // btnCustomize
-            // 
-            this.btnCustomize.Location = new System.Drawing.Point(23, 229);
-            this.btnCustomize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCustomize.Name = "btnCustomize";
-            this.btnCustomize.Size = new System.Drawing.Size(153, 23);
-            this.btnCustomize.TabIndex = 8;
-            this.btnCustomize.Text = "Customization";
-            this.btnCustomize.UseSelectable = true;
             // 
             // btnSalesReport
             // 
@@ -174,7 +162,6 @@ namespace SuperShop.App.UI.Dashboard
         private MetroFramework.Controls.MetroPanel managerPanel2;
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroButton btnCustomize;
         private MetroFramework.Controls.MetroButton btnSalesReport;
         private MetroFramework.Controls.MetroButton btnlogout;
         private MetroFramework.Controls.MetroButton btnStats;

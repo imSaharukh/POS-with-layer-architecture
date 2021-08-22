@@ -22,7 +22,8 @@ namespace SuperShop.App.UI.Seller
         }
         void loadGridView(string invoice)
         {
-            this.dgvInvoice.DataSource = invoiceRepository.GetAllInvoiceProduct(invoice);
+            try { this.dgvInvoice.DataSource = invoiceRepository.GetAllInvoiceProduct(invoice); }
+            catch(Exception err) { MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
         private void InvoiceProductList_Load(object sender, EventArgs e)
         {

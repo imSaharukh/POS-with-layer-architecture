@@ -29,35 +29,46 @@ namespace SuperShop.App
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-         var result=   userRepository.VerifyUser(this.txtUsername.Text,this.txtPassword.Text);
-
-            if (result == null) {
-                MessageBox.Show("Invalid username or password");
-              
-            }
-            else if (result.userRole.RoleName.Trim() == "admin") {
-                Console.WriteLine("inside if");
-                this.Hide();
-
-                AdminDashboard adminDashboard = new AdminDashboard(this.txtUsername.Text);
-                adminDashboard.Show();
-            }
-            else if (result.userRole.RoleName.Trim() == "manager") {
-                Console.WriteLine("inside if");
-                this.Hide();
-
-                ManagerDashboard managerDashboard = new ManagerDashboard(this.txtUsername.Text);
-                managerDashboard.Show();
-            }
-            else if (result.userRole.RoleName.Trim() == "seller")
+        try
             {
-                Console.WriteLine("inside if");
-                this.Hide();
-               
-                SellerDashboard sellerboard = new SellerDashboard(this.txtUsername.Text);
-                sellerboard.Show();
+                var result = userRepository.VerifyUser(this.txtUsername.Text, this.txtPassword.Text);
+
+                if (result == null)
+                {
+                    MessageBox.Show("Invalid username or password");
+
+                }
+                else if (result.userRole.RoleName.Trim() == "admin")
+                {
+                    Console.WriteLine("inside if");
+                    this.Hide();
+
+                    AdminDashboard adminDashboard = new AdminDashboard(this.txtUsername.Text);
+                    adminDashboard.Show();
+                }
+                else if (result.userRole.RoleName.Trim() == "manager")
+                {
+                    Console.WriteLine("inside if");
+                    this.Hide();
+
+                    ManagerDashboard managerDashboard = new ManagerDashboard(this.txtUsername.Text);
+                    managerDashboard.Show();
+                }
+                else if (result.userRole.RoleName.Trim() == "seller")
+                {
+                    Console.WriteLine("inside if");
+                    this.Hide();
+
+                    SellerDashboard sellerboard = new SellerDashboard(this.txtUsername.Text);
+                    sellerboard.Show();
+                }
+                Console.WriteLine(result?.userRole);
             }
-            Console.WriteLine(result?.userRole);
+            catch(Exception err)
+            {
+                MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }

@@ -108,15 +108,21 @@ namespace SuperShop.App
 
         void loadUserRoles()
         {
-            var result = userRepository.GetUserRoles();
-
-            foreach (var item in result)
+            try
             {
-                roleNames.Add(item.RoleName);
+                var result = userRepository.GetUserRoles();
+
+                foreach (var item in result)
+                {
+                    roleNames.Add(item.RoleName);
+                }
+                this.cmbRole.DataSource = roleNames;
+
             }
-            this.cmbRole.DataSource = roleNames;
-
-
+            catch(Exception er)
+            {
+                MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
 
         }
@@ -135,12 +141,28 @@ namespace SuperShop.App
 
             if (isUpdate)
             {
-                var result = userRepository.UpdateOne(user);
-                MessageBox.Show("user updated");
+                try
+                {
+                    var result = userRepository.UpdateOne(user);
+                    MessageBox.Show("user updated");
+                }
+                catch(Exception error)
+                {
+                    MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
             }
-            else { var result = userRepository.CreateOne(user);
-                MessageBox.Show("user added");
-
+            else
+            {
+                try
+                {
+                    var result = userRepository.CreateOne(user);
+                    MessageBox.Show("user added");
+                }
+                catch(Exception err)
+                {
+                    MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
             //Console.WriteLine(result);

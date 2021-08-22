@@ -35,10 +35,17 @@ namespace SuperShop.App
 
         void LoadGridView()
         {
-
-            var result = userRepository.GetAll(this.IsManager);
-            Console.WriteLine(result[0].userRole.RoleName);
-            this.dgv.DataSource = result;
+            try 
+            {
+                var result = userRepository.GetAll(this.IsManager);
+                Console.WriteLine(result[0].userRole.RoleName);
+                this.dgv.DataSource = result;
+            }
+            catch(Exception err)
+            {
+                MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void metroButton3_Click(object sender, EventArgs e)
@@ -85,9 +92,7 @@ namespace SuperShop.App
                 AddUserForm addUserForm = new AddUserForm(callbackDelegate,user);
                 addUserForm.Show();
             }
-            //Console.WriteLine(this.dgv.SelectedRows[0].Cells["firstName"]);
-            //AddUserForm addUserForm = new AddUserForm();
-            //addUserForm.Show();
+           
         }
 
         private void txtSearch_Click(object sender, EventArgs e)
@@ -102,11 +107,18 @@ namespace SuperShop.App
 
         private void txtSerachChanged(object sender, EventArgs e)
         {
-       
 
+            try 
+            {
                 var result = userRepository.SearchByUsername(this.txtSearch.Text, this.IsManager);
-            //Console.WriteLine(result[0]?.userRole.RoleName);
-            this.dgv.DataSource = result;
+                //Console.WriteLine(result[0]?.userRole.RoleName);
+                this.dgv.DataSource = result;
+            }
+               
+            catch(Exception err1)
+            {
+                MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -119,14 +131,22 @@ namespace SuperShop.App
             else
             {
                 DataGridViewRow row = this.dgv.SelectedRows[0];
-             var result =   userRepository.DeleteOne(row.Cells["username"].Value.ToString());
-
-                if(result == 1)
+                try
                 {
-                    MessageBox.Show("User deleted");
-                    LoadGridView();
+                    var result = userRepository.DeleteOne(row.Cells["username"].Value.ToString());
+
+                    if (result == 1)
+                    {
+                        MessageBox.Show("User deleted");
+                        LoadGridView();
+                    }
+                    else { MessageBox.Show("Somthing went wrong"); }
                 }
-                else { MessageBox.Show("Somthing went wrong"); }
+                catch(Exception err)
+                {
+                    MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
             }
         }
     }

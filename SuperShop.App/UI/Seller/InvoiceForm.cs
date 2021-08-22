@@ -41,7 +41,15 @@ namespace SuperShop.App.UI.Seller
 
         void loadGridView()
         {
-            this.dgvAllProduct.DataSource = productRepository.GetAll();
+            try
+            {
+                this.dgvAllProduct.DataSource = productRepository.GetAll();
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void metroLabel1_Click(object sender, EventArgs e)
@@ -106,7 +114,7 @@ namespace SuperShop.App.UI.Seller
         {
             if(this.dgvInvoiceProduct.SelectedRows.Count <1)
             {
-                MessageBox.Show("Are u cocky !!!Nothing to remove");
+                MessageBox.Show("Warning !!! Nothing to remove");
                 return;
             }
             DataGridViewRow row = this.dgvInvoiceProduct.SelectedRows[0];
@@ -119,7 +127,7 @@ namespace SuperShop.App.UI.Seller
                 CalculateSubTotal();
             }
             else
-                MessageBox.Show("U drunk !!!! go home and sleep");
+                MessageBox.Show("Warning !!!! Nothing to remove");
                 
         }
 
@@ -211,7 +219,15 @@ namespace SuperShop.App.UI.Seller
         }
         private void search_changed(object sender, EventArgs e)
         {
-        this.dgvAllProduct.DataSource=    productRepository.SearchByProductname(this.txtSearch.Text);
+            try
+            {
+                this.dgvAllProduct.DataSource = productRepository.SearchByProductname(this.txtSearch.Text);
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void metroPanel1_Paint(object sender, PaintEventArgs e)

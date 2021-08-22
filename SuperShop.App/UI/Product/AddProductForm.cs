@@ -47,9 +47,15 @@ namespace SuperShop.App
             }    
         }
         void loadInitialData() {
-
-            this.cmbCategory.DataSource = productRepository.GellAllProductCatagory();
-            this.cmbUnit.DataSource = productRepository.GellAllProductUnits();
+            try
+            {
+                this.cmbCategory.DataSource = productRepository.GellAllProductCatagory();
+                this.cmbUnit.DataSource = productRepository.GellAllProductUnits();
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         bool validate()
         {
@@ -124,15 +130,30 @@ namespace SuperShop.App
             product.stock = Convert.ToInt32(this.txtStock.Text);
             product.unitPrice = Convert.ToDouble(this.txtUnitPrice.Text);
             product.expireDate = this.dtExpireDate.Value;
-            //product.productID = 
-            //Console.WriteLine(this.da)
+         
             int? result = 0;
             if (isUpdate) {
-                result = productRepository.UpdateOne(product);
+                try
+                {
+                    result = productRepository.UpdateOne(product);
+                }
+                catch(Exception error)
+                {
+                    MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
                 Console.WriteLine("update: " + result);
-            } else
+            }
+            else
             {
-                 result = productRepository.CreateOne(product);
+                try
+                {
+                    result = productRepository.CreateOne(product);
+                }
+                catch(Exception error)
+                {
+                    MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
             if (result == 1)

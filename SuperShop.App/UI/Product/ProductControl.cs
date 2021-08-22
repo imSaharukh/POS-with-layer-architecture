@@ -30,7 +30,15 @@ namespace SuperShop.App
         }
         void loadGridView()
         {
-            this.dgvProduct.DataSource = productRepository.GetAll();
+            try
+            {
+                this.dgvProduct.DataSource = productRepository.GetAll();
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
         }
         private void btnAddProductform_Click(object sender, EventArgs e)
         {
@@ -74,7 +82,15 @@ namespace SuperShop.App
         private void search_TextChanged(object sender, EventArgs e)
         {
             Console.WriteLine(this.txtSearchProduct.Text);
-        this.dgvProduct.DataSource= productRepository.SearchByProductname(this.txtSearchProduct.Text);
+            try
+            {
+                this.dgvProduct.DataSource = productRepository.SearchByProductname(this.txtSearchProduct.Text);
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+      
         }
 
         private void btnAddCatagory_Click(object sender, EventArgs e)

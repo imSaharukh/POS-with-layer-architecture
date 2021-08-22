@@ -31,7 +31,6 @@ namespace SuperShop.App
         {
             this.btnLogout = new MetroFramework.Controls.MetroPanel();
             this.btnUser = new MetroFramework.Controls.MetroButton();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.btnStats = new MetroFramework.Controls.MetroButton();
             this.metroButton5 = new MetroFramework.Controls.MetroButton();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
@@ -68,16 +67,6 @@ namespace SuperShop.App
             this.btnUser.UseSelectable = true;
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
-            // metroButton3
-            // 
-            this.metroButton3.Location = new System.Drawing.Point(23, 244);
-            this.metroButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(153, 23);
-            this.metroButton3.TabIndex = 4;
-            this.metroButton3.Text = "Customization";
-            this.metroButton3.UseSelectable = true;
-            // 
             // btnStats
             // 
             this.btnStats.Location = new System.Drawing.Point(23, 129);
@@ -107,7 +96,6 @@ namespace SuperShop.App
             this.metroPanel1.Controls.Add(this.metroButton1);
             this.metroPanel1.Controls.Add(this.metroButton5);
             this.metroPanel1.Controls.Add(this.btnStats);
-            this.metroPanel1.Controls.Add(this.metroButton3);
             this.metroPanel1.Controls.Add(this.btnUser);
             this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.metroPanel1.HorizontalScrollbarBarColor = true;
@@ -176,7 +164,6 @@ namespace SuperShop.App
         #endregion
         private MetroFramework.Controls.MetroPanel btnLogout;
         private MetroFramework.Controls.MetroButton btnUser;
-        private MetroFramework.Controls.MetroButton metroButton3;
         private MetroFramework.Controls.MetroButton btnStats;
         private MetroFramework.Controls.MetroButton metroButton5;
         private MetroFramework.Controls.MetroPanel metroPanel1;

@@ -26,22 +26,36 @@ namespace SuperShop.App
 
         void LoadAllSeller()
         {
-            var users = userRepository.GetAllSeller();
-            List<string> usernames = new List<string>();
-
-            foreach (var item in users)
+            try
             {
-                usernames.Add(item.username);
+                var users = userRepository.GetAllSeller();
+                List<string> usernames = new List<string>();
+
+                foreach (var item in users)
+                {
+                    usernames.Add(item.username);
+                }
+                this.cmbUsername.DataSource = usernames;
             }
-            this.cmbUsername.DataSource = usernames;
+            catch(Exception err1)
+            {
+                MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void metroPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
        void loadGridView() {
-            
-            this.dgvInvoice.DataSource = InvoiceRepository.GetAll();
+            try
+            {
+                this.dgvInvoice.DataSource = InvoiceRepository.GetAll();
+            }
+            catch(Exception err2)
+            {
+                MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+          
         }
 
 
@@ -49,7 +63,15 @@ namespace SuperShop.App
         private void btnSearch_Click(object sender, EventArgs e)
         {
             Console.WriteLine(dtFrom.Value.ToShortDateString() +"  " + dtTo.Value.ToShortDateString());
-            this.dgvInvoice.DataSource = InvoiceRepository.GetByUsernameAndDateRange(this.cmbUsername.Text,dtFrom.Value.ToShortDateString(), dtTo.Value.ToShortDateString());
+            try
+            {
+                this.dgvInvoice.DataSource = InvoiceRepository.GetByUsernameAndDateRange(this.cmbUsername.Text, dtFrom.Value.ToShortDateString(),
+               dtTo.Value.ToShortDateString());
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void dgvInvoice_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -8,7 +8,8 @@ namespace SuperShop.Repository
 {
     public class UserRepository
     {
-        public User VerifyUser(string username,string password) {
+        public User VerifyUser(string username,string password) 
+        {
             var result = DataAccess.sqlcon.Query<User, UserRole, User>("select * from users as u join userRoles as r on u.roleID = r.roleID WHERE  username = @username and password = @password;", (user, role) => { user.userRole = role; return user; }, new { username, password }, splitOn: "roleID").Distinct()
                 .ToList();
 

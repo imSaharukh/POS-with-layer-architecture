@@ -38,18 +38,25 @@ namespace SuperShop.App.UI.Product
         {
             if(catvalidate())
             {
-                ProductRepository productRepository = new ProductRepository();
-                var result = productRepository.CreateOneProductCatagory(this.txtCatagory.Text);
-                if (result == 1)
+                try
                 {
-                    MessageBox.Show("Catagory Added");
-                    this.Hide();
+                    ProductRepository productRepository = new ProductRepository();
+                    var result = productRepository.CreateOneProductCatagory(this.txtCatagory.Text);
+                    if (result == 1)
+                    {
+                        MessageBox.Show("Catagory Added");
+                        this.Hide();
 
+                    }
+                    else
+                    {
+                        MessageBox.Show("Somthing went wrong");
+
+                    }
                 }
-                else
+                catch(Exception error)
                 {
-                    MessageBox.Show("Somthing went wrong");
-
+                    MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
