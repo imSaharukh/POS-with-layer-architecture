@@ -1,5 +1,6 @@
 ﻿using MetroFramework.Forms;
 using SuperShop.App.UI.Dashboard;
+using SuperShop.Entity;
 using SuperShop.Repository;
 using System;
 using System.Collections.Generic;
@@ -29,9 +30,20 @@ namespace SuperShop.App
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-        try
+        //try
             {
-                var result = userRepository.VerifyUser(this.txtUsername.Text, this.txtPassword.Text);
+                User result;
+
+                try
+                {
+                 result = userRepository.VerifyUser(this.txtUsername.Text, this.txtPassword.Text);
+                }
+                catch (Exception)
+                {
+                    result = null;
+                    MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
                 if (result == null)
                 {
@@ -64,10 +76,11 @@ namespace SuperShop.App
                 }
                 Console.WriteLine(result?.userRole);
             }
-            catch(Exception err)
-            {
-                MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //catch(Exception err)
+            //{
+            //    Console.WriteLine(err);
+            //    MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
 
         }
     }

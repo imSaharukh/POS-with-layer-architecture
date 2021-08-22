@@ -52,9 +52,23 @@ namespace SuperShop.Repository
              .ToList();
             return result;
         }
-        public List<Invoice> GetAll()
+        public List<Invoice> GetAll(string username =null)
         {
-            var result = DataAccess.sqlcon.Query<Invoice>(@"select * from invoice ORDER BY PurchaseDate desc;").Distinct()
+            var sql = "";
+            
+            Console.WriteLine(username);
+            if (username == null)
+            {
+                sql = "select * from invoice"; 
+            }
+            else
+            {
+                sql = "select * from invoice  where SalesmanUsername = '" +
+                   username +
+               "' ORDER BY PurchaseDate desc;";
+            }
+            Console.WriteLine(sql);
+            var result = DataAccess.sqlcon.Query<Invoice>(sql).Distinct()
              .ToList();
 
             Console.WriteLine("GetAll --> " +result.Count);

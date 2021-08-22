@@ -16,16 +16,31 @@ namespace SuperShop.App
     {
         InvoiceRepository InvoiceRepository = new InvoiceRepository();
         UserRepository userRepository = new UserRepository();
-        public ReportControl()
+        string Username { get; set; }
+        public ReportControl(string username = null)
         {
             InitializeComponent();
-            loadGridView();
+            
+          
+            this.Username = username;
+            this.dtFrom.Value = this.dtFrom.Value.AddDays(-30);
             LoadAllSeller();
+            loadGridView();
+
         }
 
 
         void LoadAllSeller()
         {
+            if(Username != null)
+            {
+                List<string> users = new List<string>();
+                users.Add(this.Username);
+                this.cmbUsername.DataSource = users;
+                this.cmbUsername.Text = this.Username;
+                this.cmbUsername.Enabled = false;
+                return;
+            }
             try
             {
                 var users = userRepository.GetAllSeller();
@@ -47,14 +62,16 @@ namespace SuperShop.App
 
         }
        void loadGridView() {
-            try
+            //try
             {
-                this.dgvInvoice.DataSource = InvoiceRepository.GetAll();
+                this.dgvInvoice.DataSource = InvoiceRepository.GetAll(Username);
             }
-            catch(Exception err2)
-            {
-                MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //catch(Exception err2)
+            //{
+
+            //    Console.WriteLine(err2);
+            //    MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
           
         }
 
