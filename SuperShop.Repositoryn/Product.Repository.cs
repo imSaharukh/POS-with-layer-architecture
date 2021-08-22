@@ -67,15 +67,14 @@ namespace SuperShop.Repository
             //@productName,@unitPrice,@stock,@productCategoryID,@purchasePrice,@expireDate,@ProductUnitID
             var ProductUnitID = DataAccess.SelectQuery<ProductUnit>("select * from productUnits where ProductUnitName = @ProductUnitName", 
                 new { product.ProductUnit.ProductUnitName })[0].ProductUnitID;
+            var productCategoryID = DataAccess.SelectQuery<ProductCategory>("select * from productCategories where " +
+                          "productCategoryName = @productCategoryName", new { product.productCategory.productCategoryName })[0].productCategoryID;
 
-            var productCategoryID = DataAccess.SelectQuery<ProductCategory>("select * from productCategories " +
-                              "where productCategoryName = @productCategoryName",
-                
-                                new { product.productCategory.productCategoryName })[0].productCategoryID;
+            Console.WriteLine(productCategoryID);
             var result = DataAccess.sqlcon.Execute(@"update products set productName = @productName,unitPrice = 
-                        @unitPrice,stock = @stock,@productCategoryID = productCategoryID,@purchasePrice = purchasePrice,
-                        @expireDate = expireDate,
-                        @ProductUnitID = ProductUnitID  where productID = @productID;",
+                        @unitPrice,stock = @stock,productCategoryID = @productCategoryID,purchasePrice = @purchasePrice,
+                        expireDate = @expireDate,
+                        ProductUnitID = @ProductUnitID  where productID = @productID;",
                         new { product.productName, product.unitPrice, product.stock,  product.purchasePrice, 
                         product.expireDate,product.productID, productCategoryID, ProductUnitID }); 
 

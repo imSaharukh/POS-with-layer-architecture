@@ -32,7 +32,7 @@ namespace SuperShop.App
             if(product !=null)
             {
                 isUpdate = true;
-                this.txtProductName.Text = product.productName;
+                this.txtProductName.Text = product.productName.Trim();
                 this.txtUnitPrice.Text = product.unitPrice.ToString();
                 this.txtStock.Text = product.stock.ToString();
                 this.txtPurchasePrice.Text = product.purchasePrice.ToString();
