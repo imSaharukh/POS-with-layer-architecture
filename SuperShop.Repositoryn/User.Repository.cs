@@ -19,10 +19,12 @@ namespace SuperShop.Repository
             return result[0];
         }
 
-        public List<User> GetAll() {
+        public List<User> GetAll(bool isSellerOnly=false) {
 
 
-            var result = DataAccess.sqlcon.Query<User,UserRole,User>("select * from users u inner join userRoles r on u.roleID = r.roleID;",(user,role) => { user.userRole = role;return user; }, splitOn: "roleID").Distinct()
+            var result = DataAccess.sqlcon.Query<User, UserRole, User>(@"select * from users u inner join 
+                        userRoles r on u.roleID = r.roleID " + (isSellerOnly ? "where roleID=3":""),
+                        (user, role) => { user.userRole = role; return user; }, splitOn: "roleID").Distinct()
         .ToList();
         return result;
         }

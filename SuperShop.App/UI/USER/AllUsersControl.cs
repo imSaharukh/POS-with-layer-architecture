@@ -16,10 +16,13 @@ namespace SuperShop.App
     {
         UserRepository userRepository = new UserRepository();
 
+        bool IsSellerOnly { get; set; }
+
         //List<String> userRoles;
-        public AllUsersControl()
+        public AllUsersControl(bool isSellerOnly =false)
         {
             InitializeComponent();
+            this.IsSellerOnly = isSellerOnly;
             LoadGridView();
         }
   

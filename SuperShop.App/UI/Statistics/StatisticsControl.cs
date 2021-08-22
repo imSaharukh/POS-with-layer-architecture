@@ -13,10 +13,10 @@ using System.Windows.Forms;
 
 namespace SuperShop.App.UI.Statistics
 {
-    public partial class Statistics : UserControl
+    public partial class StatisticsControl : UserControl
     {
         ExtraRepository extraRepository =new ExtraRepository();
-        public Statistics()
+        public StatisticsControl()
         {
             InitializeComponent();
           

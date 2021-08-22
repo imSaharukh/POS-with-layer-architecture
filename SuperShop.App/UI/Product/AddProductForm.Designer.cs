@@ -351,7 +351,7 @@ namespace SuperShop.App
             // 
             this.btnConfirmAdd.Location = new System.Drawing.Point(3, 449);
             this.btnConfirmAdd.Name = "btnConfirmAdd";
-            this.btnConfirmAdd.Size = new System.Drawing.Size(165, 23);
+            this.btnConfirmAdd.Size = new System.Drawing.Size(192, 23);
             this.btnConfirmAdd.TabIndex = 40;
             this.btnConfirmAdd.Text = "Confirm";
             this.btnConfirmAdd.UseSelectable = true;

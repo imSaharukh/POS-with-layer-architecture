@@ -29,7 +29,7 @@ namespace SuperShop.App.UI.Dashboard
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.managerPanel2 = new MetroFramework.Controls.MetroPanel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.btnCustomize = new MetroFramework.Controls.MetroButton();
             this.btnSalesReport = new MetroFramework.Controls.MetroButton();
@@ -41,19 +41,19 @@ namespace SuperShop.App.UI.Dashboard
             this.metroPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // metroPanel1
+            // managerPanel2
             // 
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(216, 66);
-            this.metroPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(867, 518);
-            this.metroPanel1.TabIndex = 0;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 11;
+            this.managerPanel2.HorizontalScrollbarBarColor = true;
+            this.managerPanel2.HorizontalScrollbarHighlightOnWheel = false;
+            this.managerPanel2.HorizontalScrollbarSize = 10;
+            this.managerPanel2.Location = new System.Drawing.Point(216, 66);
+            this.managerPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.managerPanel2.Name = "managerPanel2";
+            this.managerPanel2.Size = new System.Drawing.Size(867, 518);
+            this.managerPanel2.TabIndex = 0;
+            this.managerPanel2.VerticalScrollbarBarColor = true;
+            this.managerPanel2.VerticalScrollbarHighlightOnWheel = false;
+            this.managerPanel2.VerticalScrollbarSize = 11;
             // 
             // metroPanel2
             // 
@@ -95,6 +95,7 @@ namespace SuperShop.App.UI.Dashboard
             this.btnSalesReport.TabIndex = 7;
             this.btnSalesReport.Text = "Sales Report";
             this.btnSalesReport.UseSelectable = true;
+            this.btnSalesReport.Click += new System.EventHandler(this.btnSalesReport_Click);
             // 
             // btnlogout
             // 
@@ -138,6 +139,7 @@ namespace SuperShop.App.UI.Dashboard
             this.btnSalesEmp.TabIndex = 3;
             this.btnSalesEmp.Text = "Sales Employee";
             this.btnSalesEmp.UseSelectable = true;
+            this.btnSalesEmp.Click += new System.EventHandler(this.btnSalesEmp_Click);
             // 
             // metroLabel1
             // 
@@ -154,7 +156,7 @@ namespace SuperShop.App.UI.Dashboard
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1108, 607);
             this.Controls.Add(this.metroPanel2);
-            this.Controls.Add(this.metroPanel1);
+            this.Controls.Add(this.managerPanel2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "ManagerDashboard";
@@ -169,7 +171,7 @@ namespace SuperShop.App.UI.Dashboard
 
         #endregion
 
-        private MetroFramework.Controls.MetroPanel metroPanel1;
+        private MetroFramework.Controls.MetroPanel managerPanel2;
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroButton btnCustomize;

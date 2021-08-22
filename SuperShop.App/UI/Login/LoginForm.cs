@@ -46,7 +46,7 @@ namespace SuperShop.App
                 Console.WriteLine("inside if");
                 this.Hide();
 
-                ManagerDashboard managerDashboard = new ManagerDashboard();
+                ManagerDashboard managerDashboard = new ManagerDashboard(this.txtUsername.Text);
                 managerDashboard.Show();
             }
             else if (result.userRole.RoleName.Trim() == "seller")

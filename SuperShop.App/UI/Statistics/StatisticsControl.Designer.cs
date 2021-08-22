@@ -1,7 +1,7 @@
 ﻿
 namespace SuperShop.App.UI.Statistics
 {
-    partial class Statistics
+    partial class StatisticsControl
     {
         /// <summary> 
         /// Required designer variable.

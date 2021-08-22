@@ -141,11 +141,11 @@
     <Compile Include="UI\Seller\InvoiceForm.Designer.cs">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Statistics\Statistics.cs">
+    <Compile Include="UI\Statistics\StatisticsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Statistics\Statistics.Designer.cs">
-      <DependentUpon>Statistics.cs</DependentUpon>
+    <Compile Include="UI\Statistics\StatisticsControl.Designer.cs">
+      <DependentUpon>StatisticsControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\USER\AddUserForm.cs">
       <SubType>Form</SubType>
@@ -203,8 +203,8 @@
     <EmbeddedResource Include="UI\Seller\InvoiceForm.resx">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Statistics\Statistics.resx">
-      <DependentUpon>Statistics.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Statistics\StatisticsControl.resx">
+      <DependentUpon>StatisticsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\USER\AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
