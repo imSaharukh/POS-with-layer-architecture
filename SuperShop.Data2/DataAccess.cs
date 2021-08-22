@@ -23,8 +23,17 @@ namespace SuperShop.Data
         public static int DrmQuery(string sql, object p = null)
         {
             //string sql = "INSERT INTO Customers (CustomerName) Values (@CustomerName);";
-            var affectedRows = sqlcon.Execute(sql, p);
-            return affectedRows;
+            try
+            {
+                var affectedRows = sqlcon.Execute(sql, p);
+                return affectedRows;
+            }
+            catch (Exception)
+            {
+
+                return 0;
+            }
+            
 
         }
 

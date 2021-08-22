@@ -150,14 +150,19 @@ namespace SuperShop.App.UI.Seller
         {
             SubTotal = 0;
             CalculateTotal();
-             this.SubTotal = Total - Convert.ToDouble(String.IsNullOrEmpty(this.txtBoxDiscount.Text) ? "0" : this.txtBoxDiscount.Text);
+             this.SubTotal = Total - (Convert.ToDouble(String.IsNullOrEmpty(this.txtBoxDiscount.Text) ? "0" : this.txtBoxDiscount.Text));
             lblSubTotal.Text = (SubTotal).ToString();
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+
+            if (products.Count < 1) {
+                MessageBox.Show("Please Add Some Product first!");
+                return;
+            }
             CalculateSubTotal();
-            if (SubTotal > Convert.ToDouble(this.txtGivenAmount.Text)) 
+            if (SubTotal > Convert.ToDouble(String.IsNullOrEmpty(this.txtGivenAmount.Text)?"0": this.txtGivenAmount.Text)) 
             {
                 MessageBox.Show("Given Amount is less then SubTotal" ,"Error" , MessageBoxButtons.OK);
                 return;
