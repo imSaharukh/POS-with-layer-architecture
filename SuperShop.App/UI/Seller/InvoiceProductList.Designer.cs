@@ -224,6 +224,7 @@ namespace SuperShop.App.UI.Seller
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "InvoiceProductList";
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
+            this.Resizable = false;
             this.Text = "InvoiceProductList";
             this.Load += new System.EventHandler(this.InvoiceProductList_Load);
             this.metroPanel1.ResumeLayout(false);
