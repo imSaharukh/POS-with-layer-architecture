@@ -17,23 +17,40 @@ namespace SuperShop.App.UI.Product
         public AddCatagory()
         {
             InitializeComponent();
+            this.lblErrAddCategory.Visible = false;
         }
 
         private void AddCatagory_Load(object sender, EventArgs e)
         {
         }
 
+        bool catvalidate()
+        {
+            if(String.IsNullOrWhiteSpace(this.txtCatagory.Text) && String.IsNullOrEmpty(this.txtCatagory.Text))
+            {
+                this.lblErrAddCategory.Text = "Category can't be empty";
+                this.lblErrAddCategory.Visible = true;
+                return false;
+            }
+            return true;
+        }
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            ProductRepository productRepository = new ProductRepository();
-         var result =    productRepository.CreateOneProductCatagory(this.txtCatagory.Text);
-            if (result == 1) {
-                MessageBox.Show("Catagory Added");
-                this.Hide();
-            
-            } else {
-                MessageBox.Show("Somthing went wrong");
-            
+            if(catvalidate())
+            {
+                ProductRepository productRepository = new ProductRepository();
+                var result = productRepository.CreateOneProductCatagory(this.txtCatagory.Text);
+                if (result == 1)
+                {
+                    MessageBox.Show("Catagory Added");
+                    this.Hide();
+
+                }
+                else
+                {
+                    MessageBox.Show("Somthing went wrong");
+
+                }
             }
 
 
