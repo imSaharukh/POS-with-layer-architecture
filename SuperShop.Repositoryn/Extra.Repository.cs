@@ -21,5 +21,12 @@ namespace SuperShop.Repository
             var result = DataAccess.SelectQuery<SealsByDate>(@"Select SUM(SubTotal) 'TotalSales',PurchaseDate from invoice where (PurchaseDate <= @DateTo AND PurchaseDate >= @DateForm) group by PurchaseDate;", new { DateForm, DateTo });
             return result;
         }
+        public double GetSalesAmountByDate(string DateForm, string DateTo)
+        {
+            var result = DataAccess.SelectQuery<TotalSalesAmount>(@"Select SUM(SubTotal) 'TotalSales' from invoice where (PurchaseDate <= @DateTo AND PurchaseDate >= @DateForm);", new { DateForm, DateTo });
+            return result[0].TotalSales;
+        }
+
+
     }
 }

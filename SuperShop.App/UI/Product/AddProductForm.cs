@@ -36,7 +36,7 @@ namespace SuperShop.App
                 this.txtUnitPrice.Text = product.unitPrice.ToString();
                 this.txtStock.Text = product.stock.ToString();
                 this.txtPurchasePrice.Text = product.purchasePrice.ToString();
-                this.txtPurchasePrice.ReadOnly = true;
+                //this.txtPurchasePrice.ReadOnly = true;
                 this.cmbCategory.Text = product.categoryID.ToString();
                 this.dtExpireDate.Value = product.expireDate;
                 this.cmbUnit.Text = product.ProductUnit.ProductUnitName;

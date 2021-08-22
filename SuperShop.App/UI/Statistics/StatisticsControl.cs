@@ -23,6 +23,12 @@ namespace SuperShop.App.UI.Statistics
             this.dtForm.Value = DateTime.Now.AddDays(-30);
             LoadBarChart();
             LoadPiChart();
+            TotalSales();
+        }
+        void TotalSales()
+        {
+            var result = extraRepository.GetSalesAmountByDate(dtForm.Value.ToShortDateString(), dtTo.Value.ToShortDateString());
+            this.lblTotalSales.Text = result.ToString();
         }
         void LoadPiChart()
         {
@@ -84,6 +90,7 @@ namespace SuperShop.App.UI.Statistics
         {
             LoadBarChart();
             LoadPiChart();
+            TotalSales();
         }
     }
 }

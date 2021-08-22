@@ -41,7 +41,7 @@ namespace SuperShop.App.UI.Statistics
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.pieChart = new LiveCharts.WinForms.PieChart();
             this.lineChart = new LiveCharts.WinForms.CartesianChart();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.lblTotalSales = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
@@ -120,7 +120,7 @@ namespace SuperShop.App.UI.Statistics
             // 
             this.metroPanel2.Controls.Add(this.pieChart);
             this.metroPanel2.Controls.Add(this.lineChart);
-            this.metroPanel2.Controls.Add(this.metroLabel6);
+            this.metroPanel2.Controls.Add(this.lblTotalSales);
             this.metroPanel2.Controls.Add(this.metroLabel5);
             this.metroPanel2.Controls.Add(this.metroLabel4);
             this.metroPanel2.Controls.Add(this.metroGrid1);
@@ -154,14 +154,14 @@ namespace SuperShop.App.UI.Statistics
             this.lineChart.TabIndex = 8;
             this.lineChart.Text = "cartesianChart1";
             // 
-            // metroLabel6
+            // lblTotalSales
             // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(171, 27);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(61, 20);
-            this.metroLabel6.TabIndex = 7;
-            this.metroLabel6.Text = "5000 TK";
+            this.lblTotalSales.AutoSize = true;
+            this.lblTotalSales.Location = new System.Drawing.Point(171, 27);
+            this.lblTotalSales.Name = "lblTotalSales";
+            this.lblTotalSales.Size = new System.Drawing.Size(61, 20);
+            this.lblTotalSales.TabIndex = 7;
+            this.lblTotalSales.Text = "5000 TK";
             // 
             // metroLabel5
             // 
@@ -232,14 +232,14 @@ namespace SuperShop.App.UI.Statistics
             this.metroGrid1.TabIndex = 2;
             this.metroGrid1.UseCustomBackColor = true;
             // 
-            // Statistics
+            // StatisticsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.metroPanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Statistics";
+            this.Name = "StatisticsControl";
             this.Size = new System.Drawing.Size(867, 527);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel2.ResumeLayout(false);
@@ -260,7 +260,7 @@ namespace SuperShop.App.UI.Statistics
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private MetroFramework.Controls.MetroGrid metroGrid1;
         private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroLabel lblTotalSales;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private LiveCharts.WinForms.CartesianChart lineChart;
         private LiveCharts.WinForms.PieChart pieChart;

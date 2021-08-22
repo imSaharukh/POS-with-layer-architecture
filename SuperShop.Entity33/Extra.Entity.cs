@@ -16,4 +16,8 @@ namespace SuperShop.Entity
         public DateTime PurchaseDate { get; set; }
         public double TotalSales { get; set; }
     }
+    public class TotalSalesAmount
+    {
+        public double TotalSales { get; set; }
+    }
 }
