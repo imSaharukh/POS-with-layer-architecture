@@ -16,14 +16,19 @@ namespace SuperShop.App
     {
         UserRepository userRepository = new UserRepository();
 
-        bool IsSellerOnly { get; set; }
+        bool IsManager { get; set; }
 
         //List<String> userRoles;
-        public AllUsersControl(bool isSellerOnly =false)
+        public AllUsersControl(bool isManager =false)
         {
             InitializeComponent();
-            this.IsSellerOnly = isSellerOnly;
+            this.IsManager = isManager;
             LoadGridView();
+            if (isManager) {
+                this.btnAdd.Enabled = false;
+                this.btnUpdate.Enabled = false;
+                this.btnDelete.Enabled = false;
+            }
         }
   
 
@@ -31,7 +36,7 @@ namespace SuperShop.App
         void LoadGridView()
         {
 
-            var result = userRepository.GetAll();
+            var result = userRepository.GetAll(this.IsManager);
             Console.WriteLine(result[0].userRole.RoleName);
             this.dgv.DataSource = result;
         }
@@ -99,7 +104,7 @@ namespace SuperShop.App
         {
        
 
-                var result = userRepository.SearchByUsername(this.txtSearch.Text);
+                var result = userRepository.SearchByUsername(this.txtSearch.Text, this.IsManager);
             //Console.WriteLine(result[0]?.userRole.RoleName);
             this.dgv.DataSource = result;
         }

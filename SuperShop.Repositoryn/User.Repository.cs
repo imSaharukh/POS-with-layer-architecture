@@ -23,17 +23,17 @@ namespace SuperShop.Repository
 
 
             var result = DataAccess.sqlcon.Query<User, UserRole, User>(@"select * from users u inner join 
-                        userRoles r on u.roleID = r.roleID " + (isSellerOnly ? "where roleID=3":""),
+                        userRoles r on u.roleID = r.roleID " + (isSellerOnly ? "where u.roleID=3 and r.roleID=3" : ""),
                         (user, role) => { user.userRole = role; return user; }, splitOn: "roleID").Distinct()
         .ToList();
         return result;
         }
 
-        public List<User> SearchByUsername(string search)
+        public List<User> SearchByUsername(string search, bool isSellerOnly = false)
         {
             search = "%"+  search + "%";
 
-            var result = DataAccess.sqlcon.Query<User, UserRole, User>("select * from users u inner join userRoles r on u.roleID = r.roleID where username like @search", (user, role) => { user.userRole = role; return user; }, new { search }, splitOn: "roleID").Distinct()
+            var result = DataAccess.sqlcon.Query<User, UserRole, User>("select * from users u inner join userRoles r on u.roleID = r.roleID where username like @search" + (isSellerOnly ? " and (u.roleID=3 and r.roleID=3)" : ""), (user, role) => { user.userRole = role; return user; }, new { search }, splitOn: "roleID").Distinct()
         .ToList();
             return result;
         }
