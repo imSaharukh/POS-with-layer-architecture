@@ -29,9 +29,9 @@ namespace SuperShop.App.UI.MiniStatement
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesSlip));
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.SlipPrint = new MetroFramework.Controls.MetroButton();
@@ -98,7 +98,7 @@ namespace SuperShop.App.UI.MiniStatement
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 8;
             this.metroPanel1.Location = new System.Drawing.Point(4, 51);
-            this.metroPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.metroPanel1.Name = "metroPanel1";
             this.metroPanel1.Size = new System.Drawing.Size(242, 574);
             this.metroPanel1.TabIndex = 0;
@@ -111,7 +111,7 @@ namespace SuperShop.App.UI.MiniStatement
             this.SlipPrint.BackColor = System.Drawing.Color.LightSeaGreen;
             this.SlipPrint.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.SlipPrint.Location = new System.Drawing.Point(86, 548);
-            this.SlipPrint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SlipPrint.Margin = new System.Windows.Forms.Padding(2);
             this.SlipPrint.Name = "SlipPrint";
             this.SlipPrint.Size = new System.Drawing.Size(56, 19);
             this.SlipPrint.TabIndex = 29;
@@ -127,10 +127,10 @@ namespace SuperShop.App.UI.MiniStatement
             // 
             // 
             this.txtSubtotal.CustomButton.Image = null;
-            this.txtSubtotal.CustomButton.Location = new System.Drawing.Point(38, 2);
-            this.txtSubtotal.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSubtotal.CustomButton.Location = new System.Drawing.Point(50, 2);
+            this.txtSubtotal.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtSubtotal.CustomButton.Name = "";
-            this.txtSubtotal.CustomButton.Size = new System.Drawing.Size(8, 9);
+            this.txtSubtotal.CustomButton.Size = new System.Drawing.Size(11, 11);
             this.txtSubtotal.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtSubtotal.CustomButton.TabIndex = 1;
             this.txtSubtotal.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -138,7 +138,7 @@ namespace SuperShop.App.UI.MiniStatement
             this.txtSubtotal.CustomButton.Visible = false;
             this.txtSubtotal.Lines = new string[0];
             this.txtSubtotal.Location = new System.Drawing.Point(176, 468);
-            this.txtSubtotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSubtotal.Margin = new System.Windows.Forms.Padding(2);
             this.txtSubtotal.MaxLength = 32767;
             this.txtSubtotal.Name = "txtSubtotal";
             this.txtSubtotal.PasswordChar = '\0';
@@ -160,10 +160,10 @@ namespace SuperShop.App.UI.MiniStatement
             // 
             // 
             this.txtDiscountBDT.CustomButton.Image = null;
-            this.txtDiscountBDT.CustomButton.Location = new System.Drawing.Point(38, 2);
-            this.txtDiscountBDT.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDiscountBDT.CustomButton.Location = new System.Drawing.Point(50, 2);
+            this.txtDiscountBDT.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiscountBDT.CustomButton.Name = "";
-            this.txtDiscountBDT.CustomButton.Size = new System.Drawing.Size(8, 9);
+            this.txtDiscountBDT.CustomButton.Size = new System.Drawing.Size(11, 11);
             this.txtDiscountBDT.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtDiscountBDT.CustomButton.TabIndex = 1;
             this.txtDiscountBDT.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -171,7 +171,7 @@ namespace SuperShop.App.UI.MiniStatement
             this.txtDiscountBDT.CustomButton.Visible = false;
             this.txtDiscountBDT.Lines = new string[0];
             this.txtDiscountBDT.Location = new System.Drawing.Point(176, 448);
-            this.txtDiscountBDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDiscountBDT.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiscountBDT.MaxLength = 32767;
             this.txtDiscountBDT.Name = "txtDiscountBDT";
             this.txtDiscountBDT.PasswordChar = '\0';
@@ -193,10 +193,10 @@ namespace SuperShop.App.UI.MiniStatement
             // 
             // 
             this.txtTotalBDT.CustomButton.Image = null;
-            this.txtTotalBDT.CustomButton.Location = new System.Drawing.Point(38, 2);
-            this.txtTotalBDT.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTotalBDT.CustomButton.Location = new System.Drawing.Point(50, 2);
+            this.txtTotalBDT.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtTotalBDT.CustomButton.Name = "";
-            this.txtTotalBDT.CustomButton.Size = new System.Drawing.Size(8, 9);
+            this.txtTotalBDT.CustomButton.Size = new System.Drawing.Size(11, 11);
             this.txtTotalBDT.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtTotalBDT.CustomButton.TabIndex = 1;
             this.txtTotalBDT.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -204,7 +204,7 @@ namespace SuperShop.App.UI.MiniStatement
             this.txtTotalBDT.CustomButton.Visible = false;
             this.txtTotalBDT.Lines = new string[0];
             this.txtTotalBDT.Location = new System.Drawing.Point(176, 429);
-            this.txtTotalBDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTotalBDT.Margin = new System.Windows.Forms.Padding(2);
             this.txtTotalBDT.MaxLength = 32767;
             this.txtTotalBDT.Name = "txtTotalBDT";
             this.txtTotalBDT.PasswordChar = '\0';
@@ -226,10 +226,10 @@ namespace SuperShop.App.UI.MiniStatement
             // 
             // 
             this.txtExchange.CustomButton.Image = null;
-            this.txtExchange.CustomButton.Location = new System.Drawing.Point(38, 2);
-            this.txtExchange.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtExchange.CustomButton.Location = new System.Drawing.Point(50, 2);
+            this.txtExchange.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtExchange.CustomButton.Name = "";
-            this.txtExchange.CustomButton.Size = new System.Drawing.Size(8, 9);
+            this.txtExchange.CustomButton.Size = new System.Drawing.Size(11, 11);
             this.txtExchange.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtExchange.CustomButton.TabIndex = 1;
             this.txtExchange.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -237,7 +237,7 @@ namespace SuperShop.App.UI.MiniStatement
             this.txtExchange.CustomButton.Visible = false;
             this.txtExchange.Lines = new string[0];
             this.txtExchange.Location = new System.Drawing.Point(176, 505);
-            this.txtExchange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtExchange.Margin = new System.Windows.Forms.Padding(2);
             this.txtExchange.MaxLength = 32767;
             this.txtExchange.Name = "txtExchange";
             this.txtExchange.PasswordChar = '\0';
@@ -259,10 +259,10 @@ namespace SuperShop.App.UI.MiniStatement
             // 
             // 
             this.txtPaidAmount.CustomButton.Image = null;
-            this.txtPaidAmount.CustomButton.Location = new System.Drawing.Point(38, 2);
-            this.txtPaidAmount.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPaidAmount.CustomButton.Location = new System.Drawing.Point(50, 2);
+            this.txtPaidAmount.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtPaidAmount.CustomButton.Name = "";
-            this.txtPaidAmount.CustomButton.Size = new System.Drawing.Size(8, 9);
+            this.txtPaidAmount.CustomButton.Size = new System.Drawing.Size(11, 11);
             this.txtPaidAmount.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtPaidAmount.CustomButton.TabIndex = 1;
             this.txtPaidAmount.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -270,7 +270,7 @@ namespace SuperShop.App.UI.MiniStatement
             this.txtPaidAmount.CustomButton.Visible = false;
             this.txtPaidAmount.Lines = new string[0];
             this.txtPaidAmount.Location = new System.Drawing.Point(176, 488);
-            this.txtPaidAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPaidAmount.Margin = new System.Windows.Forms.Padding(2);
             this.txtPaidAmount.MaxLength = 32767;
             this.txtPaidAmount.Name = "txtPaidAmount";
             this.txtPaidAmount.PasswordChar = '\0';
@@ -292,10 +292,10 @@ namespace SuperShop.App.UI.MiniStatement
             // 
             // 
             this.txtInvoiceNo.CustomButton.Image = null;
-            this.txtInvoiceNo.CustomButton.Location = new System.Drawing.Point(107, 1);
-            this.txtInvoiceNo.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtInvoiceNo.CustomButton.Location = new System.Drawing.Point(136, 1);
+            this.txtInvoiceNo.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtInvoiceNo.CustomButton.Name = "";
-            this.txtInvoiceNo.CustomButton.Size = new System.Drawing.Size(13, 14);
+            this.txtInvoiceNo.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtInvoiceNo.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtInvoiceNo.CustomButton.TabIndex = 1;
             this.txtInvoiceNo.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -303,7 +303,7 @@ namespace SuperShop.App.UI.MiniStatement
             this.txtInvoiceNo.CustomButton.Visible = false;
             this.txtInvoiceNo.Lines = new string[0];
             this.txtInvoiceNo.Location = new System.Drawing.Point(76, 68);
-            this.txtInvoiceNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtInvoiceNo.Margin = new System.Windows.Forms.Padding(2);
             this.txtInvoiceNo.MaxLength = 32767;
             this.txtInvoiceNo.Name = "txtInvoiceNo";
             this.txtInvoiceNo.PasswordChar = '\0';
@@ -325,10 +325,10 @@ namespace SuperShop.App.UI.MiniStatement
             // 
             // 
             this.txtSellerID.CustomButton.Image = null;
-            this.txtSellerID.CustomButton.Location = new System.Drawing.Point(107, 1);
-            this.txtSellerID.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSellerID.CustomButton.Location = new System.Drawing.Point(136, 1);
+            this.txtSellerID.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtSellerID.CustomButton.Name = "";
-            this.txtSellerID.CustomButton.Size = new System.Drawing.Size(13, 14);
+            this.txtSellerID.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtSellerID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtSellerID.CustomButton.TabIndex = 1;
             this.txtSellerID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -336,7 +336,7 @@ namespace SuperShop.App.UI.MiniStatement
             this.txtSellerID.CustomButton.Visible = false;
             this.txtSellerID.Lines = new string[0];
             this.txtSellerID.Location = new System.Drawing.Point(76, 117);
-            this.txtSellerID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSellerID.Margin = new System.Windows.Forms.Padding(2);
             this.txtSellerID.MaxLength = 32767;
             this.txtSellerID.Name = "txtSellerID";
             this.txtSellerID.PasswordChar = '\0';
@@ -358,10 +358,10 @@ namespace SuperShop.App.UI.MiniStatement
             // 
             // 
             this.txtDate.CustomButton.Image = null;
-            this.txtDate.CustomButton.Location = new System.Drawing.Point(106, 1);
-            this.txtDate.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDate.CustomButton.Location = new System.Drawing.Point(136, 1);
+            this.txtDate.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtDate.CustomButton.Name = "";
-            this.txtDate.CustomButton.Size = new System.Drawing.Size(13, 14);
+            this.txtDate.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtDate.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtDate.CustomButton.TabIndex = 1;
             this.txtDate.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -369,7 +369,7 @@ namespace SuperShop.App.UI.MiniStatement
             this.txtDate.CustomButton.Visible = false;
             this.txtDate.Lines = new string[0];
             this.txtDate.Location = new System.Drawing.Point(76, 94);
-            this.txtDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDate.Margin = new System.Windows.Forms.Padding(2);
             this.txtDate.MaxLength = 32767;
             this.txtDate.Name = "txtDate";
             this.txtDate.PasswordChar = '\0';
@@ -407,45 +407,45 @@ namespace SuperShop.App.UI.MiniStatement
             this.dgvProducts.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProducts.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvProducts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column5,
             this.Column3});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProducts.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProducts.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProducts.EnableHeadersVisualStyles = false;
             this.dgvProducts.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvProducts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvProducts.Location = new System.Drawing.Point(2, 170);
-            this.dgvProducts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvProducts.Margin = new System.Windows.Forms.Padding(2);
             this.dgvProducts.MultiSelect = false;
             this.dgvProducts.Name = "dgvProducts";
             this.dgvProducts.ReadOnly = true;
             this.dgvProducts.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProducts.RowHeadersWidth = 51;
             this.dgvProducts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvProducts.RowTemplate.Height = 24;
@@ -642,11 +642,12 @@ namespace SuperShop.App.UI.MiniStatement
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(251, 640);
             this.Controls.Add(this.metroPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SalesSlip";
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
+            this.Resizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "SalesSlip";
             this.Load += new System.EventHandler(this.SalesSlip_Load);

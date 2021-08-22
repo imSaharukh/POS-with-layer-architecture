@@ -46,23 +46,23 @@ namespace SuperShop.App
             this.btnLogout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnLogout.HorizontalScrollbarBarColor = true;
             this.btnLogout.HorizontalScrollbarHighlightOnWheel = false;
-            this.btnLogout.HorizontalScrollbarSize = 10;
-            this.btnLogout.Location = new System.Drawing.Point(220, 74);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogout.HorizontalScrollbarSize = 8;
+            this.btnLogout.Location = new System.Drawing.Point(165, 60);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(868, 513);
+            this.btnLogout.Size = new System.Drawing.Size(651, 417);
             this.btnLogout.TabIndex = 1;
             this.btnLogout.VerticalScrollbarBarColor = true;
             this.btnLogout.VerticalScrollbarHighlightOnWheel = false;
-            this.btnLogout.VerticalScrollbarSize = 11;
+            this.btnLogout.VerticalScrollbarSize = 8;
             this.btnLogout.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
             // 
             // btnUser
             // 
-            this.btnUser.Location = new System.Drawing.Point(23, 18);
-            this.btnUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUser.Location = new System.Drawing.Point(17, 15);
+            this.btnUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(153, 23);
+            this.btnUser.Size = new System.Drawing.Size(115, 19);
             this.btnUser.TabIndex = 2;
             this.btnUser.Text = "Users";
             this.btnUser.UseSelectable = true;
@@ -70,20 +70,20 @@ namespace SuperShop.App
             // 
             // metroButton3
             // 
-            this.metroButton3.Location = new System.Drawing.Point(23, 244);
-            this.metroButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroButton3.Location = new System.Drawing.Point(17, 198);
+            this.metroButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(153, 23);
+            this.metroButton3.Size = new System.Drawing.Size(115, 19);
             this.metroButton3.TabIndex = 4;
             this.metroButton3.Text = "Customization";
             this.metroButton3.UseSelectable = true;
             // 
             // btnStats
             // 
-            this.btnStats.Location = new System.Drawing.Point(23, 129);
-            this.btnStats.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnStats.Location = new System.Drawing.Point(17, 105);
+            this.btnStats.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnStats.Name = "btnStats";
-            this.btnStats.Size = new System.Drawing.Size(153, 23);
+            this.btnStats.Size = new System.Drawing.Size(115, 19);
             this.btnStats.TabIndex = 5;
             this.btnStats.Text = "Statistics";
             this.btnStats.UseSelectable = true;
@@ -91,10 +91,10 @@ namespace SuperShop.App
             // 
             // metroButton5
             // 
-            this.metroButton5.Location = new System.Drawing.Point(23, 70);
-            this.metroButton5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroButton5.Location = new System.Drawing.Point(17, 57);
+            this.metroButton5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.metroButton5.Name = "metroButton5";
-            this.metroButton5.Size = new System.Drawing.Size(153, 23);
+            this.metroButton5.Size = new System.Drawing.Size(115, 19);
             this.metroButton5.TabIndex = 6;
             this.metroButton5.Text = "Products";
             this.metroButton5.UseSelectable = true;
@@ -112,23 +112,23 @@ namespace SuperShop.App
             this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(20, 74);
-            this.metroPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroPanel1.HorizontalScrollbarSize = 8;
+            this.metroPanel1.Location = new System.Drawing.Point(15, 60);
+            this.metroPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(200, 513);
+            this.metroPanel1.Size = new System.Drawing.Size(150, 417);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 11;
+            this.metroPanel1.VerticalScrollbarSize = 8;
             this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
             // 
             // btnSalesReport
             // 
-            this.btnSalesReport.Location = new System.Drawing.Point(23, 185);
-            this.btnSalesReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSalesReport.Location = new System.Drawing.Point(17, 150);
+            this.btnSalesReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSalesReport.Name = "btnSalesReport";
-            this.btnSalesReport.Size = new System.Drawing.Size(153, 23);
+            this.btnSalesReport.Size = new System.Drawing.Size(115, 19);
             this.btnSalesReport.TabIndex = 9;
             this.btnSalesReport.Text = "Sales Report";
             this.btnSalesReport.UseSelectable = true;
@@ -137,18 +137,19 @@ namespace SuperShop.App
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(3, 471);
+            this.metroLabel1.Location = new System.Drawing.Point(2, 383);
+            this.metroLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(114, 20);
+            this.metroLabel1.Size = new System.Drawing.Size(108, 19);
             this.metroLabel1.TabIndex = 8;
             this.metroLabel1.Text = "Version 0.1 [Beta]";
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(23, 437);
-            this.metroButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroButton1.Location = new System.Drawing.Point(17, 355);
+            this.metroButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(153, 23);
+            this.metroButton1.Size = new System.Drawing.Size(115, 19);
             this.metroButton1.TabIndex = 7;
             this.metroButton1.Text = "Log Out";
             this.metroButton1.UseSelectable = true;
@@ -156,15 +157,16 @@ namespace SuperShop.App
             // 
             // AdminDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1108, 607);
+            this.ClientSize = new System.Drawing.Size(831, 493);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.metroPanel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "AdminDashboard";
-            this.Padding = new System.Windows.Forms.Padding(20, 74, 20, 20);
+            this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
+            this.Resizable = false;
             this.Text = "AdminDashboard";
             this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.metroPanel1.ResumeLayout(false);
