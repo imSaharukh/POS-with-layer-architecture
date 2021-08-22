@@ -34,6 +34,7 @@ namespace SuperShop.App.UI.Seller
             Total = 0;
             SubTotal = 0;
             Discount = 0;
+            this.txtProductQty.Text = "1";
         }
 
 
@@ -166,7 +167,7 @@ namespace SuperShop.App.UI.Seller
             invoice.InvoiceItems =new List<InvoiceItem>();
             invoice.TotalPrice = this.Total;
             invoice.SubTotal = this.SubTotal;
-            invoice.Discount = Convert.ToDouble(this.txtBoxDiscount.Text);
+            invoice.Discount = Convert.ToDouble(String.IsNullOrEmpty(this.txtBoxDiscount.Text) ? "0":this.txtBoxDiscount.Text);
             foreach (DataGridViewRow item in this.dgvInvoiceProduct.Rows)
             {
                 var product = new InvoiceItem();
@@ -182,7 +183,7 @@ namespace SuperShop.App.UI.Seller
            var result =  InvoiceRepository.CreateOne(invoice);
             if (result == 1)
             {
-                var exhangeAmount =  Convert.ToDouble(txtGivenAmount.Text) - SubTotal;
+                var exhangeAmount =   Convert.ToDouble(String.IsNullOrEmpty(this.txtBoxDiscount.Text) ? "0" :txtGivenAmount.Text) - SubTotal;
 
                 MessageBox.Show("Excahnge Amount "+ exhangeAmount+" TK" ,"Message", MessageBoxButtons.OK);
 
