@@ -80,7 +80,7 @@ namespace SuperShop.App
             // dgvProduct
             // 
             this.dgvProduct.AllowUserToResizeRows = false;
-            this.dgvProduct.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvProduct.BackgroundColor = System.Drawing.Color.White;
             this.dgvProduct.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProduct.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvProduct.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -323,10 +323,10 @@ namespace SuperShop.App
             // 
             // 
             this.txtSearchProduct.CustomButton.Image = null;
-            this.txtSearchProduct.CustomButton.Location = new System.Drawing.Point(323, 1);
+            this.txtSearchProduct.CustomButton.Location = new System.Drawing.Point(242, 1);
             this.txtSearchProduct.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearchProduct.CustomButton.Name = "";
-            this.txtSearchProduct.CustomButton.Size = new System.Drawing.Size(28, 26);
+            this.txtSearchProduct.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtSearchProduct.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtSearchProduct.CustomButton.TabIndex = 1;
             this.txtSearchProduct.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;

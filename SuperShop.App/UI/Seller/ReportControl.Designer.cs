@@ -220,6 +220,7 @@ namespace SuperShop.App
             this.dgvInvoice.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInvoice.Size = new System.Drawing.Size(859, 377);
             this.dgvInvoice.TabIndex = 2;
+            this.dgvInvoice.UseCustomBackColor = true;
             this.dgvInvoice.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInvoice_CellContentClick);
             // 
             // invoiceID

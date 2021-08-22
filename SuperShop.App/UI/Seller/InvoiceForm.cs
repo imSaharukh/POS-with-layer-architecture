@@ -44,6 +44,15 @@ namespace SuperShop.App.UI.Seller
             try
             {
                 this.dgvAllProduct.DataSource = productRepository.GetAll();
+                for (int i = 0; i < this.dgvAllProduct.Rows.Count; i++)
+                {
+                    if (Convert.ToInt32(this.dgvAllProduct.Rows[i].Cells["stock"].Value) < 10)
+                    {
+                        Console.WriteLine("Changing color");
+                        this.dgvAllProduct.Rows[i].DefaultCellStyle.BackColor = Color.OrangeRed;
+                        this.dgvAllProduct.Rows[i].DefaultCellStyle.ForeColor = Color.Black;
+                    }
+                }
             }
             catch(Exception error)
             {
@@ -256,6 +265,11 @@ namespace SuperShop.App.UI.Seller
         private void dgvInvoiceProduct_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
             Console.WriteLine("Value_+Changed");
+        }
+
+        private void InvoiceForm_Load(object sender, EventArgs e)
+        {
+            loadGridView();
         }
     }
 }
