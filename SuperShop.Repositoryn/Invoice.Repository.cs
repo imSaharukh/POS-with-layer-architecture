@@ -22,8 +22,8 @@ namespace SuperShop.Repository
             foreach (var item in invoice.InvoiceItems)
             {
                 //decrease stock
-                DataAccess.DrmQuery("UPDATE products SET stock = stock - 1 WHERE productId = @productId",
-                    new { item.productID });
+                DataAccess.DrmQuery("UPDATE products SET stock = stock - @qty WHERE productId = @productId",
+                    new { item.productID ,item.qty });
 
 
                 DataAccess.DrmQuery(@"insert into invoiceItems (invoiceID,productID,qty) 

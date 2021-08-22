@@ -602,12 +602,12 @@ namespace SuperShop.App.UI.Seller
             // 
             // stock
             // 
+            this.stock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.stock.DataPropertyName = "stock";
             this.stock.HeaderText = "Stock";
             this.stock.MinimumWidth = 6;
             this.stock.Name = "stock";
             this.stock.ReadOnly = true;
-            this.stock.Width = 125;
             // 
             // purchasePrice
             // 
@@ -631,13 +631,12 @@ namespace SuperShop.App.UI.Seller
             // 
             // ProductUnit
             // 
+            this.ProductUnit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ProductUnit.DataPropertyName = "ProductUnit";
             this.ProductUnit.HeaderText = "Product Unit";
             this.ProductUnit.MinimumWidth = 6;
             this.ProductUnit.Name = "ProductUnit";
             this.ProductUnit.ReadOnly = true;
-            this.ProductUnit.Visible = false;
-            this.ProductUnit.Width = 125;
             // 
             // InvoiceForm
             // 
