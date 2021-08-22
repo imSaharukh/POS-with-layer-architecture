@@ -21,7 +21,6 @@ namespace SuperShop.App.UI.Product
 
         private void AddCatagory_Load(object sender, EventArgs e)
         {
-
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
@@ -42,7 +41,6 @@ namespace SuperShop.App.UI.Product
 
         private void metroLabel1_Click(object sender, EventArgs e)
         {
-
         }
     }
 }

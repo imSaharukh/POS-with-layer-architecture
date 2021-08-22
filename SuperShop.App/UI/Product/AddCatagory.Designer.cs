@@ -31,7 +31,7 @@ namespace SuperShop.App.UI.Product
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.lblErrAddCategory = new MetroFramework.Controls.MetroLabel();
             this.txtCatagory = new MetroFramework.Controls.MetroTextBox();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.flowLayoutPanel1.SuspendLayout();
@@ -40,12 +40,12 @@ namespace SuperShop.App.UI.Product
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.metroLabel2);
-            this.flowLayoutPanel1.Controls.Add(this.metroLabel1);
+            this.flowLayoutPanel1.Controls.Add(this.lblErrAddCategory);
             this.flowLayoutPanel1.Controls.Add(this.txtCatagory);
             this.flowLayoutPanel1.Controls.Add(this.metroButton1);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(44, 56);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(150, 120);
             this.flowLayoutPanel1.TabIndex = 0;
@@ -60,18 +60,18 @@ namespace SuperShop.App.UI.Product
             this.metroLabel2.TabIndex = 4;
             this.metroLabel2.Text = "Catagory";
             // 
-            // metroLabel1
+            // lblErrAddCategory
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.ForeColor = System.Drawing.Color.Red;
-            this.metroLabel1.Location = new System.Drawing.Point(2, 19);
-            this.metroLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(39, 19);
-            this.metroLabel1.TabIndex = 2;
-            this.metroLabel1.Text = "error";
-            this.metroLabel1.UseCustomForeColor = true;
-            this.metroLabel1.Click += new System.EventHandler(this.metroLabel1_Click);
+            this.lblErrAddCategory.AutoSize = true;
+            this.lblErrAddCategory.ForeColor = System.Drawing.Color.Red;
+            this.lblErrAddCategory.Location = new System.Drawing.Point(2, 19);
+            this.lblErrAddCategory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblErrAddCategory.Name = "lblErrAddCategory";
+            this.lblErrAddCategory.Size = new System.Drawing.Size(39, 19);
+            this.lblErrAddCategory.TabIndex = 2;
+            this.lblErrAddCategory.Text = "error";
+            this.lblErrAddCategory.UseCustomForeColor = true;
+            this.lblErrAddCategory.Click += new System.EventHandler(this.metroLabel1_Click);
             // 
             // txtCatagory
             // 
@@ -79,10 +79,10 @@ namespace SuperShop.App.UI.Product
             // 
             // 
             this.txtCatagory.CustomButton.Image = null;
-            this.txtCatagory.CustomButton.Location = new System.Drawing.Point(100, 1);
-            this.txtCatagory.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCatagory.CustomButton.Location = new System.Drawing.Point(133, 1);
+            this.txtCatagory.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtCatagory.CustomButton.Name = "";
-            this.txtCatagory.CustomButton.Size = new System.Drawing.Size(13, 14);
+            this.txtCatagory.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtCatagory.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtCatagory.CustomButton.TabIndex = 1;
             this.txtCatagory.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -90,7 +90,7 @@ namespace SuperShop.App.UI.Product
             this.txtCatagory.CustomButton.Visible = false;
             this.txtCatagory.Lines = new string[0];
             this.txtCatagory.Location = new System.Drawing.Point(2, 40);
-            this.txtCatagory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCatagory.Margin = new System.Windows.Forms.Padding(2);
             this.txtCatagory.MaxLength = 32767;
             this.txtCatagory.Name = "txtCatagory";
             this.txtCatagory.PasswordChar = '\0';
@@ -108,7 +108,7 @@ namespace SuperShop.App.UI.Product
             // metroButton1
             // 
             this.metroButton1.Location = new System.Drawing.Point(2, 63);
-            this.metroButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroButton1.Margin = new System.Windows.Forms.Padding(2);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(151, 19);
             this.metroButton1.TabIndex = 5;
@@ -122,9 +122,9 @@ namespace SuperShop.App.UI.Product
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(236, 214);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddCatagory";
-            this.Padding = new System.Windows.Forms.Padding(15, 49, 15, 16);
+            this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Text = "Add Catagory";
             this.Load += new System.EventHandler(this.AddCatagory_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -137,7 +137,7 @@ namespace SuperShop.App.UI.Product
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel lblErrAddCategory;
         private MetroFramework.Controls.MetroTextBox txtCatagory;
         private MetroFramework.Controls.MetroButton metroButton1;
     }
