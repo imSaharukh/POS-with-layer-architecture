@@ -261,11 +261,21 @@ namespace SuperShop.App.UI.Seller
         {
             CalculateSubTotal();
             Console.WriteLine("Value_Changed");
+            
         }
 
         private void dgvInvoiceProduct_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
             Console.WriteLine("Value_+Changed");
+            e.Control.KeyPress -= new KeyPressEventHandler(this.QtyKeyPress);
+            if (this.dgvInvoiceProduct.CurrentCell.ColumnIndex == 2) //Desired Column
+            {
+                TextBox tb = e.Control as TextBox;
+                if (tb != null)
+                {
+                    tb.KeyPress += new KeyPressEventHandler(this.QtyKeyPress);
+                }
+            }
         }
 
         private void InvoiceForm_Load(object sender, EventArgs e)
@@ -297,6 +307,11 @@ namespace SuperShop.App.UI.Seller
             {
                 e.Handled = true;
             }
+        }
+
+        private void dgvInvoiceProduct_CellValidated(object sender, DataGridViewCellEventArgs e)
+        {
+           
         }
     }
 }
