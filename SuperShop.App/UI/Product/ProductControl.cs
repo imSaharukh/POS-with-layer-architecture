@@ -138,7 +138,7 @@ namespace SuperShop.App
 
                 if (result == 1)
                 {
-                    MessageBox.Show("User Deleted");
+                    MessageBox.Show("Product Deleted");
                     loadGridView();
                 }
                 else { MessageBox.Show("Somthing went wrong"); }
