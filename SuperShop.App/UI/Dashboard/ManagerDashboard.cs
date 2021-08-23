@@ -70,5 +70,10 @@ namespace SuperShop.App.UI.Dashboard
         {
             showControl(AllUsersControl);
         }
+
+        private void ManagerDashboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

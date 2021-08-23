@@ -112,5 +112,10 @@ namespace SuperShop.App
         {
             showControll(statistics);
         }
+
+        private void AdminDashboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

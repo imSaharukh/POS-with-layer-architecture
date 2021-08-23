@@ -68,5 +68,10 @@ namespace SuperShop.App.UI.Dashboard
         {
             Application.Restart();
         }
+
+        private void SellerDashboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
