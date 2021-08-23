@@ -100,5 +100,22 @@ namespace SuperShop.Repository
             return result;
         }
 
+        public object GetByUsernameAndDateRangeAndInvoice(string invoiceID,string username, string DateForm, string DateTo)
+        {
+            invoiceID = "%" + invoiceID + "%";
+            var sql = @"select * from invoice 
+            where SalesmanUsername = @username and (PurchaseDate <= @DateTo AND PurchaseDate >= @DateForm) and invoiceID like @invoiceID  ORDER BY PurchaseDate desc;";
+
+            if (username == "All")
+            {
+                sql = @"select * from invoice 
+            where (PurchaseDate <= @DateTo AND PurchaseDate >= @DateForm) and invoiceID like @invoiceID ORDER BY PurchaseDate desc;";
+
+            }
+            Console.WriteLine(sql);
+            var result = DataAccess.sqlcon.Query<Invoice>(sql, new { invoiceID, username, DateTo, DateForm }).Distinct()
+             .ToList();
+            return result;
+        }
     }
 }

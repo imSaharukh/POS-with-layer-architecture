@@ -80,6 +80,7 @@ namespace SuperShop.App
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            this.txtInvoiceSearch.Clear();
             Console.WriteLine(dtFrom.Value.ToShortDateString() +"  " + dtTo.Value.ToShortDateString());
             try
             {
@@ -97,6 +98,12 @@ namespace SuperShop.App
             Console.WriteLine("cell content click");
             InvoiceProductList productList = new InvoiceProductList(this.dgvInvoice.SelectedRows[0].Cells[0].Value.ToString());
             productList.Show();
+        }
+
+        private void txtInvoiceSearch_TextChanged(object sender, EventArgs e)
+        {
+            this.dgvInvoice.DataSource = InvoiceRepository.GetByUsernameAndDateRangeAndInvoice(this.txtInvoiceSearch.Text,this.cmbUsername.Text, dtFrom.Value.ToShortDateString(),
+                         dtTo.Value.ToShortDateString());
         }
     }
 }

@@ -48,6 +48,8 @@ namespace SuperShop.App
             this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PurchaseDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtInvoiceSearch = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoice)).BeginInit();
@@ -55,6 +57,8 @@ namespace SuperShop.App
             // 
             // metroPanel1
             // 
+            this.metroPanel1.Controls.Add(this.metroLabel5);
+            this.metroPanel1.Controls.Add(this.txtInvoiceSearch);
             this.metroPanel1.Controls.Add(this.btnSearch);
             this.metroPanel1.Controls.Add(this.cmbUsername);
             this.metroPanel1.Controls.Add(this.metroLabel3);
@@ -68,7 +72,7 @@ namespace SuperShop.App
             this.metroPanel1.Location = new System.Drawing.Point(3, 2);
             this.metroPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(861, 100);
+            this.metroPanel1.Size = new System.Drawing.Size(861, 154);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -149,10 +153,10 @@ namespace SuperShop.App
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(3, 110);
+            this.metroPanel2.Location = new System.Drawing.Point(3, 160);
             this.metroPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(864, 415);
+            this.metroPanel2.Size = new System.Drawing.Size(864, 365);
             this.metroPanel2.TabIndex = 1;
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
@@ -268,6 +272,46 @@ namespace SuperShop.App
             this.PurchaseDate.Name = "PurchaseDate";
             this.PurchaseDate.ReadOnly = true;
             // 
+            // txtInvoiceSearch
+            // 
+            // 
+            // 
+            // 
+            this.txtInvoiceSearch.CustomButton.Image = null;
+            this.txtInvoiceSearch.CustomButton.Location = new System.Drawing.Point(163, 1);
+            this.txtInvoiceSearch.CustomButton.Name = "";
+            this.txtInvoiceSearch.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtInvoiceSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtInvoiceSearch.CustomButton.TabIndex = 1;
+            this.txtInvoiceSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtInvoiceSearch.CustomButton.UseSelectable = true;
+            this.txtInvoiceSearch.CustomButton.Visible = false;
+            this.txtInvoiceSearch.Lines = new string[0];
+            this.txtInvoiceSearch.Location = new System.Drawing.Point(36, 128);
+            this.txtInvoiceSearch.MaxLength = 32767;
+            this.txtInvoiceSearch.Name = "txtInvoiceSearch";
+            this.txtInvoiceSearch.PasswordChar = '\0';
+            this.txtInvoiceSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtInvoiceSearch.SelectedText = "";
+            this.txtInvoiceSearch.SelectionLength = 0;
+            this.txtInvoiceSearch.SelectionStart = 0;
+            this.txtInvoiceSearch.ShortcutsEnabled = true;
+            this.txtInvoiceSearch.Size = new System.Drawing.Size(185, 23);
+            this.txtInvoiceSearch.TabIndex = 12;
+            this.txtInvoiceSearch.UseSelectable = true;
+            this.txtInvoiceSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtInvoiceSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtInvoiceSearch.TextChanged += new System.EventHandler(this.txtInvoiceSearch_TextChanged);
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(36, 105);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(118, 20);
+            this.metroLabel5.TabIndex = 13;
+            this.metroLabel5.Text = "Search by Invoice";
+            // 
             // ReportControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -304,5 +348,7 @@ namespace SuperShop.App
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn PurchaseDate;
         private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroTextBox txtInvoiceSearch;
     }
 }
