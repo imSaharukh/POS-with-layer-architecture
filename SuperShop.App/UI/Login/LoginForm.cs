@@ -83,5 +83,10 @@ namespace SuperShop.App
             //}
 
         }
+
+        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
