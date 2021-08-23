@@ -1,4 +1,5 @@
-﻿using shortid;
+﻿using MetroFramework.Controls;
+using shortid;
 using shortid.Configuration;
 using SuperShop.Entity;
 using SuperShop.Repository;
@@ -205,7 +206,7 @@ namespace SuperShop.App.UI.Seller
            var result =  InvoiceRepository.CreateOne(invoice);
             if (result == 1)
             {
-                var exhangeAmount =   Convert.ToDouble(String.IsNullOrEmpty(this.txtBoxDiscount.Text) ? "0" :txtGivenAmount.Text) - SubTotal;
+                var exhangeAmount =   Math.Round((Convert.ToDouble(String.IsNullOrEmpty(this.txtGivenAmount.Text) ? "0" :txtGivenAmount.Text) - SubTotal),2);
 
                 MessageBox.Show("Excahnge Amount "+ exhangeAmount+" TK" ,"Message", MessageBoxButtons.OK);
 
@@ -270,6 +271,26 @@ namespace SuperShop.App.UI.Seller
         private void InvoiceForm_Load(object sender, EventArgs e)
         {
             loadGridView();
+        }
+
+        private void txtBoxDiscount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void discountKeypress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+           (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as MetroTextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
