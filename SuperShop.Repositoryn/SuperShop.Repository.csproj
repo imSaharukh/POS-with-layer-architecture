@@ -54,7 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extra.Repository.cs" />
+    <Compile Include="Stat.Repository.cs" />
     <Compile Include="Invoice.Repository.cs" />
     <Compile Include="Product.Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
