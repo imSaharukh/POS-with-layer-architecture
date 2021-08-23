@@ -19,13 +19,13 @@ namespace SuperShop.App
         int productID = 0;
         bool isUpdate = false;
         ProductRepository productRepository = new ProductRepository();
-        CallbackDelegate loadgridviewcallback;
+        CallbackDelegate Loadgridviewcallback { get; set; }
         public AddProductForm(CallbackDelegate loadgridviewcallback,Product product = null)
         {
             InitializeComponent();
             loadInitialData();
             loadUpdateData(product);
-            this.loadgridviewcallback = loadgridviewcallback;
+            this.Loadgridviewcallback = loadgridviewcallback;
         }
 
         void loadUpdateData(Product product)
@@ -160,7 +160,7 @@ namespace SuperShop.App
             if (result == 1)
             {
                 MessageBox.Show(isUpdate?"Product updated":"Product added");
-                loadgridviewcallback();
+                Loadgridviewcallback();
                 Hide();
             }
             else

@@ -18,13 +18,13 @@ namespace SuperShop.App
         bool isUpdate = false;
         UserRepository userRepository = new UserRepository();
         List<string> roleNames =new List<string>();
-        CallbackDelegate loadGridViewCallback;
+        CallbackDelegate LoadGridViewCallback { get; set; }
         public AddUserForm(CallbackDelegate loadGridViewCallback, User user = null)
         {
             InitializeComponent();
             loadUserRoles();
             loadUpdateData(user);
-            this.loadGridViewCallback = loadGridViewCallback;
+            this.LoadGridViewCallback = loadGridViewCallback;
              
         }
         
@@ -180,7 +180,7 @@ namespace SuperShop.App
             }
 
             //Console.WriteLine(result);
-            loadGridViewCallback();
+            LoadGridViewCallback();
 
 
             Hide();
