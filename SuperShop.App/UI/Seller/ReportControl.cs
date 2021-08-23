@@ -35,6 +35,7 @@ namespace SuperShop.App
             if(Username != null)
             {
                 List<string> users = new List<string>();
+                
                 users.Add(this.Username);
                 this.cmbUsername.DataSource = users;
                 this.cmbUsername.Text = this.Username;
@@ -45,7 +46,7 @@ namespace SuperShop.App
             {
                 var users = userRepository.GetAllSeller();
                 List<string> usernames = new List<string>();
-
+                usernames.Add("All");
                 foreach (var item in users)
                 {
                     usernames.Add(item.username);

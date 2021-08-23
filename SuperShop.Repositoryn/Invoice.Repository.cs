@@ -47,8 +47,16 @@ namespace SuperShop.Repository
         }
         public List<Invoice> GetByUsernameAndDateRange(string username,string DateForm , string DateTo)
         {
-            var result = DataAccess.sqlcon.Query<Invoice>(@"select * from invoice 
-            where SalesmanUsername = @username and (PurchaseDate <= @DateTo AND PurchaseDate >= @DateForm) ORDER BY PurchaseDate desc;", new { username , DateTo , DateForm }).Distinct()
+            var sql = @"select * from invoice 
+            where SalesmanUsername = @username and (PurchaseDate <= @DateTo AND PurchaseDate >= @DateForm) ORDER BY PurchaseDate desc;";
+
+            if (username == "All")
+            {
+                sql = @"select * from invoice 
+            where (PurchaseDate <= @DateTo AND PurchaseDate >= @DateForm) ORDER BY PurchaseDate desc;";
+
+            }
+            var result = DataAccess.sqlcon.Query<Invoice>(sql, new { username , DateTo , DateForm }).Distinct()
              .ToList();
             return result;
         }
