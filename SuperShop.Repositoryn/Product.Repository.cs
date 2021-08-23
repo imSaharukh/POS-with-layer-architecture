@@ -99,7 +99,7 @@ namespace SuperShop.Repository
 
             return result;
         }
-
+    
         public List<Product> SearchByProductname(string search)
         {
             search = "%" + search + "%";

@@ -53,7 +53,7 @@ namespace SuperShop.App
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.txtSearchProduct = new MetroFramework.Controls.MetroTextBox();
             this.btnProductUpdate = new MetroFramework.Controls.MetroButton();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
+            this.btnDelete = new MetroFramework.Controls.MetroButton();
             this.btnAddProductform = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
@@ -281,7 +281,7 @@ namespace SuperShop.App
             this.metroPanel2.Controls.Add(this.metroLabel1);
             this.metroPanel2.Controls.Add(this.txtSearchProduct);
             this.metroPanel2.Controls.Add(this.btnProductUpdate);
-            this.metroPanel2.Controls.Add(this.metroButton4);
+            this.metroPanel2.Controls.Add(this.btnDelete);
             this.metroPanel2.Controls.Add(this.btnAddProductform);
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
@@ -363,17 +363,18 @@ namespace SuperShop.App
             this.btnProductUpdate.UseSelectable = true;
             this.btnProductUpdate.Click += new System.EventHandler(this.btnProductUpdate_Click);
             // 
-            // metroButton4
+            // btnDelete
             // 
-            this.metroButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroButton4.Location = new System.Drawing.Point(598, 28);
-            this.metroButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(89, 30);
-            this.metroButton4.TabIndex = 5;
-            this.metroButton4.Text = "Delete";
-            this.metroButton4.UseCustomBackColor = true;
-            this.metroButton4.UseSelectable = true;
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnDelete.Location = new System.Drawing.Point(598, 28);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(89, 30);
+            this.btnDelete.TabIndex = 5;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseCustomBackColor = true;
+            this.btnDelete.UseSelectable = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAddProductform
             // 
@@ -414,7 +415,7 @@ namespace SuperShop.App
         private MetroFramework.Controls.MetroGrid dgvProduct;
         private MetroFramework.Controls.MetroGrid metroGrid1;
         private MetroFramework.Controls.MetroButton btnProductUpdate;
-        private MetroFramework.Controls.MetroButton metroButton4;
+        private MetroFramework.Controls.MetroButton btnDelete;
         private MetroFramework.Controls.MetroButton btnAddProductform;
         private MetroFramework.Controls.MetroTextBox txtSearchProduct;
         private MetroFramework.Controls.MetroLabel metroLabel1;

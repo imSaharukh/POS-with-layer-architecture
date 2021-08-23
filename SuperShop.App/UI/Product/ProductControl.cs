@@ -122,5 +122,28 @@ namespace SuperShop.App
             AddCatagory addCatagory =new AddCatagory();
             addCatagory.Show();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (this.dgvProduct.SelectedRows.Count == 0)
+            {
+
+                MessageBox.Show("please select a row");
+            }
+            else
+            {
+                DataGridViewRow row = this.dgvProduct.SelectedRows[0];
+                var productID = Convert.ToInt32(row.Cells["productID"].Value);
+               var result= productRepository.deleteOne(productID);
+
+                if (result == 1)
+                {
+                    MessageBox.Show("User Deleted");
+                    loadGridView();
+                }
+                else { MessageBox.Show("Somthing went wrong"); }
+
+            }
+        }
     }
 }
