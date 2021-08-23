@@ -58,7 +58,7 @@ namespace SuperShop.App.UI.MiniStatement
 
             var Bitmap = new System.Drawing.Bitmap(this.Width, this.Height);
             this.DrawToBitmap(Bitmap, this.Bounds);
-            var path = "./../../../"+ invoice.invoiceID+".jpg";
+            var path = "./../../../Invoice/"+ invoice.invoiceID+".jpg";
             Bitmap.Save(path, ImageFormat.Jpeg);
             Bitmap.Dispose();
             MessageBox.Show("Saved Invoice to " + invoice.invoiceID + ".jpg");
