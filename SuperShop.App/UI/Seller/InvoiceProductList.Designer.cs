@@ -222,6 +222,7 @@ namespace SuperShop.App.UI.Seller
             this.ClientSize = new System.Drawing.Size(475, 324);
             this.Controls.Add(this.metroPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "InvoiceProductList";
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Resizable = false;
