@@ -203,6 +203,12 @@ namespace SuperShop.App
             {
                 e.Handled = true;
             }
+
+            //reject dot at first index
+            if ((e.KeyChar == '.') && string.IsNullOrEmpty((sender as MetroTextBox).Text))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtUnitPrice_KeyPress(object sender, KeyPressEventArgs e)
@@ -218,6 +224,12 @@ namespace SuperShop.App
             {
                 e.Handled = true;
             }
+
+            //reject dot at first index
+            if ((e.KeyChar == '.') && string.IsNullOrEmpty((sender as MetroTextBox).Text))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtStock_KeyPress(object sender, KeyPressEventArgs e)
@@ -226,6 +238,7 @@ namespace SuperShop.App
             {
                 e.Handled = true;
             }
+
         }
     }
 }

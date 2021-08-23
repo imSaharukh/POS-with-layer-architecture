@@ -280,6 +280,7 @@ namespace SuperShop.App.UI.Seller
 
         private void discountKeypress(object sender, KeyPressEventArgs e)
         {
+            Console.WriteLine((sender as MetroTextBox).Text.IndexOf('.'));
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
            (e.KeyChar != '.'))
             {
@@ -288,6 +289,11 @@ namespace SuperShop.App.UI.Seller
 
             // only allow one decimal point
             if ((e.KeyChar == '.') && ((sender as MetroTextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+            //reject dot at first index
+            if ((e.KeyChar == '.') && string.IsNullOrEmpty((sender as MetroTextBox).Text))
             {
                 e.Handled = true;
             }

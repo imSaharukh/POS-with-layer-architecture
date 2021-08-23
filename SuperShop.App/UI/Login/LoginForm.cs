@@ -30,7 +30,7 @@ namespace SuperShop.App
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-        //try
+       
             {
                 User result;
 
@@ -76,11 +76,7 @@ namespace SuperShop.App
                 }
                 Console.WriteLine(result?.userRole);
             }
-            //catch(Exception err)
-            //{
-            //    Console.WriteLine(err);
-            //    MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+         
 
         }
 
