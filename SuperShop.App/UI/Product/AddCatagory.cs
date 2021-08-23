@@ -42,7 +42,11 @@ namespace SuperShop.App.UI.Product
                 {
                     ProductRepository productRepository = new ProductRepository();
                     var result = productRepository.CreateOneProductCatagory(this.txtCatagory.Text);
-                    if (result == 1)
+                    if (result == -1)
+                    {
+                        MessageBox.Show("Catagory Already Exist");
+                    }
+                  else  if (result == 1)
                     {
                         MessageBox.Show("Catagory Added");
                         this.Hide();

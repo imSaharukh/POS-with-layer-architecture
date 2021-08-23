@@ -43,6 +43,15 @@ namespace SuperShop.Repository
 
         public int? CreateOne(User user)
         {
+
+
+            var r = DataAccess.SelectQuery<User>("select * from users where username = @username", new { user.username });
+
+            if (r.Count > 0)
+            {
+                return -1;
+            }
+
             var role = user.userRole.RoleName;
             var id = DataAccess.SelectQuery<UserRole>("select * from userRoles where RoleName = @role",new {role})[0].roleID;
 

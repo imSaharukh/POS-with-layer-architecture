@@ -14,6 +14,15 @@ namespace SuperShop.Repository
 
         public int? CreateOneProductCatagory(string catagoryName)
         {
+
+            var r = DataAccess.SelectQuery<ProductCategory>(@"select * from productCategories where 
+            productCategoryName  = @catagoryName;", new { catagoryName });
+
+            if (r.Count > 0)
+            {
+                return -1;
+            }
+
             var result = DataAccess.DrmQuery("insert into productCategories (productCategoryName) values (@catagoryName);", new { catagoryName });
 
             return result;

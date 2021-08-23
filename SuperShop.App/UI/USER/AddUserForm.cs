@@ -157,7 +157,21 @@ namespace SuperShop.App
                 try
                 {
                     var result = userRepository.CreateOne(user);
-                    MessageBox.Show("user added");
+                    if (result == -1)
+                    {
+                        MessageBox.Show("User Already Exist"); 
+                    }
+                    else if (result == 1)
+                    {
+                        MessageBox.Show("User Added");
+                        this.Hide();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Somthing went wrong");
+
+                    }
                 }
                 catch(Exception err)
                 {
