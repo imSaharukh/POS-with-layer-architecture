@@ -66,7 +66,7 @@ namespace SuperShop.App
             this.flowLayoutPanel1.Controls.Add(this.txtPassword);
             this.flowLayoutPanel1.Controls.Add(this.metroButton1);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(197, 75);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(151, 75);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(411, 427);
@@ -102,10 +102,10 @@ namespace SuperShop.App
             // 
             // 
             this.txtFirstName.CustomButton.Image = null;
-            this.txtFirstName.CustomButton.Location = new System.Drawing.Point(228, 1);
+            this.txtFirstName.CustomButton.Location = new System.Drawing.Point(171, 1);
             this.txtFirstName.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFirstName.CustomButton.Name = "";
-            this.txtFirstName.CustomButton.Size = new System.Drawing.Size(28, 26);
+            this.txtFirstName.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtFirstName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtFirstName.CustomButton.TabIndex = 1;
             this.txtFirstName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -158,10 +158,10 @@ namespace SuperShop.App
             // 
             // 
             this.txtLastName.CustomButton.Image = null;
-            this.txtLastName.CustomButton.Location = new System.Drawing.Point(228, 1);
+            this.txtLastName.CustomButton.Location = new System.Drawing.Point(171, 1);
             this.txtLastName.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLastName.CustomButton.Name = "";
-            this.txtLastName.CustomButton.Size = new System.Drawing.Size(28, 26);
+            this.txtLastName.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtLastName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtLastName.CustomButton.TabIndex = 1;
             this.txtLastName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -214,10 +214,10 @@ namespace SuperShop.App
             // 
             // 
             this.txtUsername.CustomButton.Image = null;
-            this.txtUsername.CustomButton.Location = new System.Drawing.Point(228, 1);
+            this.txtUsername.CustomButton.Location = new System.Drawing.Point(171, 1);
             this.txtUsername.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsername.CustomButton.Name = "";
-            this.txtUsername.CustomButton.Size = new System.Drawing.Size(28, 26);
+            this.txtUsername.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtUsername.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtUsername.CustomButton.TabIndex = 1;
             this.txtUsername.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -263,7 +263,7 @@ namespace SuperShop.App
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(3, 245);
+            this.metroLabel4.Location = new System.Drawing.Point(3, 246);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(66, 20);
             this.metroLabel4.TabIndex = 15;
@@ -274,7 +274,7 @@ namespace SuperShop.App
             this.lblErrPassword.AutoSize = true;
             this.lblErrPassword.FontSize = MetroFramework.MetroLabelSize.Small;
             this.lblErrPassword.ForeColor = System.Drawing.Color.Red;
-            this.lblErrPassword.Location = new System.Drawing.Point(3, 265);
+            this.lblErrPassword.Location = new System.Drawing.Point(3, 266);
             this.lblErrPassword.Name = "lblErrPassword";
             this.lblErrPassword.Size = new System.Drawing.Size(34, 17);
             this.lblErrPassword.TabIndex = 26;
@@ -289,17 +289,17 @@ namespace SuperShop.App
             // 
             // 
             this.txtPassword.CustomButton.Image = null;
-            this.txtPassword.CustomButton.Location = new System.Drawing.Point(228, 1);
+            this.txtPassword.CustomButton.Location = new System.Drawing.Point(171, 1);
             this.txtPassword.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.CustomButton.Name = "";
-            this.txtPassword.CustomButton.Size = new System.Drawing.Size(28, 26);
+            this.txtPassword.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtPassword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtPassword.CustomButton.TabIndex = 1;
             this.txtPassword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtPassword.CustomButton.UseSelectable = true;
             this.txtPassword.CustomButton.Visible = false;
             this.txtPassword.Lines = new string[0];
-            this.txtPassword.Location = new System.Drawing.Point(3, 284);
+            this.txtPassword.Location = new System.Drawing.Point(3, 285);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.Name = "txtPassword";
@@ -318,7 +318,7 @@ namespace SuperShop.App
             // metroButton1
             // 
             this.metroButton1.BackColor = System.Drawing.Color.Gray;
-            this.metroButton1.Location = new System.Drawing.Point(3, 311);
+            this.metroButton1.Location = new System.Drawing.Point(3, 312);
             this.metroButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(193, 23);
@@ -332,7 +332,7 @@ namespace SuperShop.App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(608, 585);
+            this.ClientSize = new System.Drawing.Size(523, 503);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
