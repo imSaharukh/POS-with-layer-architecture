@@ -33,6 +33,8 @@ namespace SuperShop.App
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.txtInvoiceSearch = new MetroFramework.Controls.MetroTextBox();
             this.btnSearch = new MetroFramework.Controls.MetroButton();
             this.cmbUsername = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -48,8 +50,6 @@ namespace SuperShop.App
             this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PurchaseDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtInvoiceSearch = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoice)).BeginInit();
@@ -78,6 +78,46 @@ namespace SuperShop.App
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 11;
             this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(36, 105);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(118, 20);
+            this.metroLabel5.TabIndex = 13;
+            this.metroLabel5.Text = "Search by Invoice";
+            // 
+            // txtInvoiceSearch
+            // 
+            // 
+            // 
+            // 
+            this.txtInvoiceSearch.CustomButton.Image = null;
+            this.txtInvoiceSearch.CustomButton.Location = new System.Drawing.Point(163, 1);
+            this.txtInvoiceSearch.CustomButton.Name = "";
+            this.txtInvoiceSearch.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtInvoiceSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtInvoiceSearch.CustomButton.TabIndex = 1;
+            this.txtInvoiceSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtInvoiceSearch.CustomButton.UseSelectable = true;
+            this.txtInvoiceSearch.CustomButton.Visible = false;
+            this.txtInvoiceSearch.Lines = new string[0];
+            this.txtInvoiceSearch.Location = new System.Drawing.Point(36, 128);
+            this.txtInvoiceSearch.MaxLength = 32767;
+            this.txtInvoiceSearch.Name = "txtInvoiceSearch";
+            this.txtInvoiceSearch.PasswordChar = '\0';
+            this.txtInvoiceSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtInvoiceSearch.SelectedText = "";
+            this.txtInvoiceSearch.SelectionLength = 0;
+            this.txtInvoiceSearch.SelectionStart = 0;
+            this.txtInvoiceSearch.ShortcutsEnabled = true;
+            this.txtInvoiceSearch.Size = new System.Drawing.Size(185, 23);
+            this.txtInvoiceSearch.TabIndex = 12;
+            this.txtInvoiceSearch.UseSelectable = true;
+            this.txtInvoiceSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtInvoiceSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtInvoiceSearch.TextChanged += new System.EventHandler(this.txtInvoiceSearch_TextChanged);
             // 
             // btnSearch
             // 
@@ -222,7 +262,7 @@ namespace SuperShop.App
             this.dgvInvoice.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvInvoice.RowTemplate.Height = 24;
             this.dgvInvoice.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInvoice.Size = new System.Drawing.Size(859, 377);
+            this.dgvInvoice.Size = new System.Drawing.Size(859, 333);
             this.dgvInvoice.TabIndex = 2;
             this.dgvInvoice.UseCustomBackColor = true;
             this.dgvInvoice.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInvoice_CellContentClick);
@@ -271,46 +311,6 @@ namespace SuperShop.App
             this.PurchaseDate.MinimumWidth = 6;
             this.PurchaseDate.Name = "PurchaseDate";
             this.PurchaseDate.ReadOnly = true;
-            // 
-            // txtInvoiceSearch
-            // 
-            // 
-            // 
-            // 
-            this.txtInvoiceSearch.CustomButton.Image = null;
-            this.txtInvoiceSearch.CustomButton.Location = new System.Drawing.Point(163, 1);
-            this.txtInvoiceSearch.CustomButton.Name = "";
-            this.txtInvoiceSearch.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtInvoiceSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtInvoiceSearch.CustomButton.TabIndex = 1;
-            this.txtInvoiceSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtInvoiceSearch.CustomButton.UseSelectable = true;
-            this.txtInvoiceSearch.CustomButton.Visible = false;
-            this.txtInvoiceSearch.Lines = new string[0];
-            this.txtInvoiceSearch.Location = new System.Drawing.Point(36, 128);
-            this.txtInvoiceSearch.MaxLength = 32767;
-            this.txtInvoiceSearch.Name = "txtInvoiceSearch";
-            this.txtInvoiceSearch.PasswordChar = '\0';
-            this.txtInvoiceSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtInvoiceSearch.SelectedText = "";
-            this.txtInvoiceSearch.SelectionLength = 0;
-            this.txtInvoiceSearch.SelectionStart = 0;
-            this.txtInvoiceSearch.ShortcutsEnabled = true;
-            this.txtInvoiceSearch.Size = new System.Drawing.Size(185, 23);
-            this.txtInvoiceSearch.TabIndex = 12;
-            this.txtInvoiceSearch.UseSelectable = true;
-            this.txtInvoiceSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtInvoiceSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtInvoiceSearch.TextChanged += new System.EventHandler(this.txtInvoiceSearch_TextChanged);
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(36, 105);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(118, 20);
-            this.metroLabel5.TabIndex = 13;
-            this.metroLabel5.Text = "Search by Invoice";
             // 
             // ReportControl
             // 

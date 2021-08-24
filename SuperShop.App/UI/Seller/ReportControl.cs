@@ -96,7 +96,16 @@ namespace SuperShop.App
         private void dgvInvoice_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Console.WriteLine("cell content click");
-            InvoiceProductList productList = new InvoiceProductList(this.dgvInvoice.SelectedRows[0].Cells[0].Value.ToString());
+         var result =    this.InvoiceRepository.GetAllInvoiceProduct(this.dgvInvoice.SelectedRows[0].Cells[0].Value.ToString());
+
+            if (result.Count < 1)
+            {
+
+                MessageBox.Show("No Product Found! Maybe Deleted");
+              
+                return;
+            }
+            InvoiceProductList productList = new InvoiceProductList(result);
             productList.Show();
         }
 

@@ -1,4 +1,5 @@
 ﻿using MetroFramework.Forms;
+using SuperShop.Entity;
 using SuperShop.Repository;
 using System;
 using System.Collections.Generic;
@@ -14,21 +15,26 @@ namespace SuperShop.App.UI.Seller
 {
     public partial class InvoiceProductList : MetroForm
     {
-        InvoiceRepository invoiceRepository = new InvoiceRepository();
-        public InvoiceProductList(string invoice)
+
+        List<InvoiceProduct> Invoice { get; set; }
+        public InvoiceProductList(List<InvoiceProduct> invoice)
         {
             InitializeComponent();
-            loadGridView(invoice);
+            this.Invoice = invoice;
+           
         }
-        void loadGridView(string invoice)
+        void loadGridView()
         {
-            try { this.dgvInvoice.DataSource = invoiceRepository.GetAllInvoiceProduct(invoice); }
+            try {
+                this.dgvInvoice.DataSource = Invoice;
+            }
             catch(Exception err) { MessageBox.Show("Something went wrong in the database", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
         private void InvoiceProductList_Load(object sender, EventArgs e)
         {
-
+            loadGridView();
         }
+
 
         private void dgvInvoice_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
