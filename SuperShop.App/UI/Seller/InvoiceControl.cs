@@ -171,10 +171,31 @@ namespace SuperShop.App.UI.Seller
                 MessageBox.Show("Please Add Some Product first!");
                 return;
             }
-            CalculateSubTotal();
-            if (SubTotal > Convert.ToDouble(String.IsNullOrEmpty(this.txtGivenAmount.Text)?"0": this.txtGivenAmount.Text)) 
+
+
+            //validate qty
+            List<Entity.Product> allProducts = (List<Entity.Product>)this.dgvAllProduct.DataSource;
+            foreach (DataGridViewRow item in this.dgvInvoiceProduct.Rows)
             {
-                MessageBox.Show("Given Amount is less then SubTotal" ,"Error" , MessageBoxButtons.OK);
+                foreach (var item2 in allProducts)
+                {
+                    Console.WriteLine(item2.productID == Convert.ToInt32(item.Cells[0].Value));
+   
+                    if (item2.productID == Convert.ToInt32(item.Cells[0].Value) && Convert.ToInt32(item.Cells[2].Value) > item2.stock)
+                    {
+                        Console.WriteLine(Convert.ToInt32(item.Cells[2].Value).ToString() + " " + item2.stock);
+                        Console.WriteLine(Convert.ToInt32(item.Cells[2].Value) > item2.stock);
+                        MessageBox.Show(item.Cells[1].Value.ToString().Trim() +"'s qty can't be more then its stock", "Error");
+                      
+                        return;
+                    }
+                }
+            }
+
+            CalculateSubTotal();
+            if (SubTotal > Convert.ToDouble(String.IsNullOrEmpty(this.txtGivenAmount.Text) ? "0" : this.txtGivenAmount.Text))
+            {
+                MessageBox.Show("Given Amount is less then SubTotal", "Error", MessageBoxButtons.OK);
                 return;
             }
 
@@ -184,18 +205,18 @@ namespace SuperShop.App.UI.Seller
             {
                 Length = 9
             };
-          
+
             invoice.invoiceID = ShortId.Generate(options);
             invoice.SalesmanUsername = Username;
-            invoice.InvoiceItems =new List<InvoiceItem>();
+            invoice.InvoiceItems = new List<InvoiceItem>();
             invoice.TotalPrice = this.Total;
             invoice.SubTotal = this.SubTotal;
-            invoice.Discount = Convert.ToDouble(String.IsNullOrEmpty(this.txtBoxDiscount.Text) ? "0":this.txtBoxDiscount.Text);
+            invoice.Discount = Convert.ToDouble(String.IsNullOrEmpty(this.txtBoxDiscount.Text) ? "0" : this.txtBoxDiscount.Text);
             foreach (DataGridViewRow item in this.dgvInvoiceProduct.Rows)
             {
                 var product = new InvoiceItem();
                 product.Product = new Entity.Product();
-              
+
                 product.Product.productName = item.Cells[1].Value.ToString();
                 product.Product.unitPrice = Convert.ToDouble(item.Cells[3].Value);
                 product.qty = Convert.ToInt32(item.Cells[2].Value);
@@ -204,27 +225,27 @@ namespace SuperShop.App.UI.Seller
                 {
                     MessageBox.Show("Qty can't be 0");
                     return;
-                    
-                    
+
+
                 }
 
                 product.productID = Convert.ToInt32(item.Cells[0].Value);
                 invoice.InvoiceItems.Add(product);
             }
 
-           var result =  InvoiceRepository.CreateOne(invoice);
+            var result = InvoiceRepository.CreateOne(invoice);
             if (result == 1)
             {
-                var exhangeAmount =   Math.Round((Convert.ToDouble(String.IsNullOrEmpty(this.txtGivenAmount.Text) ? "0" :txtGivenAmount.Text) - SubTotal),2);
+                var exhangeAmount = Math.Round((Convert.ToDouble(String.IsNullOrEmpty(this.txtGivenAmount.Text) ? "0" : txtGivenAmount.Text) - SubTotal), 2);
 
-                MessageBox.Show("Excahnge Amount "+ exhangeAmount+" TK" ,"Message", MessageBoxButtons.OK);
+                MessageBox.Show("Excahnge Amount " + exhangeAmount + " TK", "Message", MessageBoxButtons.OK);
 
-                UI.MiniStatement.SalesSlip salesSlip = new UI.MiniStatement.SalesSlip(invoice,this.txtGivenAmount.Text, exhangeAmount.ToString());
+                UI.MiniStatement.SalesSlip salesSlip = new UI.MiniStatement.SalesSlip(invoice, this.txtGivenAmount.Text, exhangeAmount.ToString());
                 salesSlip.Location = new Point(0, 0);
                 salesSlip.Show();
                 ClearAll();
                 loadGridView();
-                
+
                 //Hide();
             }
             else
