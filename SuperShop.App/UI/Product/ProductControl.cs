@@ -132,7 +132,7 @@ namespace SuperShop.App
             }
             else
             {
-                DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete the product?", "Delete Product", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete the product, it will also delete from the invoices also?", "Delete Product", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.No)
                 {
                     return;
