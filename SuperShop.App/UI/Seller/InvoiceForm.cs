@@ -199,6 +199,15 @@ namespace SuperShop.App.UI.Seller
                 product.Product.productName = item.Cells[1].Value.ToString();
                 product.Product.unitPrice = Convert.ToDouble(item.Cells[3].Value);
                 product.qty = Convert.ToInt32(item.Cells[2].Value);
+
+                if (product.qty < 1)
+                {
+                    MessageBox.Show("Qty can't be 0");
+                    return;
+                    
+                    
+                }
+
                 product.productID = Convert.ToInt32(item.Cells[0].Value);
                 invoice.InvoiceItems.Add(product);
             }
