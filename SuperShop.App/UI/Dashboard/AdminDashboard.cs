@@ -19,7 +19,7 @@ namespace SuperShop.App
         AllUsersControl AllUsersControl { get; set; }
         ProductControl ProductControl { get; set; }
         ReportControl ReportControl { get; set; }
-        InvoiceForm Invoice { get; set; }
+        InvoiceControl Invoice { get; set; }
         StatisticsControl statistics { get; set; }
 
         public AdminDashboard(string username)
@@ -29,7 +29,7 @@ namespace SuperShop.App
              AllUsersControl = new AllUsersControl();
              ProductControl = new ProductControl();
              ReportControl = new ReportControl();
-             Invoice = new InvoiceForm(username);
+             Invoice = new InvoiceControl(username);
             statistics = new StatisticsControl();
             showControll(AllUsersControl);
         }

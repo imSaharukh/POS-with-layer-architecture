@@ -1,7 +1,7 @@
 ﻿
 namespace SuperShop.App.UI.Seller
 {
-    partial class InvoiceForm
+    partial class InvoiceControl
     {
         /// <summary> 
         /// Required designer variable.

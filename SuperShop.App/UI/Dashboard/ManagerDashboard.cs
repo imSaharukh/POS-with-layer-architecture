@@ -18,7 +18,7 @@ namespace SuperShop.App.UI.Dashboard
         AllUsersControl AllUsersControl { get; set; }
         ProductControl ProductControl { get; set; }
         ReportControl ReportControl { get; set; }
-        InvoiceForm Invoice { get; set; }
+        InvoiceControl Invoice { get; set; }
         StatisticsControl statistics { get; set; }
 
         public ManagerDashboard(string username)
@@ -27,7 +27,7 @@ namespace SuperShop.App.UI.Dashboard
             AllUsersControl = new AllUsersControl(true);
             ProductControl = new ProductControl();
             ReportControl = new ReportControl();
-            Invoice = new InvoiceForm(username);
+            Invoice = new InvoiceControl(username);
             statistics = new StatisticsControl();
             showControl(AllUsersControl);
         }

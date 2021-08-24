@@ -16,12 +16,12 @@ namespace SuperShop.App.UI.Dashboard
     public partial class SellerDashboard : MetroForm
     {
         string Username { get; set; }
-        InvoiceForm InvoiceForm { get; set; }
+        InvoiceControl InvoiceForm { get; set; }
         ReportControl ReportControl { get; set; }
         public SellerDashboard(string Username)
         {
             InitializeComponent();
-            InvoiceForm = new InvoiceForm(Username);
+            InvoiceForm = new InvoiceControl(Username);
             ReportControl = new ReportControl();
             this.Username = Username;
             showControl(InvoiceForm);

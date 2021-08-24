@@ -16,7 +16,7 @@ using System.Windows.Forms;
 namespace SuperShop.App.UI.Seller
 {
     
-    public partial class InvoiceForm : UserControl
+    public partial class InvoiceControl : UserControl
     {
         double Total { get; set; }
         double SubTotal { get; set; }
@@ -26,7 +26,7 @@ namespace SuperShop.App.UI.Seller
         ProductRepository productRepository = new ProductRepository();
         InvoiceRepository InvoiceRepository = new InvoiceRepository();
 
-        public InvoiceForm(string username)
+        public InvoiceControl(string username)
         {
             InitializeComponent();
             loadGridView();
