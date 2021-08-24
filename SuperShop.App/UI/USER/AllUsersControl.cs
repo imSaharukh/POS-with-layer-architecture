@@ -130,6 +130,12 @@ namespace SuperShop.App
             }
             else
             {
+
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete the User?", "Delete User", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.No)
+                {
+                    return;
+                }
                 DataGridViewRow row = this.dgv.SelectedRows[0];
                 try
                 {

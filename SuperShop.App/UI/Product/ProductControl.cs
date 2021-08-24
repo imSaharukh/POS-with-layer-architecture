@@ -132,6 +132,12 @@ namespace SuperShop.App
             }
             else
             {
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete the product?", "Delete Product", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.No)
+                {
+                    return;
+                }
+             
                 DataGridViewRow row = this.dgvProduct.SelectedRows[0];
                 var productID = Convert.ToInt32(row.Cells["productID"].Value);
                var result= productRepository.deleteOne(productID);
