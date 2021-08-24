@@ -28,7 +28,7 @@ namespace SuperShop.App.UI.Statistics
         void TotalSales()
         {
             var result = extraRepository.GetSalesAmountByDate(dtForm.Value.ToShortDateString(), dtTo.Value.ToShortDateString());
-            this.lblTotalSales.Text = result.ToString();
+            this.lblTotalSales.Text = result.ToString()+" TK";
         }
         void LoadPiChart()
         {
