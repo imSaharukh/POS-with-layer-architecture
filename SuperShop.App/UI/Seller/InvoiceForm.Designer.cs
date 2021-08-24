@@ -69,6 +69,7 @@ namespace SuperShop.App.UI.Seller
             this.purchasePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.expireDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoiceProduct)).BeginInit();
@@ -113,10 +114,10 @@ namespace SuperShop.App.UI.Seller
             // 
             // 
             this.txtProductQty.CustomButton.Image = null;
-            this.txtProductQty.CustomButton.Location = new System.Drawing.Point(89, 1);
+            this.txtProductQty.CustomButton.Location = new System.Drawing.Point(67, 1);
             this.txtProductQty.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtProductQty.CustomButton.Name = "";
-            this.txtProductQty.CustomButton.Size = new System.Drawing.Size(28, 26);
+            this.txtProductQty.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtProductQty.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtProductQty.CustomButton.TabIndex = 1;
             this.txtProductQty.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -157,10 +158,10 @@ namespace SuperShop.App.UI.Seller
             // 
             // 
             this.txtSearch.CustomButton.Image = null;
-            this.txtSearch.CustomButton.Location = new System.Drawing.Point(489, 1);
+            this.txtSearch.CustomButton.Location = new System.Drawing.Point(367, 1);
             this.txtSearch.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearch.CustomButton.Name = "";
-            this.txtSearch.CustomButton.Size = new System.Drawing.Size(28, 26);
+            this.txtSearch.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtSearch.CustomButton.TabIndex = 1;
             this.txtSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -198,6 +199,7 @@ namespace SuperShop.App.UI.Seller
             // metroPanel2
             // 
             this.metroPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.metroPanel2.Controls.Add(this.metroLabel7);
             this.metroPanel2.Controls.Add(this.txtGivenAmount);
             this.metroPanel2.Controls.Add(this.metroLabel6);
             this.metroPanel2.Controls.Add(this.btnCartItemRemove);
@@ -229,10 +231,10 @@ namespace SuperShop.App.UI.Seller
             // 
             // 
             this.txtGivenAmount.CustomButton.Image = null;
-            this.txtGivenAmount.CustomButton.Location = new System.Drawing.Point(161, 1);
+            this.txtGivenAmount.CustomButton.Location = new System.Drawing.Point(121, 1);
             this.txtGivenAmount.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtGivenAmount.CustomButton.Name = "";
-            this.txtGivenAmount.CustomButton.Size = new System.Drawing.Size(28, 26);
+            this.txtGivenAmount.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtGivenAmount.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtGivenAmount.CustomButton.TabIndex = 1;
             this.txtGivenAmount.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -286,10 +288,10 @@ namespace SuperShop.App.UI.Seller
             // 
             // 
             this.txtBoxDiscount.CustomButton.Image = null;
-            this.txtBoxDiscount.CustomButton.Location = new System.Drawing.Point(161, 1);
+            this.txtBoxDiscount.CustomButton.Location = new System.Drawing.Point(121, 1);
             this.txtBoxDiscount.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBoxDiscount.CustomButton.Name = "";
-            this.txtBoxDiscount.CustomButton.Size = new System.Drawing.Size(28, 26);
+            this.txtBoxDiscount.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtBoxDiscount.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtBoxDiscount.CustomButton.TabIndex = 1;
             this.txtBoxDiscount.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -640,6 +642,17 @@ namespace SuperShop.App.UI.Seller
             this.ProductUnit.Name = "ProductUnit";
             this.ProductUnit.ReadOnly = true;
             // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.metroLabel7.Location = new System.Drawing.Point(29, 76);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(211, 20);
+            this.metroLabel7.TabIndex = 17;
+            this.metroLabel7.Text = "* Qty can be changed from here";
+            this.metroLabel7.UseCustomBackColor = true;
+            // 
             // InvoiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -695,5 +708,6 @@ namespace SuperShop.App.UI.Seller
         private System.Windows.Forms.DataGridViewTextBoxColumn purchasePrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn expireDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductUnit;
+        private MetroFramework.Controls.MetroLabel metroLabel7;
     }
 }
